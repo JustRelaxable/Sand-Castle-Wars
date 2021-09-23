@@ -9,7 +9,8 @@ public class ClientGameManager : NetworkBehaviour
     private CastleStatsUI castleStatsUI;
     private GameCardHolderUI gameCardHolderUI;
     public event Action OnGameStarted;
-
+    public CardAnimationSpawner cardAnimationSpawner;
+    
     private void Start()
     {
         castleStatsUI = GameObject.FindObjectOfType<CastleStatsUI>();
@@ -36,5 +37,14 @@ public class ClientGameManager : NetworkBehaviour
             Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
         }
         gameCardHolderUI.InstantiateLastCard(cardID);
+    }
+
+    [ClientRpc]
+    public void RpcPlayCardAnimation(int cardID,byte team)
+    {
+        var animationPrefab = CardManager.instance.cards[cardID].animationPrefab;
+        if (animationPrefab == null)
+            return;
+        cardAnimationSpawner.HandleCardAnimation(animationPrefab, (Teams)team);
     }
 }

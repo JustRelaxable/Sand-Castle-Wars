@@ -122,6 +122,7 @@ public class GameManager : NetworkBehaviour
 
             CardManager.instance.GetCard(cardID).UseTheCard(callerStats, enemyStats);
             clientGameManager.RpcGetLastPlayedCard(cardID);
+            clientGameManager.RpcPlayCardAnimation(cardID, ((byte)currentTurn));
 
             if (CheckIfGameFinished(callerStats, enemyStats))
                 return;

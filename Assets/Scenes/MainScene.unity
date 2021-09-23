@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -513,6 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59f662132c2472418ada7cc5830461b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Crush Crystals
   resourceCost: 4
   resourceType: 2
@@ -560,6 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88d7d659b201b84ba98352029ddbf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Tower
   resourceCost: 5
   resourceType: 0
@@ -841,6 +843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671104cfd98622247800a50e696fe55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 5582870400144860021, guid: f11c1d7308968ef458285f72cba98d49,
+    type: 3}
   cardName: Conjure Crystals
   resourceCost: 4
   resourceType: 2
@@ -888,6 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fd6c05a0f69b345b45757b4be4cc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Saboteur
   resourceCost: 12
   resourceType: 1
@@ -1364,8 +1369,9 @@ Transform:
   m_Children:
   - {fileID: 1939333414}
   - {fileID: 1271021131}
+  - {fileID: 1651146406}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &507509512
 GameObject:
@@ -1497,6 +1503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b05315dbaa013144bc2b98b938b5749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 6740276450729155158, guid: 43519e8b85f057c4d808d6b63863cea8,
+    type: 3}
   cardName: Dragon
   resourceCost: 21
   resourceType: 2
@@ -1544,6 +1552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23428dc3cf77354baa3e428cffe45c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Babylon
   resourceCost: 39
   resourceType: 0
@@ -1603,7 +1612,7 @@ PrefabInstance:
     - target: {fileID: 7322382093325481988, guid: bc2c3e942cbc64840b9dffb81512b657,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7322382093325481988, guid: bc2c3e942cbc64840b9dffb81512b657,
         type: 3}
@@ -1743,6 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbcf8e8fd544624aa82a60ad4be9b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Sorcerer
   resourceCost: 8
   resourceType: 2
@@ -1865,6 +1875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1542bd3437d808044ae45ad05f35439b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Rider
   resourceCost: 2
   resourceType: 1
@@ -2009,7 +2020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &798266947
 MonoBehaviour:
@@ -2097,7 +2108,7 @@ Transform:
   - {fileID: 360796438}
   - {fileID: 1822083950}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862506125
 GameObject:
@@ -2142,6 +2153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacd5be8ab7c08c45b3b79cfd068f550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Thief
   resourceCost: 15
   resourceType: 1
@@ -2189,6 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8153bf97cda8a741b963955b8041ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Base
   resourceCost: 1
   resourceType: 0
@@ -2577,7 +2590,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105387752
 GameObject:
@@ -2709,7 +2722,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122046528
 GameObject:
@@ -2957,6 +2970,7 @@ GameObject:
   - component: {fileID: 1146334070}
   - component: {fileID: 1146334069}
   - component: {fileID: 1146334072}
+  - component: {fileID: 1146334073}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3060,6 +3074,22 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1146334073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146334068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e50f5dcb0578994cb910160d91608e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 1146334071}
+  shakeDuration: 0
+  shakeAmount: 0.03
+  decreaseFactor: 1
 --- !u!1001 &1146971881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3274,6 +3304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af74854ab8a9adc4c8df232ebc611279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Pixies
   resourceCost: 22
   resourceType: 2
@@ -3321,12 +3352,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9556272f1a05c46a5b93f7bc83359f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Reserve
   resourceCost: 3
   resourceType: 0
   cardDescription: 'Castle +8
 
     Wall -4'
+--- !u!1001 &1176063312
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.13199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.523
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.693
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7194449
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6945497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -92.017006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.09451699
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.09451699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274401479163850755, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274401479163850755, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b68b75543aff1994280edcd3574a1d21, type: 3}
 --- !u!1 &1230263614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a7071034c6d424b8f32526ab82f811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Platoon
   resourceCost: 4
   resourceType: 1
@@ -3470,90 +3587,25 @@ RectTransform:
   - {fileID: 1895470274}
   - {fileID: 1146971882}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1240786856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1240786858}
-  - component: {fileID: 1240786857}
-  - component: {fileID: 1240786859}
-  m_Layer: 0
-  m_Name: ClientGameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1240786857
+--- !u!114 &1240786857 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+    type: 3}
+  m_PrefabInstance: {fileID: 5688032887342473219}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240786856}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70c2ca91e6c04584f945ec624d05019a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1240786858
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240786856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 445.68658, y: 229.28975, z: -122.46875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1240786859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240786856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1 &1271021130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,7 +3618,7 @@ GameObject:
   m_Layer: 0
   m_Name: BlueSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3579,7 +3631,7 @@ Transform:
   m_GameObject: {fileID: 1271021130}
   m_LocalRotation: {x: -0, y: -0.7194449, z: -0, w: 0.6945497}
   m_LocalPosition: {x: 1.7910335, y: 1.456803, z: -3.4161286}
-  m_LocalScale: {x: 0.094516955, y: 0.094516955, z: 0.094516955}
+  m_LocalScale: {x: 0.09451699, y: 0.094516955, z: 0.09451699}
   m_Children: []
   m_Father: {fileID: 466537333}
   m_RootOrder: 1
@@ -3627,6 +3679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591b4285994ea644fbfe1b200cf91a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Crsuh Bricks
   resourceCost: 4
   resourceType: 2
@@ -3827,6 +3880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e043d247b3a187941b0b93049e2399a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Wall
   resourceCost: 1
   resourceType: 0
@@ -3874,6 +3928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7aef3312084746bd050b32e467685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Recruit
   resourceCost: 8
   resourceType: 1
@@ -3921,6 +3976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981ef995143529f499ead4b0e9e82e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Crush Weapons
   resourceCost: 4
   resourceType: 2
@@ -4414,6 +4470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3ba4108d0061d4e859ca3f3223a1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: SWAT
   resourceCost: 18
   resourceType: 1
@@ -4461,6 +4518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c2c85a792cf50418b8cf8b5cbc6523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Attack
   resourceCost: 10
   resourceType: 1
@@ -4524,7 +4582,7 @@ Transform:
   - {fileID: 2021354353}
   - {fileID: 2128535874}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1570415862
 MonoBehaviour:
@@ -4657,6 +4715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8802ec6514c5547a71a9518fc3fa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 2812030986668027198, guid: 1414dded0f2d11d448f8f4295ff7d835,
+    type: 3}
   cardName: Conjure Bricks
   resourceCost: 4
   resourceType: 2
@@ -4704,6 +4764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1db614b71fd834eb2f94ac2e8e0403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 6004639692663161292, guid: 68bab76cc435d714f8f85706425fc19d,
+    type: 3}
   cardName: Conjure Weapons
   resourceCost: 4
   resourceType: 2
@@ -4751,6 +4813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766c7a96bb5bb6c4dbc86f5d619c6ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: School
   resourceCost: 8
   resourceType: 0
@@ -4847,6 +4910,49 @@ Transform:
   m_Father: {fileID: 833372348}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 46.586002, y: -1.9720001, z: -21.456001}
+--- !u!1 &1651146405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651146406}
+  - component: {fileID: 1651146407}
+  m_Layer: 0
+  m_Name: AnimationSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1651146406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651146405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.407181, y: 1.456803, z: -3.4161286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 466537333}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651146407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651146405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d6605cd64fdca4290276533dcb3d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1684388843
 GameObject:
   m_ObjectHideFlags: 0
@@ -9953,6 +10059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097d0e6dfabb405499eddfd8cb7bc5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Knight
   resourceCost: 2
   resourceType: 1
@@ -10061,6 +10168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194c9808db2860842a8c6ebfeaf0c01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Curse
   resourceCost: 25
   resourceType: 2
@@ -10079,7 +10187,7 @@ GameObject:
   m_Layer: 0
   m_Name: RedSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10091,8 +10199,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939333413}
   m_LocalRotation: {x: -0, y: -0.7194449, z: -0, w: 0.6945497}
-  m_LocalPosition: {x: 1.0233276, y: 1.4568033, z: -3.443582}
-  m_LocalScale: {x: 0.094516955, y: 0.094516955, z: 0.094516955}
+  m_LocalPosition: {x: 1.0233276, y: 1.4568033, z: -3.416129}
+  m_LocalScale: {x: 0.09451699, y: 0.094516955, z: 0.09451699}
   m_Children: []
   m_Father: {fileID: 466537333}
   m_RootOrder: 0
@@ -10215,6 +10323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b7c1443e542854db091c1b498cead7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Fort
   resourceCost: 18
   resourceType: 0
@@ -10262,6 +10371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215bbedac6b77984da6616d628cde2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Banshee
   resourceCost: 28
   resourceType: 1
@@ -10309,6 +10419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45732a2b162cce94fbd1e51f22cb0ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Wain
   resourceCost: 10
   resourceType: 0
@@ -10358,10 +10469,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76de3be4e8de79f4a9b65cce4467c7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Fence
   resourceCost: 12
   resourceType: 0
   cardDescription: Wall +22
+--- !u!1 &2078556180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078556182}
+  - component: {fileID: 2078556181}
+  m_Layer: 0
+  m_Name: GameDebugger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2078556181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078556180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a214a6bbe8add1e4ab58f1f98d0bf246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2078556182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078556180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09849912, y: -50.381058, z: -9.234856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086021475
 GameObject:
   m_ObjectHideFlags: 0
@@ -10405,10 +10560,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd5e73525be30c468b822bcb84010b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Defense
   resourceCost: 3
   resourceType: 0
   cardDescription: Wall +6
+--- !u!1001 &2121007647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63570595
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.533
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.6930003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7194449
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6945497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -92.017006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.09451699
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.09451699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274401479163850755, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerCastle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274401479163850755, guid: b68b75543aff1994280edcd3574a1d21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b68b75543aff1994280edcd3574a1d21, type: 3}
 --- !u!1 &2128535873
 GameObject:
   m_ObjectHideFlags: 0
@@ -10452,7 +10692,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca36750e62c85a14bbbc3b267e560f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 0}
   cardName: Archer
   resourceCost: 1
   resourceType: 1
   cardDescription: Attack 2
+--- !u!1001 &5688032887342473219
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 445.68658
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 229.28975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -122.46875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093225, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: cardAnimationSpawner
+      value: 
+      objectReference: {fileID: 1651146407}
+    - target: {fileID: 5688032886142093227, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: m_Name
+      value: ClientGameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5805e7f583aab9b4e9f4303130444316, type: 3}

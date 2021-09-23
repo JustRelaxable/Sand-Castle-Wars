@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameCard : MonoBehaviour,ICard
 {
+    public GameObject animationPrefab;
     public string cardName;
     public int resourceCost;
     public ResourceType resourceType;
