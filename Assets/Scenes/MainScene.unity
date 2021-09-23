@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4049,6 +4049,95 @@ MonoBehaviour:
     magic: {fileID: 1333594326}
     castleHeight: {fileID: 317326489}
     wallHeight: {fileID: 1124057025}
+--- !u!1001 &1420508296
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1735702023114988, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_Name
+      value: Wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70033664
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71381277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 88.908005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520783176558486, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7299
+      objectReference: {fileID: 0}
+    - target: {fileID: 198061243068776072, guid: 60d9c53605152d3459e9db61f5d3bad2,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 198061243068776072, guid: 60d9c53605152d3459e9db61f5d3bad2,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 198061243068776072, guid: 60d9c53605152d3459e9db61f5d3bad2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 6.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 198061243068776072, guid: 60d9c53605152d3459e9db61f5d3bad2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 5.75
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60d9c53605152d3459e9db61f5d3bad2, type: 3}
 --- !u!1 &1426400444
 GameObject:
   m_ObjectHideFlags: 0
