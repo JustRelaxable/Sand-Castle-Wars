@@ -513,7 +513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59f662132c2472418ada7cc5830461b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 0}
+  animationPrefab: {fileID: 8994038411794720311, guid: ca777862d58d678428b31d9d7bb2a2b1,
+    type: 3}
   cardName: Crush Crystals
   resourceCost: 4
   resourceType: 2
@@ -892,7 +893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fd6c05a0f69b345b45757b4be4cc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 0}
+  animationPrefab: {fileID: 7430107638888221783, guid: 172d2af4f658bd4418e516988bd12624,
+    type: 3}
   cardName: Saboteur
   resourceCost: 12
   resourceType: 1
@@ -3679,7 +3681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591b4285994ea644fbfe1b200cf91a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 0}
+  animationPrefab: {fileID: 1233732805142949045, guid: a7157f4bba35ad543ba37bf7cddf5787,
+    type: 3}
   cardName: Crsuh Bricks
   resourceCost: 4
   resourceType: 2
@@ -3976,7 +3979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981ef995143529f499ead4b0e9e82e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 0}
+  animationPrefab: {fileID: 6004639692663161292, guid: 68bab76cc435d714f8f85706425fc19d,
+    type: 3}
   cardName: Crush Weapons
   resourceCost: 4
   resourceType: 2
@@ -10257,7 +10261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194c9808db2860842a8c6ebfeaf0c01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 0}
+  animationPrefab: {fileID: 8453605879597209075, guid: bc5d2170f59de1c41bc2c074cfd2f443,
+    type: 3}
   cardName: Curse
   resourceCost: 25
   resourceType: 2
@@ -10460,7 +10465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215bbedac6b77984da6616d628cde2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 0}
+  animationPrefab: {fileID: 7852444466256024072, guid: 9eced021b12d6ca44a6f4b075fa42095,
+    type: 3}
   cardName: Banshee
   resourceCost: 28
   resourceType: 1

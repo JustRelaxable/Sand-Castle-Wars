@@ -14,6 +14,7 @@ public class CardAnimation : MonoBehaviour
         animationEvent.functionName = "DestroyTheGameObject";
         animationEvent.time = animationClip.length;
         animationClip.AddEvent(animationEvent);
+        StartAction();
     }
     public virtual void StartAction()
     {

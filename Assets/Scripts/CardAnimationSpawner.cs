@@ -12,7 +12,7 @@ public class CardAnimationSpawner : MonoBehaviour
             turn = turn == Teams.Blue ? Teams.Red : Teams.Blue;
 
         
-        cardAnimation.StartAction();
+        //cardAnimation.StartAction();
         if(turn == Teams.Red)
         {
             var r = animation.transform.localRotation;

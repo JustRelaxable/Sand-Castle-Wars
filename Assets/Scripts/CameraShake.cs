@@ -66,4 +66,14 @@ public class CameraShake : MonoBehaviour
         }
 		ResetLocation();
     }
+
+	public void StartShake()
+    {
+		shakeDuration = int.MaxValue;
+    }
+
+	public void StopShake()
+    {
+		shakeDuration = 0;
+    }
 }
