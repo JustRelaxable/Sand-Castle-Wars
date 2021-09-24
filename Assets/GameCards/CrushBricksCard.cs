@@ -7,8 +7,6 @@ public class CrushBricksCard : GameCard
     public override void UseTheCard(CastleStats executor, CastleStats enemy)
     {
         base.UseTheCard(executor, enemy);
-        enemy.sandResource -= 8;
-        if (enemy.sandResource < 0)
-            enemy.sandResource = 0;
+        DecreaseResource(enemy, ResourceType.Sand, 8);
     }
 }
