@@ -11,12 +11,12 @@ public class ThiefCard : GameCard
         int waterToSteal = enemy.waterResource >= 5 ? 5 : enemy.waterResource;
         int magicToSteal = enemy.magicResource >= 5 ? 5 : enemy.magicResource;
 
-        executor.sandResource += sandToSteal;
-        executor.waterResource += waterToSteal;
-        executor.magicResource += magicToSteal;
+        ChangeResource(executor, ResourceType.Sand, sandToSteal);
+        ChangeResource(executor, ResourceType.Water, waterToSteal);
+        ChangeResource(executor, ResourceType.Magic, magicToSteal);
 
-        DecreaseResource(enemy, ResourceType.Sand, sandToSteal);
-        DecreaseResource(enemy, ResourceType.Water, waterToSteal);
-        DecreaseResource(enemy, ResourceType.Magic, magicToSteal);
+        ChangeResource(enemy, ResourceType.Sand, -sandToSteal);
+        ChangeResource(enemy, ResourceType.Water, -waterToSteal);
+        ChangeResource(enemy, ResourceType.Magic, -magicToSteal);
     }
 }

@@ -186,10 +186,10 @@ public class GameManager : NetworkBehaviour
         switch (currentTurn)
         {
             case Teams.Blue:
-                teamController.blueCastle.GetComponent<CastleStats>().HandleNextTurnResources();
+                teamController.blueCastle.GetComponent<CastleStats>().RpcHandleNextTurnResources();
                 break;
             case Teams.Red:
-                teamController.redCastle.GetComponent<CastleStats>().HandleNextTurnResources();
+                teamController.redCastle.GetComponent<CastleStats>().RpcHandleNextTurnResources();
                 break;
             default:
                 break;

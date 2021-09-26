@@ -7,6 +7,7 @@ public class SchoolCard : GameCard
     public override void UseTheCard(CastleStats executor, CastleStats enemy)
     {
         base.UseTheCard(executor, enemy);
-        executor.sandProduce += 1;
+        //executor.sandProduce += 1;
+        ChangeProduce(executor, ResourceType.Sand, 1);
     }
 }

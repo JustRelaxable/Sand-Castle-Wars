@@ -10,25 +10,25 @@ public class CastleStats : NetworkBehaviour
 
     public Teams team;
 
-    [SyncVar(hook = "OnCastleHeightChanged")]
+    //[SyncVar(hook = "OnCastleHeightChanged")]
     public int castleHeight = 30;
-    [SyncVar(hook = "OnWallHeightChanged")]
+    //[SyncVar(hook = "OnWallHeightChanged")]
     public int wallHeight = 10;
 
-    [SyncVar(hook = "OnSandProduceChanged")]
+    //[SyncVar(hook = "OnSandProduceChanged")]
     public int sandProduce = 2;
-    [SyncVar(hook = "OnSandResourceChanged")]
+    //[SyncVar(hook = "OnSandResourceChanged")]
     public int sandResource = 5;
 
-    [SyncVar(hook = "OnWaterProduceChanged")]
+    //[SyncVar(hook = "OnWaterProduceChanged")]
     public int waterProduce = 2;
-    [SyncVar(hook = "OnWaterResourceChanged")]
+    //[SyncVar(hook = "OnWaterResourceChanged")]
     public int waterResource = 5;
 
 
-    [SyncVar(hook = "OnMagicProduceChanged")]
+    //[SyncVar(hook = "OnMagicProduceChanged")]
     public int magicProduce = 2;
-    [SyncVar(hook = "OnMagicResourceChanged")]
+    //[SyncVar(hook = "OnMagicResourceChanged")]
     public int magicResource = 5;
 
     private PlayerCastle playerCastle;
@@ -42,7 +42,7 @@ public class CastleStats : NetworkBehaviour
         if (!hasAuthority)
             return;
         //if (Input.GetKeyDown(KeyCode.E))
-            //CmdChangeCastleHeight(5);
+        //CmdChangeCastleHeight(5);
     }
     [Command]
     private void CmdChangeCastleHeight(int v)
@@ -96,11 +96,89 @@ public class CastleStats : NetworkBehaviour
     {
         OnStatChanged?.Invoke();
     }
-
-    public void HandleNextTurnResources()
+    [ClientRpc]
+    public void RpcHandleNextTurnResources()
     {
         sandResource += sandProduce;
         waterResource += waterProduce;
         magicResource += magicProduce;
+        InvokeOnStatChanged();
+    }
+    [ClientRpc]
+    public void RpcSetResource(byte resourceType, int value)
+    {
+        var type = (ResourceType)resourceType;
+        switch (type)
+        {
+            case ResourceType.Sand:
+                sandResource = value;
+                OnSandResourceChanged(sandResource);
+                break;
+            case ResourceType.Water:
+                waterResource = value;
+                OnWaterResourceChanged(waterResource);
+                break;
+            case ResourceType.Magic:
+                magicResource = value;
+                OnMagicResourceChanged(magicResource);
+                break;
+            default:
+                break;
+        }
+    }
+    [ClientRpc]
+    public void RpcSetProduce(byte resourceType, int value)
+    {
+        var type = (ResourceType)resourceType;
+        switch (type)
+        {
+            case ResourceType.Sand:
+                sandProduce = value;
+                OnSandProduceChanged(sandProduce);
+                break;
+            case ResourceType.Water:
+                waterProduce = value;
+                OnWaterProduceChanged(waterProduce);
+                break;
+            case ResourceType.Magic:
+                magicProduce = value;
+                OnMagicProduceChanged(magicProduce);
+                break;
+            default:
+                break;
+        }
+    }
+    [ClientRpc]
+    public void RpcSetHeightOfBuilding(byte buildingType, int value)
+    {
+        BuildingType type = (BuildingType)buildingType;
+        switch (type)
+        {
+            case BuildingType.Wall:
+                wallHeight = value;
+                OnWallHeightChanged(wallHeight);
+                break;
+            case BuildingType.Castle:
+                castleHeight = value;
+                OnCastleHeightChanged(castleHeight);
+                break;
+            default:
+                break;
+        }
+    }
+    [ClientRpc]
+    public void RpcBasicAttack(int attackTime)
+    {
+        for (int i = 0; i < attackTime; i++)
+        {
+            if (wallHeight > 0)
+            {
+                wallHeight--;
+            }
+            else if (castleHeight > 0)
+            {
+                castleHeight--;
+            }
+        }
     }
 }

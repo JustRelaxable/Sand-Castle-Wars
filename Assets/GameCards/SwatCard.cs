@@ -7,6 +7,6 @@ public class SwatCard : GameCard
     public override void UseTheCard(CastleStats executor, CastleStats enemy)
     {
         base.UseTheCard(executor, enemy);
-        DecreaseHeightOfBuilding(enemy, BuildingType.Castle, 10);
+        ChangeHeightOfBuilding(enemy, BuildingType.Castle, -10);
     }
 }

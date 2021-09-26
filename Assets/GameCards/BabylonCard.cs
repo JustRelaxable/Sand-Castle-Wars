@@ -7,6 +7,7 @@ public class BabylonCard : GameCard
     public override void UseTheCard(CastleStats executor, CastleStats enemy)
     {
         base.UseTheCard(executor, enemy);
-        executor.castleHeight += 32;
+        //executor.castleHeight += 32;
+        ChangeHeightOfBuilding(executor, BuildingType.Castle, 32);
     }
 }

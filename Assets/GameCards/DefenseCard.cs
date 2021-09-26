@@ -7,6 +7,7 @@ public class DefenseCard : GameCard
     public override void UseTheCard(CastleStats executor, CastleStats enemy)
     {
         base.UseTheCard(executor, enemy);
-        executor.wallHeight += 6;
+        //executor.wallHeight += 6;
+        ChangeHeightOfBuilding(executor, BuildingType.Wall, 6);
     }
 }

@@ -7,6 +7,7 @@ public class PixiesCard : GameCard
     public override void UseTheCard(CastleStats executor, CastleStats enemy)
     {
         base.UseTheCard(executor, enemy);
-        executor.castleHeight += 22;
+        //executor.castleHeight += 22;
+        ChangeHeightOfBuilding(executor, BuildingType.Castle, 22);
     }
 }
