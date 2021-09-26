@@ -657,8 +657,10 @@ MonoBehaviour:
   resourceAmount: {fileID: 4270342405677524359}
   cardName: {fileID: 3381000882674867075}
   cardID: 0
+  overButton: {fileID: 2570394263478102930}
   normalColor: {r: 0, g: 0, b: 0, a: 0}
   darkenColor: {r: 0, g: 0, b: 0, a: 0.79607844}
+  isLastCard: 0
   overImage: {fileID: 416251829512638726}
   backgroundImage: {fileID: 6702725616564823377}
   cardSettings: {fileID: 3459386763241465437}

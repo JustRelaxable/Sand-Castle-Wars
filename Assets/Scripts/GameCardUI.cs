@@ -10,11 +10,12 @@ public class GameCardUI : MonoBehaviour
     public Text resourceAmount;
     public Text cardName;
     public int cardID;
+    public Button overButton;
 
     public Color normalColor;
     public Color darkenColor;
     bool ableToUseTheCard = false;
-    private bool isLastCard = false;
+    public bool isLastCard = false;
 
     public Image overImage;
     public Image backgroundImage;
@@ -154,5 +155,19 @@ public class GameCardUI : MonoBehaviour
     public static void CloseSettingsOpenedLastSelectedCard()
     {
         settingsOpenedCard?.CloseCardSettings();
+    }
+
+    public void DestroyTheCardForBonusCard()
+    {
+        List<GameCardUI> playerUsableCards = FindObjectsOfType<GameCardUI>().Where(x => !x.isLastCard).ToList();
+        FindObjectOfType<BonusCardUI>().OnDestroyForBonusCardClicked();
+
+        for (int i = 0; i < playerUsableCards.Count(); i++)
+        {
+            playerUsableCards[i].overButton.onClick.RemoveAllListeners();
+            playerUsableCards[i].overButton.onClick.AddListener(OpenCardSettings);
+        }
+
+        Destroy(this.gameObject);
     }
 }

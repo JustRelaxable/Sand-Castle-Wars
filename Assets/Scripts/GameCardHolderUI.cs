@@ -25,10 +25,14 @@ public class GameCardHolderUI : MonoBehaviour
 
     public void InstantiateBonusCard(int gameCardID)
     {
+        InstantiateCard(gameCardID);
+        //Old behavior
+        /*
         var cardGO = Instantiate(gameCardUIPrefab, bonusCard.transform);
         var card = CardManager.instance.GetCard(gameCardID);
         cardGO.GetComponent<GameCardUI>().PrepareCard(card, false);
         cardGO.GetComponent<GameCardUI>().cardSettings.GetComponent<CardSettingsUI>().DiscardButtonSetInteractable(false);
+        */
     }
 
     public void HandleCardsAbleToUse()

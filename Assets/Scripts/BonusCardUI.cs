@@ -65,6 +65,16 @@ public class BonusCardUI : MonoBehaviour
 
     public void OnBonusCardButtonClick()
     {
+        List<GameCardUI> playerUsableCards = FindObjectsOfType<GameCardUI>().Where(x => !x.isLastCard).ToList();
+        for (int i = 0; i < playerUsableCards.Count; i++)
+        {
+            playerUsableCards[i].overButton.onClick.RemoveAllListeners();
+            playerUsableCards[i].overButton.onClick.AddListener(playerUsableCards[i].DestroyTheCardForBonusCard);
+        }
+    }
+
+    public void OnDestroyForBonusCardClicked()
+    {
         turnMine = false;
         bonusCardRewardedAds.ShowBonusCardRewardedAd();
         var castle = FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority);
@@ -72,6 +82,4 @@ public class BonusCardUI : MonoBehaviour
         castle.CmdRequestBonusCard(netID);
         SetButtonInteractable();
     }
-
-
 }
