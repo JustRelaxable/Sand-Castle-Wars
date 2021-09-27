@@ -107,7 +107,7 @@ public class GameCard : MonoBehaviour,ICard
                 target.RpcSetHeightOfBuilding(((byte)type), target.wallHeight);
                 break;
             case BuildingType.Castle:
-                target.castleHeight += 0;
+                target.castleHeight += amount;
                 if (target.castleHeight < 0)
                     target.castleHeight = 0;
                 target.RpcSetHeightOfBuilding(((byte)type), target.castleHeight);

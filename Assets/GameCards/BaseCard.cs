@@ -8,6 +8,6 @@ public class BaseCard : GameCard
     {
         base.UseTheCard(executor, enemy);
         //executor.castleHeight += 2;
-        ChangeHeightOfBuilding(executor, BuildingType.Wall, 2);
+        ChangeHeightOfBuilding(executor, BuildingType.Castle, 2);
     }
 }
