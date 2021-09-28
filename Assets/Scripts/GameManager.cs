@@ -121,7 +121,7 @@ public class GameManager : NetworkBehaviour
             var enemyStats = teamController.GetGameObjectFromTeam(enemyTeam).GetComponent<CastleStats>();
 
             CardManager.instance.GetCard(cardID).UseTheCard(callerStats, enemyStats);
-            clientGameManager.RpcGetLastPlayedCard(cardID);
+            clientGameManager.RpcGetLastPlayedCard(cardID,false);
             clientGameManager.RpcPlayCardAnimation(cardID, ((byte)currentTurn));
 
             if (CheckIfGameFinished(callerStats, enemyStats))
@@ -140,7 +140,7 @@ public class GameManager : NetworkBehaviour
             lastPlayedID = id;
             if (gameFinished)
                 return;
-            clientGameManager.RpcGetLastPlayedCard(cardID);
+            clientGameManager.RpcGetLastPlayedCard(cardID,true);
             NextTurn();
         }
     }

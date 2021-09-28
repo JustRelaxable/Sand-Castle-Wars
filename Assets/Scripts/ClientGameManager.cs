@@ -14,7 +14,11 @@ public class ClientGameManager : NetworkBehaviour
     public GameObject cardSpawnPoint;
     public GameObject cardDeck;
     public GameObject lastCardPos;
+    public GameObject cardShowing;
     public AnimationCurve lastPlayedCurve;
+    private Transform lastPlayedCardParentTransform;
+    public GameObject nullPoint;
+    private bool isLastCardArrived = false;
     
     private void Start()
     {
@@ -35,7 +39,7 @@ public class ClientGameManager : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void RpcGetLastPlayedCard(int cardID)
+    public void RpcGetLastPlayedCard(int cardID,bool isDiscarded)
     {
         for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
         {
@@ -46,16 +50,20 @@ public class ClientGameManager : NetworkBehaviour
         
         if (myTurn)
         {
-            GameCardUI.selectedCard.CloseCardSettings();
-            
-            StartCoroutine(MoveCardToTransform(GameCardUI.selectedCard.gameObject, gameCardHolderUI.lastPlayedCard.transform));
+            if (isDiscarded)
+                GameCardUI.selectedCard.OpenDiscarded();
+            GameCardUI.selectedCard.CloseCardSettings();     
+            StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
+            gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
         }
         else
         {
-            var gameCard = gameCardHolderUI.InstantiateLastCardAndReturn(cardID);
+            var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
+            if (isDiscarded)
+                gameCard.GetComponent<GameCardUI>().OpenDiscarded();
             gameCard.transform.position = cardSpawnPoint.transform.position;
-            StartCoroutine(MoveCardToTransform(gameCard,gameCardHolderUI.lastPlayedCard.transform));
+            StartCoroutine(MoveCardToTransformAndChangeParent(gameCard,gameCardHolderUI.lastPlayedCard.transform));
         }
     }
 
@@ -69,16 +77,14 @@ public class ClientGameManager : NetworkBehaviour
     }
 
     public void TakeCardFromDeck(GameObject go)
-    {
-        go.transform.position = cardDeck.transform.position;
-        StartCoroutine(MoveCardToTransformAndPutToCard(go, lastCardPos.transform));
+    { 
+        StartCoroutine(CardTakenFromDeck(go));
     }
 
-    private IEnumerator MoveCardToTransform(GameObject go,Transform lastTransform)
+    private IEnumerator MoveCardToTransform(GameObject go,Transform lastTransform,float duration = 2f)
     {
         var currentPosition = go.transform.position;
         var time = 0f;
-        float duration = 2f;
         float curve = 0f;
         while (time<=duration)
         {
@@ -91,6 +97,35 @@ public class ClientGameManager : NetworkBehaviour
     private IEnumerator MoveCardToTransformAndPutToCard(GameObject go, Transform lastTransform)
     {
         yield return MoveCardToTransform(go, lastTransform);
-        go.transform.parent = gameCardHolderUI.transform;
+        go.transform.parent = lastPlayedCardParentTransform;
+    }
+    private IEnumerator MoveCardToTransformAndChangeParent(GameObject go, Transform lastTransform)
+    {
+        yield return MoveCardToTransform(go, lastTransform);
+        go.transform.parent = lastTransform;
+    }
+
+    private IEnumerator CardTakenFromDeck(GameObject go)
+    {
+        go.transform.position = nullPoint.transform.position;
+        while (!isLastCardArrived)
+        {
+            yield return null;
+        }
+        isLastCardArrived = false;
+        go.transform.position = cardDeck.transform.position;
+        yield return MoveCardToTransform(go, cardShowing.transform,1f);
+        go.GetComponent<GameCard3DUI>().animator.SetTrigger("TurnBack");
+        yield return MoveCardToTransformAndChangeParent(go, lastPlayedCardParentTransform);
+    }
+    private IEnumerator MoveLastPlayedCard(GameObject go)
+    {
+        yield return MoveCardToTransform(go, gameCardHolderUI.lastPlayedCard.transform,1f);
+        isLastCardArrived = true;
+    }
+
+    public void SetLastPlayedCardParentTransform(Transform transform)
+    {
+        lastPlayedCardParentTransform = transform;
     }
 }

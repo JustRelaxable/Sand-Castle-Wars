@@ -29,6 +29,7 @@ public class GameCardUI : MonoBehaviour
     public Sprite magicSprite;
 
     public GameObject cardBack;
+    public GameObject discarded;
     public void PrepareCard(GameCard gameCard,bool isLastCard)
     {
         cardID = CardManager.instance.GetIndex(gameCard);
@@ -113,6 +114,7 @@ public class GameCardUI : MonoBehaviour
         {
             myCastle.CmdUseCard(cardID);
             selectedCard = this;
+            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
         }   
     }
     public void DiscardTheCard()
@@ -122,6 +124,7 @@ public class GameCardUI : MonoBehaviour
         {
             myCastle.CmdDiscardCard(cardID);
             selectedCard = this;
+            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
         }
     }
 
@@ -172,13 +175,18 @@ public class GameCardUI : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void OpenCardBack()
+    public virtual void OpenCardBack()
     {
         cardBack.SetActive(true);
     }
 
-    public void CloseCardBack()
+    public virtual void CloseCardBack()
     {
         cardBack.SetActive(false);
+    }
+
+    public void OpenDiscarded()
+    {
+        discarded.SetActive(true);
     }
 }

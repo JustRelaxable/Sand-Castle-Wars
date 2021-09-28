@@ -55,7 +55,7 @@ public class PlayerCards : NetworkBehaviour
             return;
         //gameCardHolderUI.InstantiateCard(cardID);
         var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
-        gameCard.GetComponent<GameCardUI>().OpenCardBack();
+        //gameCard.GetComponent<GameCardUI>().OpenCardBack();
         FindObjectOfType<ClientGameManager>().TakeCardFromDeck(gameCard);
     }
 

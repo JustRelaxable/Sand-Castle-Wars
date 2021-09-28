@@ -8,7 +8,6 @@ public class GameCardHolderUI : MonoBehaviour
 {
     public GameObject gameCardUIPrefab;
     public GameObject lastPlayedCard;
-    public GameObject bonusCard;
     public ClientGameManager clientGameManager;
 
     private void Awake()
@@ -26,7 +25,7 @@ public class GameCardHolderUI : MonoBehaviour
         }
     }
 
-    private void MyCastleTurnController_OnTurnMine(bool isTurnMine)
+    public virtual void MyCastleTurnController_OnTurnMine(bool isTurnMine)
     {
         if (isTurnMine)
         {
@@ -46,13 +45,13 @@ public class GameCardHolderUI : MonoBehaviour
         }
     }
 
-    public void InstantiateCard(int gameCardID)
+    public virtual void InstantiateCard(int gameCardID)
     {
         var cardGO = Instantiate(gameCardUIPrefab, transform);
         var card = CardManager.instance.GetCard(gameCardID);
         cardGO.GetComponent<GameCardUI>().PrepareCard(card,false);
     }
-    public GameObject InstantiateCardAndReturn(int gameCardID)
+    public virtual GameObject InstantiateCardAndReturn(int gameCardID)
     {
         var cardGO = Instantiate(gameCardUIPrefab,transform.parent);
         var card = CardManager.instance.GetCard(gameCardID);
@@ -78,16 +77,9 @@ public class GameCardHolderUI : MonoBehaviour
     public void InstantiateBonusCard(int gameCardID)
     {
         InstantiateCard(gameCardID);
-        //Old behavior
-        /*
-        var cardGO = Instantiate(gameCardUIPrefab, bonusCard.transform);
-        var card = CardManager.instance.GetCard(gameCardID);
-        cardGO.GetComponent<GameCardUI>().PrepareCard(card, false);
-        cardGO.GetComponent<GameCardUI>().cardSettings.GetComponent<CardSettingsUI>().DiscardButtonSetInteractable(false);
-        */
     }
 
-    public void HandleCardsAbleToUse()
+    public virtual void HandleCardsAbleToUse()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
