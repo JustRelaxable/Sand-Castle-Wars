@@ -12,6 +12,8 @@ public class ClientGameManager : NetworkBehaviour
     public event Action OnGameStarted;
     public CardAnimationSpawner cardAnimationSpawner;
     public GameObject cardSpawnPoint;
+    public GameObject cardDeck;
+    public GameObject lastCardPos;
     public AnimationCurve lastPlayedCurve;
     
     private void Start()
@@ -45,14 +47,15 @@ public class ClientGameManager : NetworkBehaviour
         if (myTurn)
         {
             GameCardUI.selectedCard.CloseCardSettings();
+            
+            StartCoroutine(MoveCardToTransform(GameCardUI.selectedCard.gameObject, gameCardHolderUI.lastPlayedCard.transform));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
-            StartCoroutine(MoveCardToLastPlayed(GameCardUI.selectedCard.gameObject, gameCardHolderUI.lastPlayedCard.transform));
         }
         else
         {
             var gameCard = gameCardHolderUI.InstantiateLastCardAndReturn(cardID);
             gameCard.transform.position = cardSpawnPoint.transform.position;
-            StartCoroutine(MoveCardToLastPlayed(gameCard,gameCardHolderUI.lastPlayedCard.transform));
+            StartCoroutine(MoveCardToTransform(gameCard,gameCardHolderUI.lastPlayedCard.transform));
         }
     }
 
@@ -65,7 +68,13 @@ public class ClientGameManager : NetworkBehaviour
         cardAnimationSpawner.HandleCardAnimation(animationPrefab, (Teams)team);
     }
 
-    private IEnumerator MoveCardToLastPlayed(GameObject go,Transform lastTransform)
+    public void TakeCardFromDeck(GameObject go)
+    {
+        go.transform.position = cardDeck.transform.position;
+        StartCoroutine(MoveCardToTransformAndPutToCard(go, lastCardPos.transform));
+    }
+
+    private IEnumerator MoveCardToTransform(GameObject go,Transform lastTransform)
     {
         var currentPosition = go.transform.position;
         var time = 0f;
@@ -78,5 +87,10 @@ public class ClientGameManager : NetworkBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+    }
+    private IEnumerator MoveCardToTransformAndPutToCard(GameObject go, Transform lastTransform)
+    {
+        yield return MoveCardToTransform(go, lastTransform);
+        go.transform.parent = gameCardHolderUI.transform;
     }
 }

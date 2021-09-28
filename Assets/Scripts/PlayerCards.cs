@@ -53,7 +53,10 @@ public class PlayerCards : NetworkBehaviour
     {
         if (!hasAuthority)
             return;
-        gameCardHolderUI.InstantiateCard(cardID);
+        //gameCardHolderUI.InstantiateCard(cardID);
+        var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
+        gameCard.GetComponent<GameCardUI>().OpenCardBack();
+        FindObjectOfType<ClientGameManager>().TakeCardFromDeck(gameCard);
     }
 
     [ClientRpc]
