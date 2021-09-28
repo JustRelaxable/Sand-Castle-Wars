@@ -33,7 +33,7 @@ public class CastleTurnController : NetworkBehaviour
             myCastle.myTurn = false;
             OnTurnMine?.Invoke(false);
             turnIndicatorUI.SetIndicatorText(myCastle.myTurn);
-            GameCardUI.RemoveSelectedCard();
+            //GameCardUI.RemoveSelectedCard();
             HandleGlowing(myCastle.myTurn);
         }
         FindObjectOfType<GameCardHolderUI>().HandleCardsAbleToUse();

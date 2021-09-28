@@ -28,6 +28,7 @@ public class GameCardUI : MonoBehaviour
     public Sprite waterSprite;
     public Sprite magicSprite;
 
+    public GameObject cardBack;
     public void PrepareCard(GameCard gameCard,bool isLastCard)
     {
         cardID = CardManager.instance.GetIndex(gameCard);
@@ -169,5 +170,15 @@ public class GameCardUI : MonoBehaviour
         }
 
         Destroy(this.gameObject);
+    }
+
+    public void OpenCardBack()
+    {
+        cardBack.SetActive(true);
+    }
+
+    public void CloseCardBack()
+    {
+        cardBack.SetActive(false);
     }
 }

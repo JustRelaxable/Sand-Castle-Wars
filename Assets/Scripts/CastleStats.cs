@@ -169,16 +169,25 @@ public class CastleStats : NetworkBehaviour
     [ClientRpc]
     public void RpcBasicAttack(int attackTime)
     {
+        bool wall = false;
+        bool castle = false;
         for (int i = 0; i < attackTime; i++)
         {
             if (wallHeight > 0)
             {
                 wallHeight--;
+                wall = true;
             }
             else if (castleHeight > 0)
             {
                 castleHeight--;
+                castle = true;
             }
         }
+
+        if (wall)
+            OnWallHeightChanged(wallHeight);
+        if (castle)
+            OnCastleHeightChanged(castleHeight);
     }
 }

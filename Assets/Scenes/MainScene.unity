@@ -1375,6 +1375,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &494349013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494349014}
+  m_Layer: 5
+  m_Name: CardSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &494349014
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494349013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1239349576}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.0017039, y: -89}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &507509512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1721,7 @@ MonoBehaviour:
     type: 3}
   lastPlayedCard: {fileID: 1895470273}
   bonusCard: {fileID: 1146971883}
+  clientGameManager: {fileID: 1240786857}
 --- !u!114 &726960341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3588,6 +3624,7 @@ RectTransform:
   - {fileID: 1050826432}
   - {fileID: 1895470274}
   - {fileID: 1146971882}
+  - {fileID: 494349014}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10856,9 +10893,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
         type: 3}
+      propertyPath: lastPlayedCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
       propertyPath: cardAnimationSpawner
       value: 
       objectReference: {fileID: 1651146407}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: lastPlayedCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: lastPlayedCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: lastPlayedCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: lastPlayedCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: cardSpawnPoint
+      value: 
+      objectReference: {fileID: 494349013}
     - target: {fileID: 5688032886142093227, guid: 5805e7f583aab9b4e9f4303130444316,
         type: 3}
       propertyPath: m_Name
