@@ -11,7 +11,8 @@ public class ClientGameManager : NetworkBehaviour
     private GameCardHolderUI gameCardHolderUI;
     public event Action OnGameStarted;
     public CardAnimationSpawner cardAnimationSpawner;
-    public GameObject cardSpawnPoint;
+    public GameObject cardRedSpawnPoint;
+    public GameObject cardBlueSpawnPoint;
     public GameObject cardDeck;
     public GameObject lastCardPos;
     public GameObject cardShowing;
@@ -62,7 +63,22 @@ public class ClientGameManager : NetworkBehaviour
             var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
             if (isDiscarded)
                 gameCard.GetComponent<GameCardUI>().OpenDiscarded();
-            gameCard.transform.position = cardSpawnPoint.transform.position;
+
+            var team = FindObjectsOfType<CastleStats>().Single(x => !x.hasAuthority).team;
+
+            switch (team)
+            {
+                case Teams.Blue:
+                    gameCard.transform.position = cardBlueSpawnPoint.transform.position;
+                    break;
+                case Teams.Red:
+                    gameCard.transform.position = cardRedSpawnPoint.transform.position;
+                    break;
+                default:
+                    break;
+            }
+
+            
             StartCoroutine(MoveCardToTransformAndChangeParent(gameCard,gameCardHolderUI.lastPlayedCard.transform));
         }
     }
