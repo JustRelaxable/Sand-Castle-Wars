@@ -1,22 +1,41 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Advertisements;
-using System;
-using UnityEngine.Networking;
-using System.Linq;
 
-public class BonusCardRewardedAds : MonoBehaviour, IUnityAdsListener
+public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 {
-    [SerializeField] string _androidAdUnitId = "Interstitial_Android";
+    [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] public bool adReady;
+    [SerializeField] private ClientGameManager clientGameManager;
+    private int adCount = 0;
 
     private void Awake()
     {
         Advertisement.AddListener(this);
+        clientGameManager.OnGameStarted += ClientGameManager_OnGameStarted;
         adReady = false;
     }
 
-    public void ShowBonusCardRewardedAd()
+    private void ClientGameManager_OnGameStarted()
+    {
+        var castleTurnControllers = FindObjectsOfType<CastleTurnController>();
+        foreach (var castleTurnController in castleTurnControllers)
+        {
+            castleTurnController.OnTurnMine += CastleTurnController_OnTurnMine;
+        }
+    }
+
+    private void CastleTurnController_OnTurnMine(bool obj)
+    {
+        adCount++;
+        if(adCount % 10 == 0)
+        {
+            ShowRoundBasedAd();
+        }
+    }
+
+    public void ShowRoundBasedAd()
     {
         Advertisement.Show(_androidAdUnitId);
     }
@@ -52,7 +71,7 @@ public class BonusCardRewardedAds : MonoBehaviour, IUnityAdsListener
             case ShowResult.Skipped:
                 break;
             case ShowResult.Finished:
-                
+
                 break;
             default:
                 break;

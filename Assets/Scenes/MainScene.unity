@@ -2094,6 +2094,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7322382093325481986, guid: bc2c3e942cbc64840b9dffb81512b657,
+        type: 3}
+      propertyPath: _androidAdUnitId
+      value: Interstitial_Android
+      objectReference: {fileID: 0}
     - target: {fileID: 7322382093325481987, guid: bc2c3e942cbc64840b9dffb81512b657,
         type: 3}
       propertyPath: m_Name
@@ -2600,7 +2605,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 706836725}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1374008165}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fba0dec992c8b045a3c6111dfdfd66b, type: 3}
@@ -4639,6 +4644,27 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
+--- !u!1 &1374008165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7322382093325481987, guid: bc2c3e942cbc64840b9dffb81512b657,
+    type: 3}
+  m_PrefabInstance: {fileID: 706836725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1374008166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374008165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22c6c0b1e3246d44a9c19e69a58fc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Rewarded_Android
+  adReady: 0
+  clientGameManager: {fileID: 1240786857}
 --- !u!1 &1376109139
 GameObject:
   m_ObjectHideFlags: 0
