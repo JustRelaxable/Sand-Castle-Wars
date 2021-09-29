@@ -99,13 +99,24 @@ public class CastleStats : NetworkBehaviour
     [ClientRpc]
     public void RpcHandleNextTurnResources()
     {
+        HandleNextTurnResources();
+    }
+
+    public void HandleNextTurnResources()
+    {
         sandResource += sandProduce;
         waterResource += waterProduce;
         magicResource += magicProduce;
         InvokeOnStatChanged();
     }
+
     [ClientRpc]
     public void RpcSetResource(byte resourceType, int value)
+    {
+        SetResource(resourceType, value);
+    }
+
+    public void SetResource(byte resourceType, int value)
     {
         var type = (ResourceType)resourceType;
         switch (type)
@@ -126,8 +137,14 @@ public class CastleStats : NetworkBehaviour
                 break;
         }
     }
+
     [ClientRpc]
     public void RpcSetProduce(byte resourceType, int value)
+    {
+        SetProduce(resourceType, value);
+    }
+
+    public void SetProduce(byte resourceType, int value)
     {
         var type = (ResourceType)resourceType;
         switch (type)
@@ -148,8 +165,14 @@ public class CastleStats : NetworkBehaviour
                 break;
         }
     }
+
     [ClientRpc]
     public void RpcSetHeightOfBuilding(byte buildingType, int value)
+    {
+        SetHeightOfBuilding(buildingType, value);
+    }
+
+    public void SetHeightOfBuilding(byte buildingType, int value)
     {
         BuildingType type = (BuildingType)buildingType;
         switch (type)
@@ -166,8 +189,14 @@ public class CastleStats : NetworkBehaviour
                 break;
         }
     }
+
     [ClientRpc]
     public void RpcBasicAttack(int attackTime)
+    {
+        BasicAttack(attackTime);
+    }
+
+    public void BasicAttack(int attackTime)
     {
         bool wall = false;
         bool castle = false;

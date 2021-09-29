@@ -20,7 +20,7 @@ public class GameCardUI : MonoBehaviour
     public Image overImage;
     public Image backgroundImage;
     private GameCard gameCard;
-    private static GameCardUI settingsOpenedCard;
+    protected static GameCardUI settingsOpenedCard;
     public GameObject cardSettings;
     public Text cardDescription;
 
@@ -107,7 +107,7 @@ public class GameCardUI : MonoBehaviour
         }
     }
 
-    public void UseTheCard()
+    public virtual void UseTheCard()
     {
         var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
         if (myCastle.GetComponent<CastleTurnController>().myTurn && ableToUseTheCard)
@@ -117,7 +117,7 @@ public class GameCardUI : MonoBehaviour
             FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
         }   
     }
-    public void DiscardTheCard()
+    public virtual void DiscardTheCard()
     {
         var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
         if (myCastle.GetComponent<CastleTurnController>().myTurn)
@@ -134,7 +134,7 @@ public class GameCardUI : MonoBehaviour
             Destroy(selectedCard.gameObject);
     }
 
-    public void OpenCardSettings()
+    public virtual void OpenCardSettings()
     {
         if (!FindObjectOfType<PlayWaiter>().canPlay)
         {

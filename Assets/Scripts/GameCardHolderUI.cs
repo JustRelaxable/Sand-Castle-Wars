@@ -15,7 +15,7 @@ public class GameCardHolderUI : MonoBehaviour
         clientGameManager.OnGameStarted += ClientGameManager_OnGameStarted;
     }
 
-    private void ClientGameManager_OnGameStarted()
+    public void ClientGameManager_OnGameStarted()
     {
         var castleTurnControllers = FindObjectsOfType<CastleTurnController>();
 

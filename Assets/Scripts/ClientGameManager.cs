@@ -42,18 +42,15 @@ public class ClientGameManager : NetworkBehaviour
     [ClientRpc]
     public void RpcGetLastPlayedCard(int cardID,bool isDiscarded)
     {
-        for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
-        {
-            Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
-        }
+        ClearLastPlayedCards();
         //gameCardHolderUI.InstantiateLastCard(cardID);
         var myTurn = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority).myTurn;
-        
+
         if (myTurn)
         {
             if (isDiscarded)
                 GameCardUI.selectedCard.OpenDiscarded();
-            GameCardUI.selectedCard.CloseCardSettings();     
+            GameCardUI.selectedCard.CloseCardSettings();
             StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
             gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
@@ -78,8 +75,16 @@ public class ClientGameManager : NetworkBehaviour
                     break;
             }
 
-            
-            StartCoroutine(MoveCardToTransformAndChangeParent(gameCard,gameCardHolderUI.lastPlayedCard.transform));
+
+            StartCoroutine(MoveCardToTransformAndChangeParent(gameCard, gameCardHolderUI.lastPlayedCard.transform));
+        }
+    }
+
+    private void ClearLastPlayedCards()
+    {
+        for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
+        {
+            Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
         }
     }
 

@@ -47,8 +47,13 @@ public class PlayerCastle : NetworkBehaviour
     [ClientRpc]
     public void RpcUpdateTeams(Teams team)
     {
+        UpdateTeamFlagMaterials(team);
+    }
+
+    public void UpdateTeamFlagMaterials(Teams team)
+    {
         Team = team;
-        if(team == Teams.Blue)
+        if (team == Teams.Blue)
         {
             for (int i = 0; i < flagMeshRenderers.Length; i++)
             {
@@ -104,6 +109,11 @@ public class PlayerCastle : NetworkBehaviour
     {
         if (!hasAuthority)
             return;
+        SetStaticCastleStatSingle();
+    }
+
+    public void SetStaticCastleStatSingle()
+    {
         PlayerCastleStats = castleStats;
     }
 

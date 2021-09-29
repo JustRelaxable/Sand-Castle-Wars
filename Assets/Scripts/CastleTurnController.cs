@@ -54,4 +54,9 @@ public class CastleTurnController : NetworkBehaviour
     {
         sandMeshRenderer.material.SetFloat("_ShouldGlow", value);
     }
+
+    public void InvokeOnTurnMine()
+    {
+        OnTurnMine?.Invoke(true);
+    }
 }
