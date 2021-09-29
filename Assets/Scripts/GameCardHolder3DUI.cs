@@ -24,6 +24,20 @@ public class GameCardHolder3DUI : GameCardHolderUI
         return cardGO;
     }
 
+    public override void InstantiateBonusCard(int gameCardID)
+    {
+        var cardGO = InstantiateCardAndReturn(gameCardID);
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if(transform.GetChild(i).childCount == 0)
+            {
+                cardGO.transform.position = transform.GetChild(i).transform.position;
+                cardGO.transform.parent = transform.GetChild(i).transform;
+            }
+        }
+    }
+
     public override void HandleCardsAbleToUse()
     {
         var compenents = GetComponentsInChildren<GameCardUI>();

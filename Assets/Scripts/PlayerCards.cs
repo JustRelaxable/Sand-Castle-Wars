@@ -64,6 +64,6 @@ public class PlayerCards : NetworkBehaviour
     {
         if (!hasAuthority)
             return;
-        gameCardHolderUI.InstantiateBonusCard(cardID);
+        (gameCardHolderUI).InstantiateBonusCard(cardID);
     }
 }

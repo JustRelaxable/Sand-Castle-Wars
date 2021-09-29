@@ -74,7 +74,7 @@ public class GameCardHolderUI : MonoBehaviour
         cardGO.GetComponent<GameCardUI>().PrepareCard(card,true);
     }
 
-    public void InstantiateBonusCard(int gameCardID)
+    public virtual void InstantiateBonusCard(int gameCardID)
     {
         InstantiateCard(gameCardID);
     }
