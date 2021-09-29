@@ -151,21 +151,6 @@ public class SnglePlayerGameManager : MonoBehaviour
         }
     }
 
-    private bool CheckIfGameFinished(CastleStats callerStats, CastleStats enemyStats)
-    {
-        if (callerStats.castleHeight >= 100 || enemyStats.castleHeight <= 0)
-        {
-            gameFinished = true;
-            callerStats.GetComponent<PlayerCastle>().RpcGameFinished();
-        }
-        else if (callerStats.castleHeight <= 0 || enemyStats.castleHeight >= 100)
-        {
-            gameFinished = true;
-            enemyStats.GetComponent<PlayerCastle>().RpcGameFinished();
-        }
-        return gameFinished;
-    }
-
     private IEnumerator MoveCardToTransform(GameObject go, Transform lastTransform, float duration = 2f)
     {
         var currentPosition = go.transform.position;
