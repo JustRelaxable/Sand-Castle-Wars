@@ -32,8 +32,6 @@ public class PlayerCards : NetworkBehaviour
     {
         if (!hasAuthority)
             return;
-        if (Input.GetKeyDown(KeyCode.E))
-            CmdUseCard(0);
     }
 
     [ClientRpc]

@@ -4262,7 +4262,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5688032887342473219}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2101278281}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70c2ca91e6c04584f945ec624d05019a, type: 3}
@@ -11472,6 +11472,26 @@ MonoBehaviour:
   resourceCost: 3
   resourceType: 0
   cardDescription: Wall +6
+--- !u!1 &2101278281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5688032886142093227, guid: 5805e7f583aab9b4e9f4303130444316,
+    type: 3}
+  m_PrefabInstance: {fileID: 5688032887342473219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2101278282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101278281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2e0765e5b01484fb78d02f5af3d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clientGameManager: {fileID: 1240786857}
+  canPlay: 0
 --- !u!1001 &2121007647
 PrefabInstance:
   m_ObjectHideFlags: 0

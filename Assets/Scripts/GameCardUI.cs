@@ -136,6 +136,11 @@ public class GameCardUI : MonoBehaviour
 
     public void OpenCardSettings()
     {
+        if (!FindObjectOfType<PlayWaiter>().canPlay)
+        {
+            return;
+        }
+
         if (cardSettings.activeInHierarchy)
         {
             CloseCardSettings();
