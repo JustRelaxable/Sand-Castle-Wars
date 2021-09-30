@@ -3253,7 +3253,7 @@ MonoBehaviour:
   cardName: Rider
   resourceCost: 2
   resourceType: 1
-  botPriority: 15
+  botPriority: 22
   cardDescription: Attack 4
 --- !u!1 &761386912
 GameObject:
@@ -5430,7 +5430,7 @@ MonoBehaviour:
   cardName: Platoon
   resourceCost: 4
   resourceType: 1
-  botPriority: 14
+  botPriority: 22
   cardDescription: Attack 6
 --- !u!1 &1239349572
 GameObject:
@@ -7015,7 +7015,7 @@ MonoBehaviour:
   cardName: SWAT
   resourceCost: 18
   resourceType: 1
-  botPriority: 5
+  botPriority: 21
   cardDescription: Enemy Castle -10
 --- !u!1 &1533454782
 GameObject:
@@ -7064,7 +7064,7 @@ MonoBehaviour:
   cardName: Attack
   resourceCost: 10
   resourceType: 1
-  botPriority: 19
+  botPriority: 25
   cardDescription: Attack 12
 --- !u!1 &1570415860
 GameObject:
@@ -13292,7 +13292,7 @@ MonoBehaviour:
   cardName: Knight
   resourceCost: 2
   resourceType: 1
-  botPriority: 15
+  botPriority: 22
   cardDescription: Attack 3
 --- !u!1 &1895470273
 GameObject:
@@ -13736,7 +13736,7 @@ MonoBehaviour:
   cardName: Wain
   resourceCost: 10
   resourceType: 0
-  botPriority: 22
+  botPriority: 24
   cardDescription: 'Castle +8
 
     Enemy Castle -4'
@@ -14032,7 +14032,7 @@ MonoBehaviour:
   cardName: Archer
   resourceCost: 1
   resourceType: 1
-  botPriority: 5
+  botPriority: 24
   cardDescription: Attack 2
 --- !u!1001 &5688032887342473219
 PrefabInstance:
