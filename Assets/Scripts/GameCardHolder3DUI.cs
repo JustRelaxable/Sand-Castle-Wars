@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameCardHolder3DUI : GameCardHolderUI
 {
     public GameObject gameCardUI3D;
-    bool firstRound = true;
+    
     byte firstRoundCount = 0;
     public override void InstantiateCard(int gameCardID)
     {
@@ -73,4 +73,6 @@ public class GameCardHolder3DUI : GameCardHolderUI
             yield return new WaitForSeconds(0.2f);
         }
     }
+
+
 }

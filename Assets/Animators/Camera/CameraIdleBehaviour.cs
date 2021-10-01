@@ -18,7 +18,7 @@ public class CameraIdleBehaviour : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        animator.GetComponent<CameraAnimatorManager>().ReturnToMainMenu();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

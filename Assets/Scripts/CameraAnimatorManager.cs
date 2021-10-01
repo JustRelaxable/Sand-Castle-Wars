@@ -11,6 +11,7 @@ public class CameraAnimatorManager : MonoBehaviour
     public GameObject castleStatsUI;
     public GameObject turnIndicatorUI;
     public GameObject cameraCanvas;
+    public GameObject mainMenu;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -56,10 +57,72 @@ public class CameraAnimatorManager : MonoBehaviour
         }
     }
 
+    private void HandleGameModeClose()
+    {
+        var gameMode = animator.GetInteger("GameMode");
+        switch (gameMode)
+        {
+            case 0:
+                break;
+            case 1:
+                NetworkManager.singleton.StopClient();
+                break;
+            case 2:
+                NetworkManager.singleton.StopHost();
+                break;
+            default:
+                break;
+        }
+
+        animator.SetInteger("GameMode", -1);
+    }
+
     private void ActivateUI()
     {
         castleStatsUI.SetActive(true);
         turnIndicatorUI.SetActive(true);
         cameraCanvas.SetActive(true);
+    }
+    public void ClearGameScene()
+    {
+        castleStatsUI.SetActive(false);
+        turnIndicatorUI.SetActive(false);
+        CardHolderClear();
+        DestroyCastles();
+        cameraCanvas.SetActive(false);
+
+        HandleGameModeClose();
+    }
+
+    private void CardHolderClear()
+    {
+        var holders = FindObjectsOfType<GameCardHolderUI>();
+
+        foreach (var holder in holders)
+        {
+            holder.ClearAllCards();
+            holder.ResetFirstPlay();
+        }
+    }
+
+    private void DestroyCastles()
+    {
+        var castles = FindObjectsOfType<PlayerCastle>();
+
+        for (int i = 0; i < castles.Length; i++)
+        {
+            Destroy(castles[i].gameObject);
+        }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        GameCardBase.ChangeGameCardVariation(new GameCardMulti());
+        mainMenu.SetActive(true);
+    }
+
+    private void OnDisconnectedFromServer(NetworkConnection info)
+    {
+        Debug.Log("xx");
     }
 }

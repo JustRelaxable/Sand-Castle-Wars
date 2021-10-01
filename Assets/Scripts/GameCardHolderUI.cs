@@ -10,6 +10,8 @@ public class GameCardHolderUI : MonoBehaviour
     public GameObject lastPlayedCard;
     public ClientGameManager clientGameManager;
 
+    protected bool firstRound = true;
+
     private void Awake()
     {
         clientGameManager.OnGameStarted += ClientGameManager_OnGameStarted;
@@ -85,5 +87,17 @@ public class GameCardHolderUI : MonoBehaviour
         {
             transform.GetChild(i).GetComponent<GameCardUI>().HandleAbleToUse();
         }
+    }
+
+    public void ClearAllCards()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+    }
+    public void ResetFirstPlay()
+    {
+        firstRound = true;
     }
 }

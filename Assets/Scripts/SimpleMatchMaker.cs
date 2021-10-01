@@ -23,6 +23,7 @@ public class SimpleMatchMaker : MonoBehaviour
     //call this method to request a match to be created on the server
     public void CreateInternetMatch(string matchName,CreateRoomUI createRoomUI)
     {
+        NetworkManager.singleton.StartMatchMaker();
         NetworkManager.singleton.matchMaker.CreateMatch(matchName, 2, true, "", "", "", 0, 0, OnInternetMatchCreate);
         createRoomUI.transform.parent.gameObject.SetActive(false);
     }
@@ -46,6 +47,7 @@ public class SimpleMatchMaker : MonoBehaviour
     //call this method to find a match through the matchmaker
     public void GetInternetMatches()
     {
+        NetworkManager.singleton.StartMatchMaker();
         NetworkManager.singleton.matchMaker.ListMatches(0, 20, "", true, 0, 0, LoadInternetMatchList);
     }
 
@@ -61,6 +63,10 @@ public class SimpleMatchMaker : MonoBehaviour
     {
         if (success)
         {
+            for (int i = 0; i < roomListParent.childCount; i++)
+            {
+                Destroy(roomListParent.GetChild(i).gameObject);
+            }
             foreach (var item in matches)
             {
                 var go = Instantiate(roomUIInstance, roomListParent);
