@@ -13,6 +13,8 @@ public class SimpleMatchMaker : MonoBehaviour
 
     [SerializeField]
     GameObject roomUIInstance;
+
+    public static MatchInfo currentMatchInfo;
     void Start()
     {
         NetworkManager.singleton.StartMatchMaker();
@@ -31,11 +33,8 @@ public class SimpleMatchMaker : MonoBehaviour
         if (success)
         {
             //Debug.Log("Create match succeeded");
-
-            MatchInfo hostInfo = matchInfo;
-            NetworkServer.Listen(hostInfo, 9000);
-
-            NetworkManager.singleton.StartHost(hostInfo);
+            currentMatchInfo = matchInfo;
+            FindObjectOfType<CameraAnimatorManager>().StartGameAnimation();
             transform.parent.gameObject.SetActive(false);
         }
         else
@@ -80,9 +79,8 @@ public class SimpleMatchMaker : MonoBehaviour
         if (success)
         {
             //Debug.Log("Able to join a match");
-
-            MatchInfo hostInfo = matchInfo;
-            NetworkManager.singleton.StartClient(hostInfo);
+            currentMatchInfo = matchInfo;
+            FindObjectOfType<CameraAnimatorManager>().StartGameAnimation();
             transform.parent.gameObject.SetActive(false);
         }
         else

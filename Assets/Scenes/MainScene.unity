@@ -626,6 +626,133 @@ RectTransform:
   m_AnchoredPosition: {x: 66.8999, y: 16.127014}
   m_SizeDelta: {x: 87.36432, y: 313.0061}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &160436053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160436055}
+  - component: {fileID: 160436054}
+  m_Layer: 0
+  m_Name: AmbientSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &160436054
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160436053}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b1015d211ce5b4642b6b219ffe0770ef, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &160436055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160436053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 859.01544, y: 674.7581, z: -336.9543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210761231
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,11 +767,11 @@ GameObject:
   - component: {fileID: 210761232}
   m_Layer: 5
   m_Name: CameraCanvas
-  m_TagString: Untagged
+  m_TagString: CameraCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &210761232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,6 +1713,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1146334075}
+        m_MethodName: ChangeGameMode
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &385711094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,7 +2150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &494349014
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2483,6 +2621,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1146334075}
+        m_MethodName: ChangeGameMode
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &527476689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2851,6 +3000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CardDeck
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681437792365883030, guid: 32dfb94c485d5d64f849b0bbd29c050c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8092309755920118558, guid: 32dfb94c485d5d64f849b0bbd29c050c,
         type: 3}
@@ -3470,9 +3624,9 @@ RectTransform:
   m_Father: {fileID: 860894378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 10.739998}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -90.26}
   m_SizeDelta: {x: 298.85413, y: 149.71355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820346078 stripped
@@ -4397,7 +4551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1050826432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4915,6 +5069,8 @@ GameObject:
   - component: {fileID: 1146334069}
   - component: {fileID: 1146334072}
   - component: {fileID: 1146334073}
+  - component: {fileID: 1146334074}
+  - component: {fileID: 1146334075}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4980,13 +5136,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146334068}
-  m_LocalRotation: {x: -0.007825152, y: -0, z: -0, w: 0.99996936}
-  m_LocalPosition: {x: -0.28, y: 1, z: -8.59}
+  m_LocalRotation: {x: -0.022007441, y: -0.9718486, z: -0.0366809, w: 0.23169051}
+  m_LocalPosition: {x: 2.328, y: 0.732, z: -4.694}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.897, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -4.6740003, y: -153.242, z: 1.4820001}
 --- !u!114 &1146334072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5025,7 +5181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146334068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e50f5dcb0578994cb910160d91608e4, type: 3}
   m_Name: 
@@ -5034,6 +5190,40 @@ MonoBehaviour:
   shakeDuration: 0
   shakeAmount: 0.03
   decreaseFactor: 1
+--- !u!95 &1146334074
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146334068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e2e480f1322f5e4ba2868eb9507f046, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1146334075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146334068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b02ebabdc4eff4194bc317f4fe9b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castleStatsUI: {fileID: 1399362468}
+  turnIndicatorUI: {fileID: 1050826431}
+  cameraCanvas: {fileID: 210761231}
 --- !u!1001 &1146971881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5045,6 +5235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BonusCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 507055018502982596, guid: a29f6516199bbb542ab1e9d6ec0cab9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 507055018502982597, guid: a29f6516199bbb542ab1e9d6ec0cab9d,
         type: 3}
@@ -5799,7 +5994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1321416332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6143,7 +6338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1399362469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7602,9 +7797,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026657786}
-        m_MethodName: SetupScene
-        m_Mode: 1
+      - m_Target: {fileID: 1484484571}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7613,9 +7808,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1484484571}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1146334074}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameStarts
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1146334075}
+        m_MethodName: ChangeGameMode
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13310,7 +13516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1895470274
 RectTransform:
   m_ObjectHideFlags: 0
