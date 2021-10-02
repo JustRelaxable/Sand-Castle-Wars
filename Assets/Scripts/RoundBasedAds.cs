@@ -17,8 +17,9 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
         adReady = false;
     }
 
-    private void ClientGameManager_OnGameStarted()
+    public void ClientGameManager_OnGameStarted()
     {
+        adCount = 0;
         var castleTurnControllers = FindObjectsOfType<CastleTurnController>();
         foreach (var castleTurnController in castleTurnControllers)
         {

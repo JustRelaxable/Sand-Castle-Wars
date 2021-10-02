@@ -63,6 +63,7 @@ public class CameraAnimatorManager : MonoBehaviour
         switch (gameMode)
         {
             case 0:
+                FindObjectOfType<SnglePlayerGameManager>().adManager.SetActive(false);
                 break;
             case 1:
                 NetworkManager.singleton.StopClient();

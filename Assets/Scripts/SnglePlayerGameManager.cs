@@ -17,6 +17,9 @@ public class SnglePlayerGameManager : MonoBehaviour
     [SerializeField]
     GameCardHolderUI gameCardHolderUI;
 
+    [SerializeField]
+    public GameObject adManager;
+
 
     CastleStats playerStats;
     CastleStats botStats;
@@ -25,6 +28,7 @@ public class SnglePlayerGameManager : MonoBehaviour
     private Transform lastPlayedCardParentTransform;
     public GameObject nullPoint;
     private bool isLastCardArrived = false;
+    private bool gameFinished = false;
     public GameObject cardDeck;
     public GameObject cardShowing;
     public GameObject cardBlueSpawnPoint;
@@ -37,7 +41,8 @@ public class SnglePlayerGameManager : MonoBehaviour
     public void SetupScene()
     {
         GameCardBase.ChangeGameCardVariation(new GameCardSingle());
-
+        adManager.gameObject.SetActive(true);
+        
         
 
         var playerCastle = Instantiate(castlePrefab);
@@ -57,6 +62,9 @@ public class SnglePlayerGameManager : MonoBehaviour
         gameCardHolderUI.ClientGameManager_OnGameStarted();
         castleStatsUI.OnGameStarted();
         PrepareCastleCards(playerCastle.GetComponent<PlayerCards>());
+
+        adManager.GetComponent<RoundBasedAds>().ClientGameManager_OnGameStarted();
+
         playerStats.GetComponent<CastleTurnController>().InvokeOnTurnMine();
     }
 
@@ -82,6 +90,9 @@ public class SnglePlayerGameManager : MonoBehaviour
 
     public void PlayCard(int gameCardID,bool isDiscarded)
     {
+        if (gameFinished)
+            return;
+
         ClearLastPlayedCards();
        
 
@@ -102,7 +113,9 @@ public class SnglePlayerGameManager : MonoBehaviour
 
         var gameCard = gameCardHolderUI.InstantiateCardAndReturn(UnityEngine.Random.Range(0, CardManager.instance.cards.Length));
         StartCoroutine(CardTakenFromDeck(gameCard));
-        
+
+        if (CheckIfGameFinished(playerStats, botStats))
+            return;
 
         StartCoroutine(HandleBot());
     }
@@ -132,11 +145,32 @@ public class SnglePlayerGameManager : MonoBehaviour
             
         botGameCard.transform.position = cardBlueSpawnPoint.transform.position;
         StartCoroutine(MoveCardToTransformAndChangeParent(botGameCard, gameCardHolderUI.lastPlayedCard.transform));
+
+        if (CheckIfGameFinished(playerStats, botStats))
+            yield break;
+
         playerStats.HandleNextTurnResources();
         gameCardHolderUI.HandleCardsAbleToUse();
         playerStats.GetComponent<CastleTurnController>().InvokeOnTurnMine();
     }
-
+    private bool CheckIfGameFinished(CastleStats callerStats, CastleStats enemyStats)
+    {
+        if (callerStats.castleHeight >= 100 || enemyStats.castleHeight <= 0)
+        {
+            var turnIndicator = FindObjectOfType<TurnIndicatorUI>();
+            turnIndicator.SetIndicatorText("You Win!");
+            gameFinished = true;
+            return true;
+        }
+        else if (callerStats.castleHeight <= 0 || enemyStats.castleHeight >= 100)
+        {
+            var turnIndicator = FindObjectOfType<TurnIndicatorUI>();
+            turnIndicator.SetIndicatorText("You Lose!");
+            gameFinished = true;
+            return true;
+        }
+        return false;
+    }
     public void SetLastPlayedCardParentTransform(Transform transform)
     {
         lastPlayedCardParentTransform = transform;
