@@ -14,7 +14,7 @@ public class GameCardUI : MonoBehaviour
 
     public Color normalColor;
     public Color darkenColor;
-    bool ableToUseTheCard = false;
+    protected bool ableToUseTheCard = false;
     public bool isLastCard = false;
 
     public Image overImage;

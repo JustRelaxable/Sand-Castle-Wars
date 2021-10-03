@@ -23,6 +23,8 @@ public class GameCardUISingle : GameCard3DUI
 
     public override void UseTheCard()
     {
+        if (!ableToUseTheCard)
+            return;
         selectedCard = this;
         FindObjectOfType<SnglePlayerGameManager>().SetLastPlayedCardParentTransform(transform.parent);
         FindObjectOfType<SnglePlayerGameManager>().PlayCard(cardID,false);
