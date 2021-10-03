@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4523,7 +4523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.32946777, y: 0.11151123}
+  m_AnchoredPosition: {x: -0.3293457, y: 0.11151123}
   m_SizeDelta: {x: -0.27127075, y: 0.22306824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860894379
@@ -6368,7 +6368,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.272
+      value: 0.104
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -6378,7 +6378,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.707
+      value: -7.857
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -6388,7 +6388,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9163108
+      value: -0.56113905
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -6398,7 +6398,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.4004679
+      value: 0.82772154
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -6413,7 +6413,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -132.785
+      value: -68.269005
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -15596,7 +15596,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.588
+      value: -0.803
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -15606,7 +15606,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.698
+      value: -7.565
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -15616,7 +15616,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9988229
+      value: -0.5965398
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -15626,7 +15626,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.04850612
+      value: 0.8025835
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
@@ -15641,7 +15641,7 @@ PrefabInstance:
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -174.43901
+      value: -73.245
       objectReference: {fileID: 0}
     - target: {fileID: 2754745463577209529, guid: b68b75543aff1994280edcd3574a1d21,
         type: 3}
