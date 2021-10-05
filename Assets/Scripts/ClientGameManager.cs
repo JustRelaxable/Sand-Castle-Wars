@@ -154,7 +154,7 @@ public class ClientGameManager : NetworkBehaviour
     public void RpcAdsFinished()
     {
         var playWaiter = FindObjectOfType<PlayWaiter>();
-        StartCoroutine(playWaiter.WaitForPlay(1f));
+        StartCoroutine(playWaiter.WaitForPlay(2f));
         FindObjectOfType<RoundBasedAds>().adsWatchedOnBothPlayers = true;
     }
 }
