@@ -25,7 +25,7 @@ public class PlayWaiter : MonoBehaviour
     {
         if (obj)
         {
-            StartCoroutine(WaitForPlay(4f));
+            StartCoroutine(WaitForPlay(3.5f));
         }
     }
 

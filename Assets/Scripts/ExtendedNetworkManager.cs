@@ -15,15 +15,13 @@ public class ExtendedNetworkManager : NetworkManager
         onClientDisconnected?.Invoke(conn);
         Debug.Log("tt");
     }
-
-    public override void OnDropConnection(bool success, string extendedInfo)
+    public override void OnServerDisconnect(NetworkConnection conn)
     {
-        base.OnDropConnection(success, extendedInfo);
-        Debug.Log("tt");
-    }
-
-    public override void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo)
-    {
-        Debug.Log("tt");
+        NetworkServer.DestroyPlayersForConnection(conn);
+        if (conn.lastError != NetworkError.Ok)
+        {
+            if (LogFilter.logError) { Debug.Log("ServerDisconnected due to error: " + conn.lastError); }
+        }
+        Debug.Log("A client disconnected from the server: " + conn);
     }
 }
