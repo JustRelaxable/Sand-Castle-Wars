@@ -7250,6 +7250,7 @@ MonoBehaviour:
   _androidAdUnitId: Rewarded_Android
   adReady: 0
   clientGameManager: {fileID: 1240786857}
+  adsWatchedOnBothPlayers: 0
 --- !u!1 &1376109139
 GameObject:
   m_ObjectHideFlags: 0

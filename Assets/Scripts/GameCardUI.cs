@@ -136,7 +136,12 @@ public class GameCardUI : MonoBehaviour
 
     public virtual void OpenCardSettings()
     {
+        bool adsWatchedOnBothPlayers = FindObjectOfType<RoundBasedAds>().adsWatchedOnBothPlayers;
         if (!FindObjectOfType<PlayWaiter>().canPlay)
+        {
+            return;
+        }
+        if (!adsWatchedOnBothPlayers)
         {
             return;
         }

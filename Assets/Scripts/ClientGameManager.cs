@@ -149,4 +149,12 @@ public class ClientGameManager : NetworkBehaviour
     {
         lastPlayedCardParentTransform = transform;
     }
+
+    [ClientRpc]
+    public void RpcAdsFinished()
+    {
+        var playWaiter = FindObjectOfType<PlayWaiter>();
+        StartCoroutine(playWaiter.WaitForPlay(1f));
+        FindObjectOfType<RoundBasedAds>().adsWatchedOnBothPlayers = true;
+    }
 }

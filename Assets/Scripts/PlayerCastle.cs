@@ -35,7 +35,7 @@ public class PlayerCastle : NetworkBehaviour
     }
     private void Start()
     {
-        
+
         UpdateMeshHeight(castleStats.castleHeight);
         animator = GetComponent<Animator>();
     }
@@ -85,12 +85,12 @@ public class PlayerCastle : NetworkBehaviour
     }
 
     public void OnCastleHeightChanged(int newHeight)
-    {   
+    {
         UpdateMeshHeightWithAnim(newHeight);
         castleStats.castleHeight = newHeight;
     }
 
-    IEnumerator CastleHeightChange(float duration,int newHeight)
+    IEnumerator CastleHeightChange(float duration, int newHeight)
     {
         animator.SetBool("Shake", true);
         float currentTime = 0f;
@@ -98,7 +98,7 @@ public class PlayerCastle : NetworkBehaviour
 
         while (currentTime <= duration)
         {
-            meshObjects.transform.localPosition = Vector3.Lerp(meshObjects.transform.localPosition, heightPosToGo, (currentTime/duration));
+            meshObjects.transform.localPosition = Vector3.Lerp(meshObjects.transform.localPosition, heightPosToGo, (currentTime / duration));
             currentTime += Time.deltaTime;
             yield return null;
         }
@@ -135,5 +135,11 @@ public class PlayerCastle : NetworkBehaviour
     public void CmdRequestBonusCard(NetworkInstanceId id)
     {
         GameManager.instance.GetBonusCard(id);
+    }
+
+    [Command]
+    public void CmdTellAdsFinished()
+    {
+        GameManager.instance.AdsFinished(netId);
     }
 }

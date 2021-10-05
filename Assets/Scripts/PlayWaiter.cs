@@ -25,14 +25,14 @@ public class PlayWaiter : MonoBehaviour
     {
         if (obj)
         {
-            StartCoroutine(WaitForPlay());
+            StartCoroutine(WaitForPlay(4f));
         }
     }
 
-    private IEnumerator WaitForPlay()
+    public IEnumerator WaitForPlay(float waitTime)
     {
         canPlay = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(waitTime);
         canPlay = true;
     }
 }

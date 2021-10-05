@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using System.Linq;
 
 public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 {
@@ -9,6 +10,7 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
     [SerializeField] public bool adReady;
     [SerializeField] private ClientGameManager clientGameManager;
     private int adCount = 0;
+    public bool adsWatchedOnBothPlayers;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
     public void ClientGameManager_OnGameStarted()
     {
         adCount = 0;
+        adsWatchedOnBothPlayers = true;
         var castleTurnControllers = FindObjectsOfType<CastleTurnController>();
         foreach (var castleTurnController in castleTurnControllers)
         {
@@ -32,6 +35,7 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
         adCount++;
         if(adCount % 10 == 0)
         {
+            adsWatchedOnBothPlayers = false;
             ShowRoundBasedAd();
         }
     }
@@ -68,11 +72,9 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
         switch (showResult)
         {
             case ShowResult.Failed:
-                break;
             case ShowResult.Skipped:
-                break;
             case ShowResult.Finished:
-
+                FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority).CmdTellAdsFinished();
                 break;
             default:
                 break;

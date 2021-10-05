@@ -19,6 +19,8 @@ public class GameManager : NetworkBehaviour
 
     private object cardInTheProgress = new object();
     private NetworkInstanceId lastPlayedID;
+
+    private int adsFinishedID = -1;
     private void Start()
     {
         instance = this;
@@ -205,5 +207,18 @@ public class GameManager : NetworkBehaviour
     {
         var x = NetworkServer.FindLocalObject(id);
         x.GetComponent<PlayerCards>().RpcTakeBonusCard(GiveRandomCardIndex());
+    }
+
+    public void AdsFinished(NetworkInstanceId id)
+    {
+        if(adsFinishedID == -1)
+        {
+            adsFinishedID = (int)id.Value;
+        }
+        else if(adsFinishedID != (int)id.Value)
+        {
+            adsFinishedID = -1;
+            clientGameManager.RpcAdsFinished();
+        }
     }
 }
