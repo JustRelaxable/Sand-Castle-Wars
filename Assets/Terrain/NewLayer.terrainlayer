@@ -7,16 +7,16 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NewLayer
-  m_DiffuseTexture: {fileID: 2800000, guid: baddb0e8036955a45afeb227fd87417b, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 7c330d04bd3ccb84ea053af4b025023f, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: aa1cbd60fddcf7643a22ff33befa8193, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: dbf0e509ff03deb43a5d7e6147663cbc, type: 3}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 2, y: 2}
+  m_TileSize: {x: 1, y: 1}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
   m_Smoothness: 0
   m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_DiffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}
+  m_DiffuseRemapMax: {x: 0.9433962, y: 0.84879047, z: 0.6986472, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}

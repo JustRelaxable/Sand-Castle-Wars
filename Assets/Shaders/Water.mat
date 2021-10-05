@@ -33,7 +33,7 @@ Material:
     - _Depth: 1.27
     - _NormalStrength: 1
     - _Smoothnes: 0.872
-    - _Strength: 0.09
+    - _Strength: 0.86
     m_Colors:
-    - _DeepColor: {r: 0.01108044, g: 0.50557905, b: 0.7830188, a: 0.7215686}
-    - _ShallowColor: {r: 0.18396226, g: 0.97119874, b: 1, a: 0.68235296}
+    - _DeepColor: {r: 0.08627451, g: 0.6509804, b: 0.67058825, a: 0.84313726}
+    - _ShallowColor: {r: 0.08530616, g: 0.64999753, b: 0.6698113, a: 0.68235296}

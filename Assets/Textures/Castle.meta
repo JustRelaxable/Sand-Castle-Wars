@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: 0e1c2fae8c4cfa64eb05adb60b25506b
+<<<<<<< Updated upstream:Assets/Textures/Castle.meta
+guid: b0df1c8997516964ab50ef76b66ee740
+=======
+guid: 215097ed0eb5b41b7b3f3d23a41bc254
+>>>>>>> Stashed changes:Assets/UnityFBXExporter.meta
 folderAsset: yes
+timeCreated: 1460504524
+licenseType: Free
 DefaultImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
