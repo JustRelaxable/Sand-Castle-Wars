@@ -20,6 +20,9 @@ public class SnglePlayerGameManager : MonoBehaviour
     [SerializeField]
     public GameObject adManager;
 
+    [SerializeField]
+    LastPlayedCardUI lastPlayedCardUI;
+
 
     CastleStats playerStats;
     CastleStats botStats;
@@ -106,7 +109,8 @@ public class SnglePlayerGameManager : MonoBehaviour
         }
             
         GameCardUI.selectedCard.CloseCardSettings();
-        StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject));
+        var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+        StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
         GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
         gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
 
@@ -144,7 +148,11 @@ public class SnglePlayerGameManager : MonoBehaviour
 
             
         botGameCard.transform.position = cardBlueSpawnPoint.transform.position;
-        StartCoroutine(MoveCardToTransformAndChangeParent(botGameCard, gameCardHolderUI.lastPlayedCard.transform));
+
+        var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+        StartCoroutine(MoveCardToTransform(botGameCard, cardPosToGo));
+        botGameCard.transform.SetParent(lastPlayedCardUI.transform);
+        //StartCoroutine(MoveCardToTransformAndChangeParent(botGameCard, gameCardHolderUI.lastPlayedCard.transform));
 
         if (CheckIfGameFinished(playerStats, botStats))
             yield break;
@@ -179,10 +187,10 @@ public class SnglePlayerGameManager : MonoBehaviour
 
     private void ClearLastPlayedCards()
     {
-        for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
-        {
-            Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
-        }
+        //for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
+        //{
+        //    Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
+        //}
     }
 
     private IEnumerator MoveCardToTransform(GameObject go, Transform lastTransform, float duration = 2f)
@@ -194,6 +202,19 @@ public class SnglePlayerGameManager : MonoBehaviour
         {
             curve = lastPlayedCurve.Evaluate((time / duration));
             go.transform.position = Vector3.Lerp(currentPosition, lastTransform.position, curve);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+    private IEnumerator MoveCardToTransform(GameObject go, Vector3 lastPosition, float duration = 2f)
+    {
+        var currentPosition = go.transform.position;
+        var time = 0f;
+        float curve = 0f;
+        while (time <= duration)
+        {
+            curve = lastPlayedCurve.Evaluate((time / duration));
+            go.transform.position = Vector3.Lerp(currentPosition, lastPosition, curve);
             time += Time.deltaTime;
             yield return null;
         }
@@ -222,9 +243,9 @@ public class SnglePlayerGameManager : MonoBehaviour
         go.GetComponent<GameCard3DUI>().animator.SetTrigger("TurnBack");
         yield return MoveCardToTransformAndChangeParent(go, lastPlayedCardParentTransform);
     }
-    private IEnumerator MoveLastPlayedCard(GameObject go)
+    private IEnumerator MoveLastPlayedCard(GameObject go,Vector3 posToGo)
     {
-        yield return MoveCardToTransform(go, gameCardHolderUI.lastPlayedCard.transform, 1f);
+        yield return MoveCardToTransform(go, posToGo, 1f);
         isLastCardArrived = true;
     }
 }

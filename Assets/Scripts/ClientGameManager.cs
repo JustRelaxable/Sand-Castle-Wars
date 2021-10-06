@@ -7,6 +7,9 @@ using System.Linq;
 
 public class ClientGameManager : NetworkBehaviour
 {
+    [SerializeField]
+    LastPlayedCardUI lastPlayedCardUI;
+
     private CastleStatsUI castleStatsUI;
     private GameCardHolderUI gameCardHolderUI;
     public event Action OnGameStarted;
@@ -51,7 +54,8 @@ public class ClientGameManager : NetworkBehaviour
             if (isDiscarded)
                 GameCardUI.selectedCard.OpenDiscarded();
             GameCardUI.selectedCard.CloseCardSettings();
-            StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject));
+            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+            StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
             gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
         }
@@ -75,17 +79,22 @@ public class ClientGameManager : NetworkBehaviour
                     break;
             }
 
-
-            StartCoroutine(MoveCardToTransformAndChangeParent(gameCard, gameCardHolderUI.lastPlayedCard.transform));
+            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+            StartCoroutine(MoveCardToTransform(gameCard, cardPosToGo));
+            gameCard.transform.SetParent(lastPlayedCardUI.transform);
         }
     }
 
     private void ClearLastPlayedCards()
     {
-        for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
-        {
-            Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
-        }
+        //if(gameCardHolderUI.transform.childCount == 3)
+        //{
+        //    Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(1).gameObject);
+        //}
+        //for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
+        //{
+        //    Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
+        //}
     }
 
     [ClientRpc]
@@ -115,6 +124,19 @@ public class ClientGameManager : NetworkBehaviour
             yield return null;
         }
     }
+    private IEnumerator MoveCardToTransform(GameObject go, Vector3 lastPosition, float duration = 2f)
+    {
+        var currentPosition = go.transform.position;
+        var time = 0f;
+        float curve = 0f;
+        while (time <= duration)
+        {
+            curve = lastPlayedCurve.Evaluate((time / duration));
+            go.transform.position = Vector3.Lerp(currentPosition, lastPosition, curve);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
     private IEnumerator MoveCardToTransformAndPutToCard(GameObject go, Transform lastTransform)
     {
         yield return MoveCardToTransform(go, lastTransform);
@@ -139,9 +161,9 @@ public class ClientGameManager : NetworkBehaviour
         go.GetComponent<GameCard3DUI>().animator.SetTrigger("TurnBack");
         yield return MoveCardToTransformAndChangeParent(go, lastPlayedCardParentTransform);
     }
-    private IEnumerator MoveLastPlayedCard(GameObject go)
+    private IEnumerator MoveLastPlayedCard(GameObject go, Vector3 posToGo)
     {
-        yield return MoveCardToTransform(go, gameCardHolderUI.lastPlayedCard.transform,1f);
+        yield return MoveCardToTransform(go, posToGo, 1f);
         isLastCardArrived = true;
     }
 
