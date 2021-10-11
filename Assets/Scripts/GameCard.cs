@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [System.Serializable]
 public class GameCard : GameCardBase,ICard
@@ -10,6 +11,7 @@ public class GameCard : GameCardBase,ICard
     public int resourceCost;
     public ResourceType resourceType;
     public int botPriority;
+    public Sprite cardIcon;
     [TextArea]
     public string cardDescription;
     public virtual void UseTheCard(CastleStats executor,CastleStats enemy)

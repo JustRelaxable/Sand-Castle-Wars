@@ -1382,6 +1382,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 5
+  cardIcon: {fileID: 0}
   cardDescription: Enemy Magic -8
 --- !u!1 &232659260
 GameObject:
@@ -1431,6 +1432,7 @@ MonoBehaviour:
   resourceCost: 5
   resourceType: 0
   botPriority: 15
+  cardIcon: {fileID: 0}
   cardDescription: Castle +5
 --- !u!1 &237560830
 GameObject:
@@ -1715,6 +1717,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 30
+  cardIcon: {fileID: 0}
   cardDescription: Magic +8
 --- !u!1 &288543627
 GameObject:
@@ -1765,6 +1768,7 @@ MonoBehaviour:
   resourceCost: 12
   resourceType: 1
   botPriority: 0
+  cardIcon: {fileID: 0}
   cardDescription: Enemy Resources -4
 --- !u!1 &317326487
 GameObject:
@@ -3847,6 +3851,7 @@ MonoBehaviour:
   resourceCost: 21
   resourceType: 2
   botPriority: 27
+  cardIcon: {fileID: 0}
   cardDescription: Attack 25
 --- !u!1001 &647494192
 PrefabInstance:
@@ -4112,6 +4117,7 @@ MonoBehaviour:
   resourceCost: 39
   resourceType: 0
   botPriority: 20
+  cardIcon: {fileID: 0}
   cardDescription: Castle +32
 --- !u!1001 &706836725
 PrefabInstance:
@@ -4318,6 +4324,7 @@ MonoBehaviour:
   resourceCost: 8
   resourceType: 2
   botPriority: 28
+  cardIcon: {fileID: 0}
   cardDescription: Magic Produce +1
 --- !u!1 &751877884
 GameObject:
@@ -4442,6 +4449,7 @@ MonoBehaviour:
   resourceCost: 2
   resourceType: 1
   botPriority: 22
+  cardIcon: {fileID: 0}
   cardDescription: Attack 4
 --- !u!1 &761386912
 GameObject:
@@ -4835,6 +4843,7 @@ MonoBehaviour:
   resourceCost: 15
   resourceType: 1
   botPriority: 24
+  cardIcon: {fileID: 0}
   cardDescription: Transfer Resources 5
 --- !u!1 &892484579
 GameObject:
@@ -4884,6 +4893,7 @@ MonoBehaviour:
   resourceCost: 1
   resourceType: 0
   botPriority: 16
+  cardIcon: {fileID: 0}
   cardDescription: Castle +2
 --- !u!1 &908982569
 GameObject:
@@ -6559,6 +6569,7 @@ MonoBehaviour:
   resourceCost: 22
   resourceType: 2
   botPriority: 26
+  cardIcon: {fileID: 0}
   cardDescription: Castle +22
 --- !u!1 &1164598895
 GameObject:
@@ -6608,6 +6619,7 @@ MonoBehaviour:
   resourceCost: 3
   resourceType: 0
   botPriority: 18
+  cardIcon: {fileID: 0}
   cardDescription: 'Castle +8
 
     Wall -4'
@@ -6659,6 +6671,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 1
   botPriority: 22
+  cardIcon: {fileID: 0}
   cardDescription: Attack 6
 --- !u!1 &1239349572
 GameObject:
@@ -6937,6 +6950,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 5
+  cardIcon: {fileID: 0}
   cardDescription: Enemy Sand -8
 --- !u!1 &1317765013
 GameObject:
@@ -7174,6 +7188,7 @@ MonoBehaviour:
   resourceCost: 1
   resourceType: 0
   botPriority: 15
+  cardIcon: {fileID: 0}
   cardDescription: Wall +3
 --- !u!1 &1361196504
 GameObject:
@@ -7321,6 +7336,7 @@ MonoBehaviour:
   resourceCost: 8
   resourceType: 1
   botPriority: 28
+  cardIcon: {fileID: 0}
   cardDescription: Water Produce +1
 --- !u!1 &1388296665
 GameObject:
@@ -7371,6 +7387,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 5
+  cardIcon: {fileID: 0}
   cardDescription: Enemy Weapons -8
 --- !u!1 &1397331068
 GameObject:
@@ -8533,6 +8550,7 @@ MonoBehaviour:
   resourceCost: 18
   resourceType: 1
   botPriority: 21
+  cardIcon: {fileID: 0}
   cardDescription: Enemy Castle -10
 --- !u!1 &1533454782
 GameObject:
@@ -8582,6 +8600,7 @@ MonoBehaviour:
   resourceCost: 10
   resourceType: 1
   botPriority: 25
+  cardIcon: {fileID: 0}
   cardDescription: Attack 12
 --- !u!1 &1570415860
 GameObject:
@@ -8781,6 +8800,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 20
+  cardIcon: {fileID: 0}
   cardDescription: Sand +8
 --- !u!1 &1582275337
 GameObject:
@@ -8868,6 +8888,7 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 20
+  cardIcon: {fileID: 0}
   cardDescription: Water +8
 --- !u!1 &1614883254
 GameObject:
@@ -8981,6 +9002,7 @@ MonoBehaviour:
   resourceCost: 8
   resourceType: 0
   botPriority: 28
+  cardIcon: {fileID: 0}
   cardDescription: Sand Produce +1
 --- !u!1 &1620744830
 GameObject:
@@ -15170,6 +15192,7 @@ MonoBehaviour:
   resourceCost: 2
   resourceType: 1
   botPriority: 22
+  cardIcon: {fileID: 0}
   cardDescription: Attack 3
 --- !u!1 &1895470273
 GameObject:
@@ -15287,6 +15310,7 @@ MonoBehaviour:
   resourceCost: 25
   resourceType: 2
   botPriority: 29
+  cardIcon: {fileID: 0}
   cardDescription: 'All +1
 
     Enemy All -1'
@@ -15443,6 +15467,7 @@ MonoBehaviour:
   resourceCost: 18
   resourceType: 0
   botPriority: 12
+  cardIcon: {fileID: 0}
   cardDescription: Castle +20
 --- !u!1 &1992213700
 GameObject:
@@ -15493,6 +15518,7 @@ MonoBehaviour:
   resourceCost: 28
   resourceType: 1
   botPriority: 26
+  cardIcon: {fileID: 0}
   cardDescription: Attack 32
 --- !u!1 &2002025326
 GameObject:
@@ -15739,6 +15765,7 @@ MonoBehaviour:
   resourceCost: 10
   resourceType: 0
   botPriority: 24
+  cardIcon: {fileID: 0}
   cardDescription: 'Castle +8
 
     Enemy Castle -4'
@@ -15790,6 +15817,7 @@ MonoBehaviour:
   resourceCost: 12
   resourceType: 0
   botPriority: 25
+  cardIcon: {fileID: 0}
   cardDescription: Wall +22
 --- !u!1001 &2037816626
 PrefabInstance:
@@ -16029,6 +16057,7 @@ MonoBehaviour:
   resourceCost: 3
   resourceType: 0
   botPriority: 20
+  cardIcon: {fileID: 0}
   cardDescription: Wall +6
 --- !u!1 &2091597255
 GameObject:
@@ -16238,6 +16267,7 @@ MonoBehaviour:
   resourceCost: 1
   resourceType: 1
   botPriority: 24
+  cardIcon: {fileID: 0}
   cardDescription: Attack 2
 --- !u!1001 &5688032887342473219
 PrefabInstance:

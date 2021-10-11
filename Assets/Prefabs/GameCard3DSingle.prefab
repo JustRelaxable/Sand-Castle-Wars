@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4806200788736647648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6981176233569948730}
+  - component: {fileID: 3949372792540929081}
+  - component: {fileID: 2313377601566139222}
+  m_Layer: 0
+  m_Name: CardIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6981176233569948730
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4806200788736647648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00901821}
+  m_LocalScale: {x: 3.9209592, y: 3.9209597, z: 3.9209592}
+  m_Children: []
+  m_Father: {fileID: 6720729009344487444}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.28678235, y: 0.36246666}
+  m_AnchorMax: {x: 0.7127169, y: 0.63578385}
+  m_AnchoredPosition: {x: 0.00010109693, y: 0.00041519105}
+  m_SizeDelta: {x: -0.094995186, y: -0.09222763}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3949372792540929081
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4806200788736647648}
+  m_CullTransparentMesh: 0
+--- !u!114 &2313377601566139222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4806200788736647648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5874306607792406710
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +196,7 @@ MonoBehaviour:
   isLastCard: 0
   overImage: {fileID: 6720729010310794577}
   backgroundImage: {fileID: 6720729009344487445}
+  cardIcon: {fileID: 2313377601566139222}
   cardSettings: {fileID: 6720729011089623892}
   cardDescription: {fileID: 6720729010026899642}
   sandSprite: {fileID: 21300000, guid: d4fb6060fbe75b04a8cc182d8489d54d, type: 3}
@@ -290,6 +365,7 @@ RectTransform:
   m_LocalScale: {x: 0.2550396, y: 0.2550396, z: 0.2550396}
   m_Children:
   - {fileID: 6720729010026899637}
+  - {fileID: 6981176233569948730}
   - {fileID: 6720729009797888722}
   - {fileID: 6720729010052157925}
   - {fileID: 6720729010310794579}
@@ -521,7 +597,7 @@ RectTransform:
   m_LocalScale: {x: 0.0015319517, y: 0.0015319517, z: 0.0015319517}
   m_Children: []
   m_Father: {fileID: 6720729009344487444}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.79866844}
   m_AnchorMax: {x: 0.5, y: 0.79866844}
@@ -829,7 +905,7 @@ RectTransform:
   - {fileID: 6720729009623666619}
   - {fileID: 6720729009398837022}
   m_Father: {fileID: 6720729009344487444}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -941,7 +1017,7 @@ RectTransform:
   m_LocalScale: {x: 0.0057240897, y: 0.0057240897, z: 0.0057240897}
   m_Children: []
   m_Father: {fileID: 6720729009344487444}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1431,7 +1507,7 @@ RectTransform:
   m_LocalScale: {x: 0.0014647158, y: 0.0014647158, z: 0.0014647158}
   m_Children: []
   m_Father: {fileID: 6720729009344487444}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 59.342003}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -19,6 +19,7 @@ public class GameCardUI : MonoBehaviour
 
     public Image overImage;
     public Image backgroundImage;
+    public Image cardIcon;
     private GameCard gameCard;
     protected static GameCardUI settingsOpenedCard;
     public GameObject cardSettings;
@@ -38,6 +39,8 @@ public class GameCardUI : MonoBehaviour
         this.gameCard = gameCard;
         this.isLastCard = isLastCard;
         cardDescription.text = gameCard.cardDescription;
+        if(gameCard.cardIcon)
+            cardIcon.sprite = gameCard.cardIcon;
 
         switch (gameCard.resourceType)
         {
