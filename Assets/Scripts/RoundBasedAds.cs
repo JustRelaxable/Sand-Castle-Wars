@@ -74,8 +74,10 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
             case ShowResult.Failed:
             case ShowResult.Skipped:
             case ShowResult.Finished:
-                //singleplayer gives error
-                FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority).CmdTellAdsFinished();
+                if(GameCardBase.GameMode == GameMode.Multiplayer)
+                {
+                    FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority).CmdTellAdsFinished();
+                }   
                 break;
             default:
                 break;

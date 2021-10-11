@@ -7,7 +7,7 @@ public class LastPlayedCardUI : MonoBehaviour
     [SerializeField]
     float zFactor;
 
-    public Vector3 HandleNewCardTransform()
+    public Vector3 GetNewCardLocalPosition()
     {
         var firstChildTransform = transform.GetChild(0);
         var zVector = new Vector3(0, 0, zFactor);

@@ -21,9 +21,9 @@ public class GameCardHolderUI : MonoBehaviour
     {
         var castleTurnControllers = FindObjectsOfType<CastleTurnController>();
 
-        foreach (var item in castleTurnControllers)
+        foreach (var turnController in castleTurnControllers)
         {
-            item.OnTurnMine += MyCastleTurnController_OnTurnMine;
+            turnController.OnTurnMine += MyCastleTurnController_OnTurnMine;
         }
     }
 

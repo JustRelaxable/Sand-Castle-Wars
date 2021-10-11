@@ -5,10 +5,23 @@ using UnityEngine;
 public class GameCardBase : MonoBehaviour
 {
     private static GameCardVariation cardVariation;
+    public static GameMode GameMode { get => GetGameMode();}
 
     static GameCardBase()
     {
         cardVariation = new GameCardMulti();
+    }
+
+    private static GameMode GetGameMode()
+    {
+        if(cardVariation is GameCardSingle)
+        {
+            return GameMode.Singleplayer;
+        }
+        else
+        {
+            return GameMode.Multiplayer;
+        }
     }
 
     public static void ChangeGameCardVariation(GameCardVariation gcv)
@@ -45,4 +58,9 @@ public class GameCardBase : MonoBehaviour
     {
         cardVariation.ChangeHeightOfBuilding(target, type, amount);
     }
+}
+
+public enum GameMode
+{
+    Singleplayer,Multiplayer
 }

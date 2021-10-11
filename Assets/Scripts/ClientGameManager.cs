@@ -54,7 +54,7 @@ public class ClientGameManager : NetworkBehaviour
             if (isDiscarded)
                 GameCardUI.selectedCard.OpenDiscarded();
             GameCardUI.selectedCard.CloseCardSettings();
-            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
             StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
             gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
@@ -79,7 +79,7 @@ public class ClientGameManager : NetworkBehaviour
                     break;
             }
 
-            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
             StartCoroutine(MoveCardToTransform(gameCard, cardPosToGo));
             gameCard.transform.SetParent(lastPlayedCardUI.transform);
         }

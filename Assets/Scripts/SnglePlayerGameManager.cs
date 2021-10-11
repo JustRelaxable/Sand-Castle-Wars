@@ -45,33 +45,47 @@ public class SnglePlayerGameManager : MonoBehaviour
     {
         GameCardBase.ChangeGameCardVariation(new GameCardSingle());
         adManager.gameObject.SetActive(true);
-        
-        
 
-        var playerCastle = Instantiate(castlePrefab);
-        spawnController.ConfigureCastleTransform(Teams.Red, playerCastle);
-        playerCastle.GetComponent<PlayerCastle>().Team = Teams.Red;
-        playerCastle.GetComponent<PlayerCastle>().UpdateTeamFlagMaterials(Teams.Red);
-        playerCastle.GetComponent<PlayerCastle>().SetStaticCastleStatSingle();
-        playerStats = playerCastle.GetComponent<CastleStats>();
-
-
-        var botCastle = Instantiate(castlePrefab);
-        spawnController.ConfigureCastleTransform(Teams.Blue, botCastle);
-        botCastle.GetComponent<PlayerCastle>().Team = Teams.Blue;
-        botCastle.GetComponent<PlayerCastle>().UpdateTeamFlagMaterials(Teams.Blue);
-        botStats = botCastle.GetComponent<CastleStats>();
+        ConfigurePlayerCastle();
+        ConfigureBotCastle();
 
         gameCardHolderUI.ClientGameManager_OnGameStarted();
         castleStatsUI.OnGameStarted();
-        PrepareCastleCards(playerCastle.GetComponent<PlayerCards>());
+        PrepareCastleCards();
 
         adManager.GetComponent<RoundBasedAds>().ClientGameManager_OnGameStarted();
 
         playerStats.GetComponent<CastleTurnController>().InvokeOnTurnMine();
     }
 
-    private void PrepareCastleCards(PlayerCards playerCards)
+    private void ConfigurePlayerCastle()
+    {
+        var playerCastle = ConfigureAndGetCastleGameObject(Teams.Red);
+        playerStats = playerCastle.GetComponent<CastleStats>();
+        playerCastle.GetComponent<PlayerCastle>().SetStaticCastleStatSingle();
+    }
+
+    private void ConfigureBotCastle()
+    {
+        var botCastle = ConfigureAndGetCastleGameObject(Teams.Blue);
+        botStats = botCastle.GetComponent<CastleStats>();
+    }
+
+    private GameObject ConfigureAndGetCastleGameObject(Teams team)
+    {
+        var castle = Instantiate(castlePrefab);
+        spawnController.ConfigureCastleTransform(team, castle);
+        AssignCastleTeam(castle.GetComponent<PlayerCastle>(), team);
+        return castle;
+    }
+
+    private void AssignCastleTeam(PlayerCastle playerCastle,Teams team)
+    {
+        playerCastle.Team = team;
+        playerCastle.UpdateTeamFlagMaterials(team);
+    }
+
+    private void PrepareCastleCards()
     {
         int[] cardDeckToSend = new int[8];
         for (int i = 0; i < cardDeckToSend.Length; i++)
@@ -95,8 +109,6 @@ public class SnglePlayerGameManager : MonoBehaviour
     {
         if (gameFinished)
             return;
-
-        ClearLastPlayedCards();
        
 
         if (isDiscarded)
@@ -109,7 +121,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         }
             
         GameCardUI.selectedCard.CloseCardSettings();
-        var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+        var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
         StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
         GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
         gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
@@ -144,12 +156,11 @@ public class SnglePlayerGameManager : MonoBehaviour
             botResponse.gameCard.UseTheCard(botStats, playerStats);
         }
 
-        ClearLastPlayedCards();
 
             
         botGameCard.transform.position = cardBlueSpawnPoint.transform.position;
 
-        var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.HandleNewCardTransform());
+        var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
         StartCoroutine(MoveCardToTransform(botGameCard, cardPosToGo));
         botGameCard.transform.SetParent(lastPlayedCardUI.transform);
         //StartCoroutine(MoveCardToTransformAndChangeParent(botGameCard, gameCardHolderUI.lastPlayedCard.transform));
@@ -182,15 +193,6 @@ public class SnglePlayerGameManager : MonoBehaviour
     public void SetLastPlayedCardParentTransform(Transform transform)
     {
         lastPlayedCardParentTransform = transform;
-    }
-
-
-    private void ClearLastPlayedCards()
-    {
-        //for (int i = 0; i < gameCardHolderUI.lastPlayedCard.transform.childCount; i++)
-        //{
-        //    Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
-        //}
     }
 
     private IEnumerator MoveCardToTransform(GameObject go, Transform lastTransform, float duration = 2f)
