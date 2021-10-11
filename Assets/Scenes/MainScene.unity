@@ -1432,7 +1432,7 @@ MonoBehaviour:
   resourceCost: 5
   resourceType: 0
   botPriority: 15
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 330ab34a894619b4c8a6bb1c7d6e1b6b, type: 3}
   cardDescription: Castle +5
 --- !u!1 &237560830
 GameObject:
