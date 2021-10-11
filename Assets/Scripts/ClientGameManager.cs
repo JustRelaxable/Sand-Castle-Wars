@@ -100,10 +100,12 @@ public class ClientGameManager : NetworkBehaviour
     [ClientRpc]
     public void RpcPlayCardAnimation(int cardID,byte team)
     {
-        var animationPrefab = CardManager.instance.cards[cardID].animationPrefab;
-        if (animationPrefab == null)
-            return;
-        cardAnimationSpawner.HandleCardAnimation(animationPrefab, (Teams)team);
+        PlayCardAnimation(cardID, team);
+    }
+
+    public void PlayCardAnimation(int cardID, byte team)
+    {
+        cardAnimationSpawner.HandleCardAnimation(cardID, (Teams)team);
     }
 
     public void TakeCardFromDeck(GameObject go)

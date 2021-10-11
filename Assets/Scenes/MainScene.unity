@@ -5681,6 +5681,7 @@ MonoBehaviour:
   gameCardHolderUI: {fileID: 525699831}
   adManager: {fileID: 1374008165}
   lastPlayedCardUI: {fileID: 1361196507}
+  cardAnimationSpawner: {fileID: 1651146407}
   lastPlayedCurve:
     serializedVersion: 2
     m_Curve:

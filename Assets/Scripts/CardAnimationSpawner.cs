@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class CardAnimationSpawner : MonoBehaviour
 {
-    public void HandleCardAnimation(GameObject cardAnimationPrefab,Teams turn)
+    public void HandleCardAnimation(int cardID,Teams turn)
     {
-        var animation = Instantiate(cardAnimationPrefab, transform);
+        var animationPrefab = CardManager.instance.cards[cardID].animationPrefab;
+        if (animationPrefab == null)
+            return;
+
+        var animation = Instantiate(animationPrefab, transform);
         var cardAnimation = animation.GetComponent<CardAnimation>();
         if(!cardAnimation.onSelf)
             turn = turn == Teams.Blue ? Teams.Red : Teams.Blue;

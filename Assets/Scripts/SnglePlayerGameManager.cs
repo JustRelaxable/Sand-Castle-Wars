@@ -23,6 +23,9 @@ public class SnglePlayerGameManager : MonoBehaviour
     [SerializeField]
     LastPlayedCardUI lastPlayedCardUI;
 
+    [SerializeField]
+    CardAnimationSpawner cardAnimationSpawner;
+
 
     CastleStats playerStats;
     CastleStats botStats;
@@ -118,13 +121,16 @@ public class SnglePlayerGameManager : MonoBehaviour
         else
         {
             CardManager.instance.GetCard(gameCardID).UseTheCard(playerStats, botStats);
+            cardAnimationSpawner.HandleCardAnimation(gameCardID, Teams.Red);
         }
-            
+        
         GameCardUI.selectedCard.CloseCardSettings();
         var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
         StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
         GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
         gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
+
+       
 
 
         var gameCard = gameCardHolderUI.InstantiateCardAndReturn(UnityEngine.Random.Range(0, CardManager.instance.cards.Length));
@@ -154,6 +160,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         else
         {
             botResponse.gameCard.UseTheCard(botStats, playerStats);
+            cardAnimationSpawner.HandleCardAnimation(botResponse.gameCard.ID, Teams.Blue);
         }
 
 

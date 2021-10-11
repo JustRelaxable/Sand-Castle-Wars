@@ -14,6 +14,8 @@ public class GameCard : GameCardBase,ICard
     public Sprite cardIcon;
     [TextArea]
     public string cardDescription;
+
+    public int ID { get { return CardManager.instance.GetIndex(this); } }
     public virtual void UseTheCard(CastleStats executor,CastleStats enemy)
     {
         base.UseTheCard(executor, enemy, this);
