@@ -22,5 +22,51 @@ MonoBehaviour:
     m_Localized: Derecelendir
     m_Metadata:
       m_Items: []
+  - m_Id: 47807177756672
+    m_Localized: Tek Oyunculu Mod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48042910224384
+    m_Localized: "\xC7ok Oyunculu Mod"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48305297494016
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48420678602752
+    m_Localized: "Oyundan zevk al\u0131yor musunuz? \xD6yleyse l\xFCtfen oyunumuzu
+      uygulama marketinde derecelendirin. Gerid\xF6n\xFC\u015Fleriniz bizim i\xE7in
+      \xE7ok \xF6nemli!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50417867755520
+    m_Localized: "Odalar\u0131 Yenile"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50549828947968
+    m_Localized: "Oda Olu\u015Ftur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50699745955840
+    m_Localized: "Se\xE7ili Odaya Kat\u0131l"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51508231606272
+    m_Localized: Oda ismi giriniz...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51677186560000
+    m_Localized: "Oda \u015Fifrenizi giriniz..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51808040456192
+    m_Localized: "Olu\u015Ftur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52530639343616
+    m_Localized: "Anamen\xFCye D\xF6n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

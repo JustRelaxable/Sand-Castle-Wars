@@ -16,7 +16,51 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: bd8be6d053ffc244fbb24a7f88fd1286
   m_Entries:
   - m_Id: 10302853120
-    m_Key: RATE
+    m_Key: RATE_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47807177756672
+    m_Key: SINGLEPLAYER_MODE_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48042910224384
+    m_Key: MULTIPLAYER_MODE_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48305297494016
+    m_Key: OPTIONS_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48420678602752
+    m_Key: RATE_EXPLANATION_TEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50417867755520
+    m_Key: REFRESH_ROOMS_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50549828947968
+    m_Key: CREATE_ROOM_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50699745955840
+    m_Key: JOIN_THE_ROOM_BUTTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51508231606272
+    m_Key: ENTER_ROOM_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51677186560000
+    m_Key: ENTER_ROOM_PASSWORD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51808040456192
+    m_Key: CREATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52530639343616
+    m_Key: RETURN_TO_THE_MAINMENU
     m_Metadata:
       m_Items: []
   m_Metadata:

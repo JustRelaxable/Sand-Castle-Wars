@@ -22,5 +22,50 @@ MonoBehaviour:
     m_Localized: Rate
     m_Metadata:
       m_Items: []
+  - m_Id: 47807177756672
+    m_Localized: Singleplayer Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48042910224384
+    m_Localized: Multiplayer Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48305297494016
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48420678602752
+    m_Localized: Enjoying the Game? Please Rate our Game On The Store, We really
+      appreciate your feedbacks!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50417867755520
+    m_Localized: Refresh Rooms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50549828947968
+    m_Localized: Create a Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50699745955840
+    m_Localized: Join The Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51508231606272
+    m_Localized: Enter room name...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51677186560000
+    m_Localized: Enter room password...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51808040456192
+    m_Localized: Create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52530639343616
+    m_Localized: Return to the Mainmenu
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
