@@ -1,0 +1,1116 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19041.1237; Version 2004; 64bit' Language: 'tr' Physical Memory: 16300 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/GithubRepos/Sand-Castle-Wars
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60577
+Successfully changed project path to: D:/GithubRepos/Sand-Castle-Wars
+D:/GithubRepos/Sand-Castle-Wars
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 53.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GithubRepos/Sand-Castle-Wars/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 Ti (ID=0x1b06)
+    Vendor:   
+    VRAM:     11127 MB
+    Driver:   27.21.14.6109
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56840
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001451 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 48.95 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.609 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001964 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.92 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2773 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 126.4 MB.
+System memory in use after: 126.6 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 3206.
+Total: 1.900500 ms (FindLiveObjects: 0.257800 ms CreateObjectMapping: 0.138500 ms MarkObjects: 1.443200 ms  DeleteObjects: 0.059900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_GroundBreaking.mat
+  artifactKey: Guid(91fed33cc38deab4fbdb803e4f223fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_GroundBreaking.mat using Guid(91fed33cc38deab4fbdb803e4f223fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70dde3e3b327f07615e0bbefd5ec9446') in 0.229338 seconds
+  Import took 0.233665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Default.mat
+  artifactKey: Guid(0c6ceb865a050c64683892d8aa073844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Default.mat using Guid(0c6ceb865a050c64683892d8aa073844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5d33632972d0c450fc093c6abc80ba') in 0.026054 seconds
+  Import took 0.029929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Leaves.mat
+  artifactKey: Guid(1d6ce39015646794bb453e5b4e85f3ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Leaves.mat using Guid(1d6ce39015646794bb453e5b4e85f3ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec9bfc1fc947c34eec9f80a9f48d151') in 0.027230 seconds
+  Import took 0.030861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round_Dark.mat
+  artifactKey: Guid(819f0997b5a3d424bae37f31c7c24f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round_Dark.mat using Guid(819f0997b5a3d424bae37f31c7c24f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46519fad97ee0a2be0ef2eff7c733737') in 0.008852 seconds
+  Import took 0.012481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Liquid Particle Systems/Materials/Rain Heavy PRT MAT Alpha.mat
+  artifactKey: Guid(0f452eefc21cea24dbd4b630b074e0b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/Rain Heavy PRT MAT Alpha.mat using Guid(0f452eefc21cea24dbd4b630b074e0b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f48816ec7e6e3445aa3e2146d57138') in 0.027154 seconds
+  Import took 0.031415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Ice_02.mat
+  artifactKey: Guid(0fbfad6b062b1a84f9f585ef8cfed1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Ice_02.mat using Guid(0fbfad6b062b1a84f9f585ef8cfed1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fa0353e523a16a9b91f64257e2a6bb') in 0.032021 seconds
+  Import took 0.035671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Materials/seashell1.mat
+  artifactKey: Guid(adf421ef5ddf2034195e4d7431446c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/seashell1.mat using Guid(adf421ef5ddf2034195e4d7431446c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a0e9c3adebadddf6aa176cdea93c003') in 0.294797 seconds
+  Import took 0.298590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/PolygonParticles/Materials/Materials/pCube1Mat.mat
+  artifactKey: Guid(d188404875e4946478951f0c2b6593e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/Materials/pCube1Mat.mat using Guid(d188404875e4946478951f0c2b6593e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cff226fbfee79a357ed71a0b4b4a926') in 0.273467 seconds
+  Import took 0.276996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Materials/sand.001.mat
+  artifactKey: Guid(8a5cd5f2655ecd14b93e52cb8426ffb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/sand.001.mat using Guid(8a5cd5f2655ecd14b93e52cb8426ffb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de95a1ff3f62a73d649b05d094e73cb5') in 0.250071 seconds
+  Import took 0.253721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ExampleAssets/Materials/Metal_Simple_Mat.mat
+  artifactKey: Guid(a0427cf339e5891468d5f2b433b2d44a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Metal_Simple_Mat.mat using Guid(a0427cf339e5891468d5f2b433b2d44a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81f656e8e892cf95e9de1bc3988926ec') in 0.245778 seconds
+  Import took 0.249603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Materials/sand.001.mat
+  artifactKey: Guid(8a5cd5f2655ecd14b93e52cb8426ffb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/sand.001.mat using Guid(8a5cd5f2655ecd14b93e52cb8426ffb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de95a1ff3f62a73d649b05d094e73cb5') in 0.010674 seconds
+  Import took 0.014290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Ring_01.mat
+  artifactKey: Guid(7eb97b17430c1564eb6b43614bfbf371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Ring_01.mat using Guid(7eb97b17430c1564eb6b43614bfbf371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02b80e12e80eccceb4478dacb43860e') in 0.008188 seconds
+  Import took 0.011851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ExampleAssets/Materials/Jigsaw_Mat.mat
+  artifactKey: Guid(801db2d997a562b4ea333aa4593ce0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Jigsaw_Mat.mat using Guid(801db2d997a562b4ea333aa4593ce0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e07aefb3e0b6b70b559ebde49f6c3a83') in 0.282118 seconds
+  Import took 0.285864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Emissive_Fire.mat
+  artifactKey: Guid(b0921f44478f0f048a2a6c682c1bfb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Emissive_Fire.mat using Guid(b0921f44478f0f048a2a6c682c1bfb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068aefdd21dcf733141bdb8beff85a1c') in 0.034645 seconds
+  Import took 0.038261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Colored Blood MAT.mat
+  artifactKey: Guid(7f62affad04e9ec479e8bffefff51034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Colored Blood MAT.mat using Guid(7f62affad04e9ec479e8bffefff51034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '800ac462c61cca1d49a9b8175c2da6f5') in 0.014035 seconds
+  Import took 0.018271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Ice_01.mat
+  artifactKey: Guid(d4b280f132511204e807baef7817683d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Ice_01.mat using Guid(d4b280f132511204e807baef7817683d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0d770bb45d2f46ae82f070f73bf1dd') in 0.331120 seconds
+  Import took 0.336210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Materials/Cloud.mat
+  artifactKey: Guid(59dc84868490bb24bb3234c632acd6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Cloud.mat using Guid(59dc84868490bb24bb3234c632acd6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d6cfad2074964c4368e86a16c299c3') in 0.300758 seconds
+  Import took 0.304701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/ExampleAssets/Materials/Hammer_Mat.mat
+  artifactKey: Guid(4efcffd7ae23f1e41943fd914b18da10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Hammer_Mat.mat using Guid(4efcffd7ae23f1e41943fd914b18da10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4647bef584e0ed98ec137b5a67f1b9c') in 0.013688 seconds
+  Import took 0.020193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Smoke_Mat_05.mat
+  artifactKey: Guid(88dd2abb72819d143a867f0b74333037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Smoke_Mat_05.mat using Guid(88dd2abb72819d143a867f0b74333037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f235535e7f382ce14ab078889e7739') in 0.015838 seconds
+  Import took 0.020589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Soft_Spot.mat
+  artifactKey: Guid(3bd0bff47a21f0b4089acd1d1b075bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Soft_Spot.mat using Guid(3bd0bff47a21f0b4089acd1d1b075bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e71c417138c5afa430d454bf4399530') in 0.019091 seconds
+  Import took 0.023705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_Gray_Mat.mat
+  artifactKey: Guid(4dad30bbe2213eb4d8312f7bb6190866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_Gray_Mat.mat using Guid(4dad30bbe2213eb4d8312f7bb6190866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4915e79b5daee1d268bfa677cfe54506') in 0.248956 seconds
+  Import took 0.254391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Particle 6 MAT.mat
+  artifactKey: Guid(e3710e8ac372202449c8c9de79a41707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Particle 6 MAT.mat using Guid(e3710e8ac372202449c8c9de79a41707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63d3c0607ed54566abe4491afb24aa3') in 0.009081 seconds
+  Import took 0.013623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Cloud.mat
+  artifactKey: Guid(f9a98fdfbba337d43bb545e357c48b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Cloud.mat using Guid(f9a98fdfbba337d43bb545e357c48b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be00fd48764f4284a3c2ca0b28d011ea') in 0.009088 seconds
+  Import took 0.013947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/ExampleAssets/Materials/PaintLabel_Mat.mat
+  artifactKey: Guid(3da4aad06945bbf4baf801c2aacbc01e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/PaintLabel_Mat.mat using Guid(3da4aad06945bbf4baf801c2aacbc01e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f93c83782d4ca30f99928dfd7347c1') in 0.233692 seconds
+  Import took 0.237517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Circle.mat
+  artifactKey: Guid(f3053f8556ff7cf4fb59de5cf109104e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Circle.mat using Guid(f3053f8556ff7cf4fb59de5cf109104e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e02a68017ed3c638f7b763cdaf572edb') in 0.011077 seconds
+  Import took 0.014775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Materials/seashell3.mat
+  artifactKey: Guid(406af3f7abc02834384b02441d4db7bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/seashell3.mat using Guid(406af3f7abc02834384b02441d4db7bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e18ab04960a31b9e42f724cf1c2ed42a') in 0.017494 seconds
+  Import took 0.021622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Wind.mat
+  artifactKey: Guid(34d1067f93566394e813f63c2f054f09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Wind.mat using Guid(34d1067f93566394e813f63c2f054f09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '085691624a7c0839791f8c1301a9bd9e') in 0.009844 seconds
+  Import took 0.014317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Particle 2 MAT.mat
+  artifactKey: Guid(0cdcfeb7cdc8d55458e3b53f8b9fd990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Particle 2 MAT.mat using Guid(0cdcfeb7cdc8d55458e3b53f8b9fd990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b00265f289a43350d419ada49b17a8f0') in 0.009156 seconds
+  Import took 0.013322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Swipe_Grid.mat
+  artifactKey: Guid(292c23ebfcf66194caae3b5650a6e98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Swipe_Grid.mat using Guid(292c23ebfcf66194caae3b5650a6e98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f3464cb0748586aa4be373297b7c1dc') in 0.010077 seconds
+  Import took 0.014235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_Ridges_Mat.mat
+  artifactKey: Guid(c05de7c865075334786e6a47a543af72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_Ridges_Mat.mat using Guid(c05de7c865075334786e6a47a543af72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60374f51cdf2022bd13a07219fbe33e0') in 0.010306 seconds
+  Import took 0.013937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Materials/seashell2.mat
+  artifactKey: Guid(5a61cc9c110f60841b9c51622f98f3a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/seashell2.mat using Guid(5a61cc9c110f60841b9c51622f98f3a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82e5591e3e109cc76f721546182c9ea5') in 0.011071 seconds
+  Import took 0.015461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round.mat
+  artifactKey: Guid(f55d44db4612b10438c11e63bc1ea9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round.mat using Guid(f55d44db4612b10438c11e63bc1ea9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da15ace91cd9c113ef65e041c5ddc49f') in 0.008505 seconds
+  Import took 0.012244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_RitualCircle_01.mat
+  artifactKey: Guid(d3042a8a5e619204e89c65372c11ec64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_RitualCircle_01.mat using Guid(d3042a8a5e619204e89c65372c11ec64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b03ad93fa078cceb7b8467ea5fba101') in 0.029126 seconds
+  Import took 0.032960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Rock_02.mat
+  artifactKey: Guid(c6f1ea5e8ec046f449aafa6978e4ac4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Rock_02.mat using Guid(c6f1ea5e8ec046f449aafa6978e4ac4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec66e29c6d26197bf89ccd630b4cffd7') in 0.007746 seconds
+  Import took 0.011550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticles_Material_01_B.mat
+  artifactKey: Guid(8488848242723b14e9895f302b43b949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticles_Material_01_B.mat using Guid(8488848242723b14e9895f302b43b949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b618973bc362d23330b1471c63de6f9b') in 0.009877 seconds
+  Import took 0.013536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExampleAssets/Materials/DryWall_Mat.mat
+  artifactKey: Guid(a68228c24abfa2f4b8954d7b0148f799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/DryWall_Mat.mat using Guid(a68228c24abfa2f4b8954d7b0148f799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6343171f0b01e6a25fdd65c985b8c34') in 0.011337 seconds
+  Import took 0.015111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Meshes/seashell.fbx
+  artifactKey: Guid(4847fbede1daa874a93b8903731f5cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/seashell.fbx using Guid(4847fbede1daa874a93b8903731f5cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0af2d10c0b039f27b5f4009809e03b3') in 0.202476 seconds
+  Import took 0.206202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/ExampleAssets/Models/safetygoggles_low.fbx
+  artifactKey: Guid(6296e48663fd7ad46b1a2af507f871cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/safetygoggles_low.fbx using Guid(6296e48663fd7ad46b1a2af507f871cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ce4ee571e0e3fffe225b28981f47602') in 0.210601 seconds
+  Import took 0.214706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Additive_Soft.mat
+  artifactKey: Guid(f42a357a923c92f4b9818c765c8b2c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Additive_Soft.mat using Guid(f42a357a923c92f4b9818c765c8b2c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd54e9d2049fd3d5215e4df82944429cc') in 0.007740 seconds
+  Import took 0.011207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Particle 1 MAT.mat
+  artifactKey: Guid(0788e7cee6aea12459803db0caa5d72e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Particle 1 MAT.mat using Guid(0788e7cee6aea12459803db0caa5d72e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fa1d6db083366d45b32ae3dd0db1425') in 0.009039 seconds
+  Import took 0.012950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round 1.mat
+  artifactKey: Guid(931f6cb81f32ff8418b581d210c8dd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round 1.mat using Guid(931f6cb81f32ff8418b581d210c8dd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2240ee4b07329d3a145a2bac04943ddf') in 0.010153 seconds
+  Import took 0.014049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_Rough_Mat.mat
+  artifactKey: Guid(a5aaee4111611af43b5abbff184fe5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_Rough_Mat.mat using Guid(a5aaee4111611af43b5abbff184fe5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c7ce67c0b96e950c3cddf304724b073') in 0.010163 seconds
+  Import took 0.014098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Materials/SeashellMat.mat
+  artifactKey: Guid(b97d074d7fe95cf4596098f9a874c54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/SeashellMat.mat using Guid(b97d074d7fe95cf4596098f9a874c54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8855b105d0d1bc7e8d3847fb27400921') in 0.008156 seconds
+  Import took 0.011813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Liquid Particle Systems/Materials/Rain Splash PRT MAT Aplha.mat
+  artifactKey: Guid(d3f48e8f67fbe0841b132b2f39c379fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/Rain Splash PRT MAT Aplha.mat using Guid(d3f48e8f67fbe0841b132b2f39c379fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0d562c62e2253e81d6166e6720eb32c') in 0.008270 seconds
+  Import took 0.012432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/ExampleAssets/Models/Stud.fbx
+  artifactKey: Guid(34624edaccd9d704a95ed404d919b492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/Stud.fbx using Guid(34624edaccd9d704a95ed404d919b492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab468c557e52bb1dbb61f05fc1ac5cdb') in 0.024261 seconds
+  Import took 0.028497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Portal_01.mat
+  artifactKey: Guid(63fe091b9b93bc24fb33ff7e92799835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Portal_01.mat using Guid(63fe091b9b93bc24fb33ff7e92799835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6dab238b354d255b041b4e6ae7f5e3b') in 0.008493 seconds
+  Import took 0.012429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Particle 4 MAT.mat
+  artifactKey: Guid(abe9ef1c3986b3a40ab2102dbd0ef8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Particle 4 MAT.mat using Guid(abe9ef1c3986b3a40ab2102dbd0ef8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b4630119574d604dd0eedca3e6dcff') in 0.008265 seconds
+  Import took 0.011746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Material.mat
+  artifactKey: Guid(49fa84335db088c4dafac40a4d0743db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Material.mat using Guid(49fa84335db088c4dafac40a4d0743db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d97be2ed2f9c57dc792d50f0986e3a') in 0.008682 seconds
+  Import took 0.012641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Sparkle.mat
+  artifactKey: Guid(2372c82814ea2ed41aed3d611d81953d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Sparkle.mat using Guid(2372c82814ea2ed41aed3d611d81953d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c2747c16f436b2319a97f4f6eece73c') in 0.008300 seconds
+  Import took 0.012211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Smoke_Mat_03.mat
+  artifactKey: Guid(33acf48390ff3dd49bee5f8de43d6876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Smoke_Mat_03.mat using Guid(33acf48390ff3dd49bee5f8de43d6876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a94ef652b7f74e06440560229ab727') in 0.031736 seconds
+  Import took 0.035276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Default_01.mat
+  artifactKey: Guid(417cbbf4755e392408e489080c4ede09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Default_01.mat using Guid(417cbbf4755e392408e489080c4ede09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ac6689ea3dfd615ed93b4984c00f8f') in 0.008138 seconds
+  Import took 0.013032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Fumes_01.mat
+  artifactKey: Guid(4c5f13e6a6061214697a61fa94a0e19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Fumes_01.mat using Guid(4c5f13e6a6061214697a61fa94a0e19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f01b2a82b20af3ae7275b371193f44b') in 0.009208 seconds
+  Import took 0.013979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Diffuse Gray MAT.mat
+  artifactKey: Guid(66466f7b2cde55f47824b1e62eabd476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Diffuse Gray MAT.mat using Guid(66466f7b2cde55f47824b1e62eabd476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1c79ee086829bf22e5c269d836d73ae') in 0.033118 seconds
+  Import took 0.037480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Water - Steam MAT.mat
+  artifactKey: Guid(9deea8e886d87d44b8522812e625e20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Water - Steam MAT.mat using Guid(9deea8e886d87d44b8522812e625e20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7505dfa5dd12f862c274f57df1892de5') in 0.010840 seconds
+  Import took 0.015092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/ExampleAssets/Models/Workbench.fbx
+  artifactKey: Guid(efe9381559c516743bd05cef82f39ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/Workbench.fbx using Guid(efe9381559c516743bd05cef82f39ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e99ebda2d3f5d5d60bed2395729be3') in 0.055427 seconds
+  Import took 0.059522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Fumes_02.mat
+  artifactKey: Guid(10a8ddd34c118804ea1bfbcf936e1b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Fumes_02.mat using Guid(10a8ddd34c118804ea1bfbcf936e1b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c6d22a1955b4d83b6932bedad6c244') in 0.008224 seconds
+  Import took 0.011974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Hexagon.mat
+  artifactKey: Guid(3e40f2795430a314da835c0b22a031c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Hexagon.mat using Guid(3e40f2795430a314da835c0b22a031c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d49f2a38cf44adad65afc97f7dfad0f') in 0.009227 seconds
+  Import took 0.013495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Texture.mat
+  artifactKey: Guid(9e5dcdb827982cf4da4c2126c56d31ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Texture.mat using Guid(9e5dcdb827982cf4da4c2126c56d31ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7733e901d2691c9c102ce4d3c2a5f578') in 0.008434 seconds
+  Import took 0.012253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_White_Mat.mat
+  artifactKey: Guid(6cfe423139c361a459da7ed9831d4b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_White_Mat.mat using Guid(6cfe423139c361a459da7ed9831d4b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c532d3563b2c7f379ae6005afcb561f6') in 0.010035 seconds
+  Import took 0.013803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/ExampleAssets/Materials/Paint1G_WAnim_Material.mat
+  artifactKey: Guid(55c183dc45153be48a45c4e530127fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Paint1G_WAnim_Material.mat using Guid(55c183dc45153be48a45c4e530127fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e1389d1cde915f06363cf404581023') in 0.508219 seconds
+  Import took 0.511971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/ExampleAssets/Models/Workbench_Low.fbx
+  artifactKey: Guid(ff6dc36862fe41641bb21568d92147c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/Workbench_Low.fbx using Guid(ff6dc36862fe41641bb21568d92147c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd49d025718e7685c00cbc025c486608') in 0.054232 seconds
+  Import took 0.057891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_VertexLitBlended_Dark.mat
+  artifactKey: Guid(285b0791008c39844936e10062f85a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_VertexLitBlended_Dark.mat using Guid(285b0791008c39844936e10062f85a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1863d73dfe89411230c025f1eb6ee26a') in 0.007323 seconds
+  Import took 0.011025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/ExampleAssets/Materials/OBS_Mat.mat
+  artifactKey: Guid(c438e5c679f1be040a135443008e2fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/OBS_Mat.mat using Guid(c438e5c679f1be040a135443008e2fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '770bb86accb76972aab14ac7258eb18c') in 0.011068 seconds
+  Import took 0.014794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/ExampleAssets/Materials/PaintBrush_Mat.mat
+  artifactKey: Guid(539165557a9d3744680bb21164bea45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/PaintBrush_Mat.mat using Guid(539165557a9d3744680bb21164bea45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46282f0dc5ce220473a4992f25c75330') in 0.009487 seconds
+  Import took 0.013581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Flies.mat
+  artifactKey: Guid(2ebe5f4397ab6f540a440c1b54e797bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Flies.mat using Guid(2ebe5f4397ab6f540a440c1b54e797bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09baabc7d467f3a9221a97f9f47f828') in 0.008252 seconds
+  Import took 0.011942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round_Multiply.mat
+  artifactKey: Guid(f9fa7768fbf327049884a40be125ebc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round_Multiply.mat using Guid(f9fa7768fbf327049884a40be125ebc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ef25f8f92dee60f9ab932aee102928') in 0.009335 seconds
+  Import took 0.013361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Shell.mat
+  artifactKey: Guid(70dcf2a0afa97b444aa4a54fe4ac2fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Shell.mat using Guid(70dcf2a0afa97b444aa4a54fe4ac2fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf255628dbc0b1862f3783888298f5b') in 0.007886 seconds
+  Import took 0.011682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/ExampleAssets/Materials/ConstructionLight_Mat.mat
+  artifactKey: Guid(49076442eeb7e054b8e8869f8b40656d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/ConstructionLight_Mat.mat using Guid(49076442eeb7e054b8e8869f8b40656d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eab0858117e635fc2f22c3e7ee445d59') in 0.222187 seconds
+  Import took 0.225717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Water - Small MAT.mat
+  artifactKey: Guid(3b7f75e6c0278804a8419968f69c138d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Water - Small MAT.mat using Guid(3b7f75e6c0278804a8419968f69c138d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '379b981a15d4db562496988a0f0cc2b3') in 0.008434 seconds
+  Import took 0.011792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Materials/SeashellMat.001.mat
+  artifactKey: Guid(35d0a0f51d358b94ba2dd469023a25bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/SeashellMat.001.mat using Guid(35d0a0f51d358b94ba2dd469023a25bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '172b79ebcdbf8f4c069f9c4aa5620dec') in 0.009524 seconds
+  Import took 0.013947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExampleAssets/Models/jigsaw_low.fbx
+  artifactKey: Guid(8b73e8872ca76104bbca4ee2b704a1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/jigsaw_low.fbx using Guid(8b73e8872ca76104bbca4ee2b704a1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6f6ef9caec066bce3630d036ff425d') in 0.017598 seconds
+  Import took 0.021959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/ExampleAssets/Models/magneticlevel_low.fbx
+  artifactKey: Guid(bae110eee250e4b418b188f4ae4e3170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/magneticlevel_low.fbx using Guid(bae110eee250e4b418b188f4ae4e3170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad93660c7effe763f357795e3213a84') in 0.025555 seconds
+  Import took 0.029948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_Transparent.mat
+  artifactKey: Guid(8a38b7350df9a9c438e568993a00e5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_Transparent.mat using Guid(8a38b7350df9a9c438e568993a00e5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9569ede6fbf59f173474e185e0a0f9c8') in 0.008557 seconds
+  Import took 0.012572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Materials/sand.002.mat
+  artifactKey: Guid(81212359d5085434eb5042809169ce1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/sand.002.mat using Guid(81212359d5085434eb5042809169ce1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc5df791cfd1d054e95346fd8223a4dd') in 0.009435 seconds
+  Import took 0.013116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_LightRay_Cube.mat
+  artifactKey: Guid(e6d1b113ac12bfc45a46c2e5991e3eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_LightRay_Cube.mat using Guid(e6d1b113ac12bfc45a46c2e5991e3eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a344f3de59a0b1bab5de5c0562291b3b') in 0.007809 seconds
+  Import took 0.012072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Liquid Particle Systems/Materials/Rain PRT MAT Alpha.mat
+  artifactKey: Guid(41e00e56e8c39d642b7de8aa13749fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/Rain PRT MAT Alpha.mat using Guid(41e00e56e8c39d642b7de8aa13749fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b0ef3fd17ad8fbad221f6f9e584ffa') in 0.009046 seconds
+  Import took 0.012849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticles_Material_01_A.mat
+  artifactKey: Guid(82eb6f79a83225a4a9d4586b6fcea4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticles_Material_01_A.mat using Guid(82eb6f79a83225a4a9d4586b6fcea4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28db3923e05cb23ac2cdf2b259d404d0') in 0.009800 seconds
+  Import took 0.013866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ExampleAssets/Models/brush_low.fbx
+  artifactKey: Guid(aed8c47425ab91f4eb06ce6fe47c3e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/brush_low.fbx using Guid(aed8c47425ab91f4eb06ce6fe47c3e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7514c8851e9dcb23c3ae93579f609c1') in 0.015253 seconds
+  Import took 0.019068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExampleAssets/Models/Workshop_Set.fbx
+  artifactKey: Guid(47616bd0cda748d4cbedcfc908506b9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/Workshop_Set.fbx using Guid(47616bd0cda748d4cbedcfc908506b9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7f150fe61b9df0fc6b9fb3b0278fb3') in 0.059055 seconds
+  Import took 0.063238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Meshes/SandCastle/untitled.fbx
+  artifactKey: Guid(5d9e97e2d8062f4478fe89d8402f9677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/SandCastle/untitled.fbx using Guid(5d9e97e2d8062f4478fe89d8402f9677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e4973ca9271eb421b3014cff09aa78') in 0.030897 seconds
+  Import took 0.034763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Sun_Beams.mat
+  artifactKey: Guid(17a4c6781d082ff4a94fd2985ec70739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Sun_Beams.mat using Guid(17a4c6781d082ff4a94fd2985ec70739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71641d5bb8025994e0f6472dfbe26fe') in 0.008819 seconds
+  Import took 0.012918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/ExampleAssets/Models/ConstructionLight_Low.fbx
+  artifactKey: Guid(e3ae06a3979f53046aa05330d69de1fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/ConstructionLight_Low.fbx using Guid(e3ae06a3979f53046aa05330d69de1fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd38d276e121fa86b86b16f38890970') in 0.034601 seconds
+  Import took 0.038900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Materials/Sand.mat
+  artifactKey: Guid(7bc5ecb0c068ff64e8de758fe800aa10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Sand.mat using Guid(7bc5ecb0c068ff64e8de758fe800aa10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14670772bd79579d6487391a74b9a18') in 0.011063 seconds
+  Import took 0.015701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Rock_01.mat
+  artifactKey: Guid(52afa9e4bf9887a44aedbc2a547b658c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Rock_01.mat using Guid(52afa9e4bf9887a44aedbc2a547b658c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b332ae0b98f38e2b862fae4fad8666') in 0.008267 seconds
+  Import took 0.012771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Meshes/Card/Card.blend
+  artifactKey: Guid(7c35979f35b285b4dbd9e49600f75edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Card/Card.blend using Guid(7c35979f35b285b4dbd9e49600f75edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3358ed5eb230bc911d64969749c4a7a4') in 0.017893 seconds
+  Import took 0.022800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ExampleAssets/Materials/LightBulb_Mat.mat
+  artifactKey: Guid(ec739259ec61f5d4ba3ed6d34fd802a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/LightBulb_Mat.mat using Guid(ec739259ec61f5d4ba3ed6d34fd802a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d755c0d47a02de4eca57374b9bbf5e8') in 0.008346 seconds
+  Import took 0.012297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/PolygonParticles/Models/Materials/PolygonApocalypse_Texture_01_Cleaned.mat
+  artifactKey: Guid(be606054d1f7d3949bfc2b4eae1ee80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Models/Materials/PolygonApocalypse_Texture_01_Cleaned.mat using Guid(be606054d1f7d3949bfc2b4eae1ee80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8492e25ba717a615991a2eecf0e30ea') in 0.010390 seconds
+  Import took 0.014464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/ExampleAssets/Materials/Metal_Blue_Simple_Mat.mat
+  artifactKey: Guid(cd71291c91c8cce499cb663b5db9970e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Metal_Blue_Simple_Mat.mat using Guid(cd71291c91c8cce499cb663b5db9970e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7001d68871840adb0b797b4a18d6470a') in 0.010906 seconds
+  Import took 0.014894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/ExampleAssets/Materials/Stud_Mat.mat
+  artifactKey: Guid(027cb3d3d7dc79d41ad763e01759de07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Stud_Mat.mat using Guid(027cb3d3d7dc79d41ad763e01759de07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031efbda33ce87a0cdd40d9e233f8b16') in 0.009926 seconds
+  Import took 0.014305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/ExampleAssets/Models/safetyhat_low.fbx
+  artifactKey: Guid(9d0d902f71acfe646a46cb625f815a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/safetyhat_low.fbx using Guid(9d0d902f71acfe646a46cb625f815a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4507e7a5b21cf41b1574f91df36eb24') in 0.016864 seconds
+  Import took 0.020736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Shaders/Water.mat
+  artifactKey: Guid(c5f629e1cc2fa8b4d83267f7e97d78b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Water.mat using Guid(c5f629e1cc2fa8b4d83267f7e97d78b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2ba8acd820567c86934590397ab7be7') in 0.355840 seconds
+  Import took 0.359532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Wings_Grid.mat
+  artifactKey: Guid(ca8b896b1da14284ca29c35595cb750e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Wings_Grid.mat using Guid(ca8b896b1da14284ca29c35595cb750e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd58e7d454ef998809e6766eff48a2d') in 0.008372 seconds
+  Import took 0.012232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExampleAssets/Models/small_plane.fbx
+  artifactKey: Guid(aeaee610429f51f44981e141eb2a3545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/small_plane.fbx using Guid(aeaee610429f51f44981e141eb2a3545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f135affa42e39439875fc067b82018') in 0.015589 seconds
+  Import took 0.019630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Sparkle 1.mat
+  artifactKey: Guid(75375bb6651b4c84995a0dbbc490cc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Sparkle 1.mat using Guid(75375bb6651b4c84995a0dbbc490cc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dfc3f428f66d61b707a4578e74b2ffe') in 0.007968 seconds
+  Import took 0.011789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Materials/PlayerCastleSand.mat
+  artifactKey: Guid(b725ad2aeed5e1f409205f9957cd53a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/PlayerCastleSand.mat using Guid(b725ad2aeed5e1f409205f9957cd53a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1124e1cf846f4aee89a8420d0cc88e31') in 0.523898 seconds
+  Import took 0.527769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/ExampleAssets/Materials/Strap_Mat.mat
+  artifactKey: Guid(81c1860e7800e5340bf8a54c565ba9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Strap_Mat.mat using Guid(81c1860e7800e5340bf8a54c565ba9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c50ccd5b29adf776d233224bca47a37') in 0.011791 seconds
+  Import took 0.016339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Swipe_02.mat
+  artifactKey: Guid(413cbb0543875484fb2ad3f1d0a537de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Swipe_02.mat using Guid(413cbb0543875484fb2ad3f1d0a537de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27623eb00f98b7fb1a22aaab98303137') in 0.010389 seconds
+  Import took 0.014520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Materials/TeamRed.mat
+  artifactKey: Guid(115272fabffa8f34faf2d93277dca28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TeamRed.mat using Guid(115272fabffa8f34faf2d93277dca28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85cc5e4c9d3b12a4de4d9976198ff9b2') in 0.009239 seconds
+  Import took 0.013078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Bubble_01.mat
+  artifactKey: Guid(43e9d91ac8fd6f84f88ed89971c20f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Bubble_01.mat using Guid(43e9d91ac8fd6f84f88ed89971c20f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703ae4dcc2990936df3621d92df37a23') in 0.011184 seconds
+  Import took 0.015338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Lightning.mat
+  artifactKey: Guid(f3491b5edbcb43640a86e7ff9cc63d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Lightning.mat using Guid(f3491b5edbcb43640a86e7ff9cc63d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0c4d64da16d93d8f7415ed1f2c834f') in 0.009403 seconds
+  Import took 0.013888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/ExampleAssets/Models/hammer_low.fbx
+  artifactKey: Guid(68a66fb5a71f8204a8dcb613c97d1fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/hammer_low.fbx using Guid(68a66fb5a71f8204a8dcb613c97d1fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096498fa45b7242ff3ffd53bc3607019') in 0.015280 seconds
+  Import took 0.019387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_HalfCircle.mat
+  artifactKey: Guid(98c2cb3a48b9fc849ae1b47e397eaece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_HalfCircle.mat using Guid(98c2cb3a48b9fc849ae1b47e397eaece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a919d39067694b1d9f4a64e4611759d2') in 0.010271 seconds
+  Import took 0.014538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_VertexLitBlended_Light.mat
+  artifactKey: Guid(4bd4855edb749174180df19dc61807a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_VertexLitBlended_Light.mat using Guid(4bd4855edb749174180df19dc61807a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3bf5ff73b05a0afd601e6ec35564e91') in 0.008222 seconds
+  Import took 0.012494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Dust.mat
+  artifactKey: Guid(cd97a4f0bfba00a46a4a29156f2a23bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Dust.mat using Guid(cd97a4f0bfba00a46a4a29156f2a23bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb2f749fda473c71a0776066aa7613c') in 0.008982 seconds
+  Import took 0.013174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Materials/SeashellMat.002.mat
+  artifactKey: Guid(2c642877bf5df11458f820850916ad7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/SeashellMat.002.mat using Guid(2c642877bf5df11458f820850916ad7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '929217245982928e58f1d01f95961970') in 0.008676 seconds
+  Import took 0.012957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Dark.mat
+  artifactKey: Guid(964f6345d4feb0347958244fe3c32cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Dark.mat using Guid(964f6345d4feb0347958244fe3c32cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c354a6674f50f72af4878100e502660d') in 0.008191 seconds
+  Import took 0.012144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Blood.mat
+  artifactKey: Guid(9efedd2a02a24ac479e285d244f6b34e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Blood.mat using Guid(9efedd2a02a24ac479e285d244f6b34e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69496b33e747c1cbbcb4a7f06265f226') in 0.010254 seconds
+  Import took 0.014540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_SemiCircle.mat
+  artifactKey: Guid(65a599a464dcddd4bbad0dae75e567e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_SemiCircle.mat using Guid(65a599a464dcddd4bbad0dae75e567e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08e649e3a858ea1560e475ad0cb6f7af') in 0.008416 seconds
+  Import took 0.012972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticles_Material_01_C.mat
+  artifactKey: Guid(4f2936f284f9b574d8a56243f10d7db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticles_Material_01_C.mat using Guid(4f2936f284f9b574d8a56243f10d7db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570cebd10813b43f613fd2ba41977483') in 0.010155 seconds
+  Import took 0.014145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/ExampleAssets/Materials/Ground_Mat.mat
+  artifactKey: Guid(d92ef32394b5f474385d74b565a7bdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Ground_Mat.mat using Guid(d92ef32394b5f474385d74b565a7bdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a5a88a148269d72607e222c4dec0a3') in 0.010296 seconds
+  Import took 0.014134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Meshes/Cloud/Cloud.fbx
+  artifactKey: Guid(d0a91a3f837d1fb4d99e9e64729050b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Cloud/Cloud.fbx using Guid(d0a91a3f837d1fb4d99e9e64729050b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd469022e139ca7f31fcf6064f35ae2') in 0.016671 seconds
+  Import took 0.021407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_Yellow_Mat.mat
+  artifactKey: Guid(bd2d742ee2ce7a740ae0cf992a38be74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_Yellow_Mat.mat using Guid(bd2d742ee2ce7a740ae0cf992a38be74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc5415220481e9f9054e49bc292a5e4') in 0.009975 seconds
+  Import took 0.014263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Soft_Spot 1.mat
+  artifactKey: Guid(ada0702ac52956f4ba6ea382af4146b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Soft_Spot 1.mat using Guid(ada0702ac52956f4ba6ea382af4146b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e94f278880f2f4e40e2dee28c1122c') in 0.009226 seconds
+  Import took 0.013543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/ExampleAssets/Models/paintbucket_low.fbx
+  artifactKey: Guid(b451a052397f03c4f8a04d915d1c0492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/paintbucket_low.fbx using Guid(b451a052397f03c4f8a04d915d1c0492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '814bea148506613283811733f9fc8875') in 0.041833 seconds
+  Import took 0.046481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Materials/Skybox_Mat.mat
+  artifactKey: Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Skybox_Mat.mat using Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e52a05e3e0f9a6c93f69880b5b7825') in 0.014110 seconds
+  Import took 0.018242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Empty.mat
+  artifactKey: Guid(0d02cd2cee6d0c548b6d6ee74d16e74b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Empty.mat using Guid(0d02cd2cee6d0c548b6d6ee74d16e74b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86f6b31035a25cd30c00219bbf4b9a8') in 0.009302 seconds
+  Import took 0.013319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Emission.mat
+  artifactKey: Guid(11110f8b297fb5842984fab30e790888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Emission.mat using Guid(11110f8b297fb5842984fab30e790888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da3d8b5220585e38adfe7b3f68b91196') in 0.008974 seconds
+  Import took 0.013571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Materials/TeamBlue.mat
+  artifactKey: Guid(413dab130a731cb4b85fc4cac1cdd76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TeamBlue.mat using Guid(413dab130a731cb4b85fc4cac1cdd76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9c3f528a6d1e6a804aa31bd05056937') in 0.008700 seconds
+  Import took 0.012642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Rainbow_FX.mat
+  artifactKey: Guid(11213bb280baa0a46871c22c5a1c21d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Rainbow_FX.mat using Guid(11213bb280baa0a46871c22c5a1c21d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d789565ca2d0a8c896992f80692190d') in 0.010250 seconds
+  Import took 0.015589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Meshes/SandCastle/SandCastle.blend
+  artifactKey: Guid(aa440cb56ca52264fa6ce1258be60932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/SandCastle/SandCastle.blend using Guid(aa440cb56ca52264fa6ce1258be60932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6637dc6910663a783b41d48cb9c6abbe') in 0.031469 seconds
+  Import took 0.035664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/ExampleAssets/Materials/Plastic_Black_Mat.mat
+  artifactKey: Guid(e745492728544aa488aa0429b6068e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Plastic_Black_Mat.mat using Guid(e745492728544aa488aa0429b6068e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bef1e058e1ef1cc7fa1df29b772b205') in 0.008522 seconds
+  Import took 0.012496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ExampleAssets/Materials/HardHat_Mat.mat
+  artifactKey: Guid(e93789f0a5d66df4a81613935579642b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/HardHat_Mat.mat using Guid(e93789f0a5d66df4a81613935579642b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e98391f8b67524a82d32892efb119285') in 0.010069 seconds
+  Import took 0.014934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/ExampleAssets/Materials/DryWallPainted_Mat.mat
+  artifactKey: Guid(9b8eadc4de0544646b75ddcc43f8fd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/DryWallPainted_Mat.mat using Guid(9b8eadc4de0544646b75ddcc43f8fd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '243d1d5de4b43614087523c0f0f7b5c2') in 0.010940 seconds
+  Import took 0.014848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Bubble.mat
+  artifactKey: Guid(331e0a6a99ab21f469cb8da0335a1312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Bubble.mat using Guid(331e0a6a99ab21f469cb8da0335a1312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0402b52af9ffa8d3e76716d68a3b53a') in 0.009264 seconds
+  Import took 0.013244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Liquid Particle Systems/Materials/uLiquid - Particle 3 MAT.mat
+  artifactKey: Guid(ff6663d927968dc4482d24a8495316de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/uLiquid - Particle 3 MAT.mat using Guid(ff6663d927968dc4482d24a8495316de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1033906656cc84cfd6740ba0565b5a68') in 0.009479 seconds
+  Import took 0.013660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Liquid Particle Systems/Materials/Skybox Gradient MAT.mat
+  artifactKey: Guid(6d461bee5db75df4aa3afe0ef00cf7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Liquid Particle Systems/Materials/Skybox Gradient MAT.mat using Guid(6d461bee5db75df4aa3afe0ef00cf7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e41afeab1f4b1dc5113380ce2a9bdd') in 0.033297 seconds
+  Import took 0.038538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExampleAssets/Materials/Liquid_Mat.mat
+  artifactKey: Guid(c532880e607f8c84d8b9bf0c46a522ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Liquid_Mat.mat using Guid(c532880e607f8c84d8b9bf0c46a522ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '228009167083749461b0629ab04d819c') in 0.008447 seconds
+  Import took 0.012739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Fumes.mat
+  artifactKey: Guid(36fed2b2ce033b240899903fe04df57b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Fumes.mat using Guid(36fed2b2ce033b240899903fe04df57b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13eda31ff6d2e7443a83c40cce4a0955') in 0.010916 seconds
+  Import took 0.015093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round_VertexLit.mat
+  artifactKey: Guid(a56a6d4404bb5944c8e5a9bd16f2b31e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round_VertexLit.mat using Guid(a56a6d4404bb5944c8e5a9bd16f2b31e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb60898cce8f8de3a0937a276f92434e') in 0.008814 seconds
+  Import took 0.012868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Meshes/Card/Card.fbx
+  artifactKey: Guid(0664db5c967a29b45989529007e14810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Card/Card.fbx using Guid(0664db5c967a29b45989529007e14810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6cfa38ca52a96091263d40883fd38a') in 0.014899 seconds
+  Import took 0.018726 seconds .
+
