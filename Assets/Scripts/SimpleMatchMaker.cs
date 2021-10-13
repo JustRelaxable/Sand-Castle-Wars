@@ -21,10 +21,10 @@ public class SimpleMatchMaker : MonoBehaviour
     }
 
     //call this method to request a match to be created on the server
-    public void CreateInternetMatch(string matchName,CreateRoomUI createRoomUI)
+    public void CreateInternetMatch(string matchName, CreateRoomUI createRoomUI,string matchPassword = "")
     {
         NetworkManager.singleton.StartMatchMaker();
-        NetworkManager.singleton.matchMaker.CreateMatch(matchName, 2, true, "", "", "", 0, 0, OnInternetMatchCreate);
+        NetworkManager.singleton.matchMaker.CreateMatch(matchName, 2, true,matchPassword, "", "", 0, 0, OnInternetMatchCreate);
         createRoomUI.transform.parent.gameObject.SetActive(false);
     }
 
@@ -48,14 +48,12 @@ public class SimpleMatchMaker : MonoBehaviour
     public void GetInternetMatches()
     {
         NetworkManager.singleton.StartMatchMaker();
-        NetworkManager.singleton.matchMaker.ListMatches(0, 20, "", true, 0, 0, LoadInternetMatchList);
+        NetworkManager.singleton.matchMaker.ListMatches(0, 20, "", false, 0, 0, LoadInternetMatchList);
     }
 
-    public void JoinTheMatch()
+    public void JoinTheMatch(MatchInfoSnapshot mathcInfoSnapshot,string matchPassword = "")
     {
-        if (RoomUI.SelectedRoom == null)
-            return;
-        NetworkManager.singleton.matchMaker.JoinMatch(RoomUI.SelectedRoom.MatchInfo.networkId, "", "", "", 0, 0, OnJoinInternetMatch);
+        NetworkManager.singleton.matchMaker.JoinMatch(mathcInfoSnapshot.networkId, matchPassword, "", "", 0, 0, OnJoinInternetMatch);
     }
 
     //this method is called when a list of matches is returned

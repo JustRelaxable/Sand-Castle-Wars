@@ -9,6 +9,9 @@ public class CreateRoomUI : MonoBehaviour
     private InputField roomNameField;
 
     [SerializeField]
+    private InputField roomPasswordField;
+
+    [SerializeField]
     private SimpleMatchMaker simpleMatchMaker;
 
 
@@ -16,6 +19,6 @@ public class CreateRoomUI : MonoBehaviour
     {
         if (string.IsNullOrEmpty(roomNameField.text))
             return;
-        simpleMatchMaker.CreateInternetMatch(roomNameField.text,this);
+        simpleMatchMaker.CreateInternetMatch(roomNameField.text,this, roomPasswordField.text);
     }
 }
