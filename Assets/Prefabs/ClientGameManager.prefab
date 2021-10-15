@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5688032886142093225}
   - component: {fileID: 5688032886142093226}
-  - component: {fileID: 5688032886142093224}
   - component: {fileID: 1386141446186889053}
   m_Layer: 0
   m_Name: ClientGameManager
@@ -45,39 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c2ca91e6c04584f945ec624d05019a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5688032886142093224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688032886142093227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  lastPlayedCardUI: {fileID: 0}
+  cardAnimationSpawner: {fileID: 0}
+  cardRedSpawnPoint: {fileID: 0}
+  cardBlueSpawnPoint: {fileID: 0}
+  cardDeck: {fileID: 0}
+  lastCardPos: {fileID: 0}
+  cardShowing: {fileID: 0}
+  lastPlayedCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  nullPoint: {fileID: 0}
 --- !u!95 &1386141446186889053
 Animator:
   serializedVersion: 3

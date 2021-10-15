@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Networking.Match;
+using Photon.Pun;
 
 public class CameraAnimatorManager : MonoBehaviour
 {
@@ -45,12 +46,14 @@ public class CameraAnimatorManager : MonoBehaviour
                 break;
             case 1:
                 ActivateUI();
-                NetworkManager.singleton.StartClient(mathcInfo);
+                PhotonNetwork.Instantiate("PlayerNetworkObject", Vector3.zero, Quaternion.identity);
+                //NetworkManager.singleton.StartClient(mathcInfo);
                 break;
             case 2:
                 ActivateUI();
-                NetworkServer.Listen(mathcInfo, 9000);
-                NetworkManager.singleton.StartHost(mathcInfo);
+                PhotonNetwork.Instantiate("PlayerNetworkObject", Vector3.zero, Quaternion.identity);
+                //NetworkServer.Listen(mathcInfo, 9000);
+                //NetworkManager.singleton.StartHost(mathcInfo);
                 break;
             default:
                 break;

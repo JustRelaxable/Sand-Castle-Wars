@@ -66,23 +66,23 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
-        if (placementId != _androidAdUnitId)
-            return;
+        //if (placementId != _androidAdUnitId)
+        //    return;
 
-        switch (showResult)
-        {
-            case ShowResult.Failed:
-            case ShowResult.Skipped:
-            case ShowResult.Finished:
-                if(GameCardBase.GameMode == GameMode.Multiplayer)
-                {
-                    FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority).CmdTellAdsFinished();
-                }   
-                break;
-            default:
-                break;
-        }
+        //switch (showResult)
+        //{
+        //    case ShowResult.Failed:
+        //    case ShowResult.Skipped:
+        //    case ShowResult.Finished:
+        //        if(GameCardBase.GameMode == GameMode.Multiplayer)
+        //        {
+        //            FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority).CmdTellAdsFinished();
+        //        }   
+        //        break;
+        //    default:
+        //        break;
+        //}
 
-        adReady = false;
+        //adReady = false;
     }
 }

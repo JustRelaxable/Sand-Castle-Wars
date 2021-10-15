@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &30619965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +161,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 4749117688000154000, guid: fed6e82c8e1ed3b48b76545c4380e2d1,
-    type: 3}
+  m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: 
@@ -236,7 +235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &34196909 stripped
 Transform:
@@ -1305,7 +1304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180422677
 GameObject:
@@ -1490,7 +1489,7 @@ RectTransform:
   - {fileID: 66778512}
   - {fileID: 1397331069}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2967,7 +2966,7 @@ Transform:
   m_Children:
   - {fileID: 180422678}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410493860
 GameObject:
@@ -3419,7 +3418,7 @@ Transform:
   - {fileID: 1271021131}
   - {fileID: 1651146406}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477129005
 GameObject:
@@ -4219,6 +4218,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 860894380}
+        m_TargetAssemblyTypeName: PhotonSimpleMatchMaker, Assembly-CSharp
+        m_MethodName: ConnectToMasterServer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5617,115 +5628,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761386912}
   m_CullTransparentMesh: 0
---- !u!1 &798266944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 798266946}
-  - component: {fileID: 798266945}
-  - component: {fileID: 798266947}
-  - component: {fileID: 798266948}
-  - component: {fileID: 798266949}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &798266945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798266944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 1
-  m_LocalPlayerAuthority: 0
---- !u!4 &798266946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798266944}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5642765, y: -1.6547145, z: -3.815424}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &798266947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798266944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a782a79b342994ca1cda7a996c74e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castlePrefab: {fileID: 3274401479163850755, guid: 770372853b2faa84aa3498d12118118e,
-    type: 3}
---- !u!114 &798266948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798266944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d7231016f55264eb6716ee7343f73f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redSpawnPoint: {fileID: 1939333414}
-  blueSpawnPoint: {fileID: 1271021131}
---- !u!114 &798266949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798266944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2103c124b6c2884996d5af2a4880a82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redCastle: {fileID: 0}
-  blueCastle: {fileID: 0}
 --- !u!1 &820346076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5842,6 +5744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860894378}
   - component: {fileID: 860894379}
+  - component: {fileID: 860894380}
   m_Layer: 5
   m_Name: RoomsList
   m_TagString: Untagged
@@ -5886,6 +5789,19 @@ MonoBehaviour:
   roomListParent: {fileID: 820346077}
   roomUIInstance: {fileID: 2057822920883312446, guid: b99db90090a5b854a89d405c079e588b,
     type: 3}
+--- !u!114 &860894380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860894377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb02854c1458ae545937e62a9e962f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedToMasterServer: 0
 --- !u!1 &862506125
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,7 +6807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1032238012
 GameObject:
@@ -8437,7 +8353,7 @@ GameObject:
   - component: {fileID: 1271021131}
   m_Layer: 0
   m_Name: BlueSpawn
-  m_TagString: Untagged
+  m_TagString: BlueSpawn
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10248,6 +10164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simpleMatchMaker: {fileID: 860894379}
   enterRoomPasswordPanel: {fileID: 290676146}
+  photonSimpleMatchMaker: {fileID: 860894380}
 --- !u!1 &1516599617
 GameObject:
   m_ObjectHideFlags: 0
@@ -10370,7 +10287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524419861
 GameObject:
@@ -10645,7 +10562,7 @@ Transform:
   - {fileID: 2021354353}
   - {fileID: 2128535874}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1570415862
 MonoBehaviour:
@@ -10822,7 +10739,7 @@ Transform:
   - {fileID: 34196909}
   - {fileID: 1025985272}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1609133465
 GameObject:
@@ -11581,6 +11498,7 @@ MonoBehaviour:
   roomNameField: {fileID: 1719472339}
   roomPasswordField: {fileID: 1165716847}
   simpleMatchMaker: {fileID: 860894379}
+  photonSimpleMatchMaker: {fileID: 860894380}
 --- !u!1001 &1716054158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17725,7 +17643,7 @@ GameObject:
   - component: {fileID: 1939333414}
   m_Layer: 0
   m_Name: RedSpawn
-  m_TagString: Untagged
+  m_TagString: RedSpawn
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18333,7 +18251,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085121240
 GameObject:
@@ -18628,6 +18546,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clientGameManager: {fileID: 1240786857}
   canPlay: 0
+--- !u!114 &2101278283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101278281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2128535873
 GameObject:
   m_ObjectHideFlags: 0
@@ -18760,6 +18700,11 @@ PrefabInstance:
       propertyPath: lastCardPos
       value: 
       objectReference: {fileID: 1361196504}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: castleStatsUI
+      value: 
+      objectReference: {fileID: 1399362470}
     - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
         type: 3}
       propertyPath: cardSpawnPoint

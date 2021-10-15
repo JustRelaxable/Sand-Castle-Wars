@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class CastleStats : NetworkBehaviour
+public class CastleStats : MonoBehaviour
 {
     public event Action OnStatChanged;
 
@@ -39,12 +39,11 @@ public class CastleStats : NetworkBehaviour
 
     private void Update()
     {
-        if (!hasAuthority)
-            return;
+        //if (!hasAuthority)
+        //    return;
         //if (Input.GetKeyDown(KeyCode.E))
         //CmdChangeCastleHeight(5);
     }
-    [Command]
     private void CmdChangeCastleHeight(int v)
     {
         castleHeight += v;
@@ -96,7 +95,6 @@ public class CastleStats : NetworkBehaviour
     {
         OnStatChanged?.Invoke();
     }
-    [ClientRpc]
     public void RpcHandleNextTurnResources()
     {
         HandleNextTurnResources();
@@ -110,7 +108,6 @@ public class CastleStats : NetworkBehaviour
         InvokeOnStatChanged();
     }
 
-    [ClientRpc]
     public void RpcSetResource(byte resourceType, int value)
     {
         SetResource(resourceType, value);
@@ -137,8 +134,6 @@ public class CastleStats : NetworkBehaviour
                 break;
         }
     }
-
-    [ClientRpc]
     public void RpcSetProduce(byte resourceType, int value)
     {
         SetProduce(resourceType, value);
@@ -166,7 +161,6 @@ public class CastleStats : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
     public void RpcSetHeightOfBuilding(byte buildingType, int value)
     {
         SetHeightOfBuilding(buildingType, value);
@@ -190,7 +184,6 @@ public class CastleStats : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
     public void RpcBasicAttack(int attackTime)
     {
         BasicAttack(attackTime);

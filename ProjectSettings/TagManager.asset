@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CameraCanvas
+  - RedSpawn
+  - BlueSpawn
   layers:
   - Default
   - TransparentFX

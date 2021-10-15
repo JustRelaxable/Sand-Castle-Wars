@@ -112,23 +112,23 @@ public class GameCardUI : MonoBehaviour
 
     public virtual void UseTheCard()
     {
-        var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
-        if (myCastle.GetComponent<CastleTurnController>().myTurn && ableToUseTheCard)
-        {
-            myCastle.CmdUseCard(cardID);
-            selectedCard = this;
-            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
-        }   
+        //var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
+        //if (myCastle.GetComponent<CastleTurnController>().myTurn && ableToUseTheCard)
+        //{
+        //    myCastle.CmdUseCard(cardID);
+        //    selectedCard = this;
+        //    FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+        //}   
     }
     public virtual void DiscardTheCard()
     {
-        var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
-        if (myCastle.GetComponent<CastleTurnController>().myTurn)
-        {
-            myCastle.CmdDiscardCard(cardID);
-            selectedCard = this;
-            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
-        }
+        //var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
+        //if (myCastle.GetComponent<CastleTurnController>().myTurn)
+        //{
+        //    myCastle.CmdDiscardCard(cardID);
+        //    selectedCard = this;
+        //    FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+        //}
     }
 
     public static void RemoveSelectedCard()

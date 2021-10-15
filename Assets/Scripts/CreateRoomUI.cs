@@ -14,11 +14,16 @@ public class CreateRoomUI : MonoBehaviour
     [SerializeField]
     private SimpleMatchMaker simpleMatchMaker;
 
+    [SerializeField]
+    private PhotonSimpleMatchMaker photonSimpleMatchMaker;
+
 
     public void OnCreateButtonClicked()
     {
+        photonSimpleMatchMaker.CreateInternetMatch("test");
         if (string.IsNullOrEmpty(roomNameField.text))
             return;
-        simpleMatchMaker.CreateInternetMatch(roomNameField.text,this, roomPasswordField.text);
+       
+        //simpleMatchMaker.CreateInternetMatch(roomNameField.text,this, roomPasswordField.text);
     }
 }

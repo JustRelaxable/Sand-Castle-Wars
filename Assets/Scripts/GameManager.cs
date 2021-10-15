@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class GameManager : NetworkBehaviour
+public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
@@ -21,6 +23,11 @@ public class GameManager : NetworkBehaviour
     private NetworkInstanceId lastPlayedID;
 
     private int adsFinishedID = -1;
+
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
         instance = this;
@@ -29,19 +36,29 @@ public class GameManager : NetworkBehaviour
         clientGameManager = FindObjectOfType<ClientGameManager>();
     }
 
-    public void OnPlayerConnect(NetworkConnection nc)
-    {
-        var castle = Instantiate(castlePrefab);
+    public void OnPlayerConnect(Player player)
+    {      
+        var castle = PhotonNetwork.Instantiate("PlayerCastle", Vector3.zero, Quaternion.identity);
+        castle.GetComponent<PhotonView>().TransferOwnership(player);
         var team = RequestTeam(castle);
         spawnController.ConfigureCastleTransform(team, castle);
         castle.GetComponent<PlayerCastle>().Team = team;
-
-        NetworkServer.SpawnWithClientAuthority(castle, nc);
+        //NetworkServer.SpawnWithClientAuthority(castle, nc);
 
         UpdateCastleTeams();
+        UpdateCastleTransforms();
 
         if (teamController.AreTeamsReady)
             StartGame();
+    }
+
+    private void UpdateCastleTransforms()
+    {
+        var castles = FindObjectsOfType<PlayerCastle>();
+        foreach (var castle in castles)
+        {
+            castle.GetComponent<PhotonView>().RPC("UpdateTransformsRpc",RpcTarget.All, castle.gameObject.transform.position,castle.gameObject.transform.rotation.eulerAngles);
+        }
     }
 
     public Teams RequestTeam(GameObject castle)
@@ -61,13 +78,14 @@ public class GameManager : NetworkBehaviour
 
         foreach (var castle in castles)
         {
-            castle.RpcUpdateTeams(castle.Team);
+            //castle.UpdateTeamsRpc(castle.Team);
+            castle.GetComponent<PhotonView>().RPC("UpdateTeamsRpc", RpcTarget.All, castle.Team);
         }
     }
 
     public void StartGame()
     {
-        clientGameManager.RpcStartGame();
+        clientGameManager.GetComponent<PhotonView>().RPC("StartGameRpc",RpcTarget.All);
         PrepareCastleCards();
         AssignStartingPlayer();
     }
@@ -77,12 +95,12 @@ public class GameManager : NetworkBehaviour
         var randomNumber = UnityEngine.Random.Range(0, 2);
         if (randomNumber == 0)
         {
-            teamController.blueCastle.GetComponent<CastleTurnController>().RpcNextTurn();
+            teamController.blueCastle.GetComponent<PhotonView>().RPC("NextTurnRpc",RpcTarget.All);
             currentTurn = Teams.Blue;
         }
         else
         {
-            teamController.redCastle.GetComponent<CastleTurnController>().RpcNextTurn();
+            teamController.redCastle.GetComponent<PhotonView>().RPC("NextTurnRpc", RpcTarget.All);
             currentTurn = Teams.Red;
         }      
     }
@@ -95,14 +113,14 @@ public class GameManager : NetworkBehaviour
             int randomCardIndex = UnityEngine.Random.Range(0, CardManager.instance.cards.Length);
             cardDeckToSend[i] = randomCardIndex;
         }
-        teamController.blueCastle.GetComponent<PlayerCards>().RpcSetCardDeck(cardDeckToSend);
+        teamController.blueCastle.GetComponent<PhotonView>().RPC("SetCardDeckRpc",RpcTarget.All,cardDeckToSend);
 
         for (int i = 0; i < cardDeckToSend.Length; i++)
         {
             int randomCardIndex = UnityEngine.Random.Range(0, CardManager.instance.cards.Length);
             cardDeckToSend[i] = randomCardIndex;
         }
-        teamController.redCastle.GetComponent<PlayerCards>().RpcSetCardDeck(cardDeckToSend);
+        teamController.redCastle.GetComponent<PhotonView>().RPC("SetCardDeckRpc", RpcTarget.All, cardDeckToSend);
     }
 
     public void UseCard(NetworkInstanceId id,int cardID)
@@ -170,7 +188,7 @@ public class GameManager : NetworkBehaviour
             teamController.blueCastle.GetComponent<PlayerCards>().RpcTakeCard(GiveRandomCardIndex());        
             currentTurn = Teams.Red;
             HandleNextTurnResources(currentTurn);
-            teamController.redCastle.GetComponent<CastleTurnController>().RpcNextTurn();
+            teamController.redCastle.GetComponent<CastleTurnController>().NextTurnRpc();
         }
            
         else if(currentTurn == Teams.Red)
@@ -178,7 +196,7 @@ public class GameManager : NetworkBehaviour
             teamController.redCastle.GetComponent<PlayerCards>().RpcTakeCard(GiveRandomCardIndex());
             currentTurn = Teams.Blue;
             HandleNextTurnResources(currentTurn);
-            teamController.blueCastle.GetComponent<CastleTurnController>().RpcNextTurn();
+            teamController.blueCastle.GetComponent<CastleTurnController>().NextTurnRpc();
         }
         
     }

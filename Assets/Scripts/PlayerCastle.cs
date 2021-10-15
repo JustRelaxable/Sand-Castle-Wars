@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Linq;
-
-public class PlayerCastle : NetworkBehaviour
+using Photon.Pun;
+// player castle castle stats player cards castle turn
+public class PlayerCastle : MonoBehaviour
 {
     [SerializeField]
     GameObject meshObjects;
@@ -29,8 +30,10 @@ public class PlayerCastle : NetworkBehaviour
 
     private Animator animator;
     private CastleStats castleStats;
+    PhotonView photonView;
     private void Awake()
     {
+        photonView = GetComponent<PhotonView>();
         castleStats = GetComponent<CastleStats>();
     }
     private void Start()
@@ -39,13 +42,12 @@ public class PlayerCastle : NetworkBehaviour
         UpdateMeshHeight(castleStats.castleHeight);
         animator = GetComponent<Animator>();
     }
-    [Command]
     public void CmdGetTeam(NetworkInstanceId id)
     {
         var team = NetworkServer.FindLocalObject(id).GetComponent<PlayerCastle>().Team;
     }
-    [ClientRpc]
-    public void RpcUpdateTeams(Teams team)
+    [PunRPC]
+    public void UpdateTeamsRpc(Teams team)
     {
         UpdateTeamFlagMaterials(team);
     }
@@ -107,7 +109,7 @@ public class PlayerCastle : NetworkBehaviour
 
     public void SetStaticCastleStat()
     {
-        if (!hasAuthority)
+        if (!photonView.IsMine)
             return;
         SetStaticCastleStatSingle();
     }
@@ -117,29 +119,33 @@ public class PlayerCastle : NetworkBehaviour
         PlayerCastleStats = castleStats;
     }
 
-    [ClientRpc]
     public void RpcGameFinished()
     {
-        var turnIndicator = FindObjectOfType<TurnIndicatorUI>();
-        if (hasAuthority)
-        {
-            turnIndicator.SetIndicatorText("You win!");
-        }
-        else
-        {
-            turnIndicator.SetIndicatorText("You lose!");
-        }
+        //var turnIndicator = FindObjectOfType<TurnIndicatorUI>();
+        //if (hasAuthority)
+        //{
+        //    turnIndicator.SetIndicatorText("You win!");
+        //}
+        //else
+        //{
+        //    turnIndicator.SetIndicatorText("You lose!");
+        //}
     }
 
-    [Command]
     public void CmdRequestBonusCard(NetworkInstanceId id)
     {
         GameManager.instance.GetBonusCard(id);
     }
 
-    [Command]
     public void CmdTellAdsFinished()
     {
-        GameManager.instance.AdsFinished(netId);
+        //GameManager.instance.AdsFinished(netId);
+    }
+
+    [PunRPC]
+    public void UpdateTransformsRpc(Vector3 position,Vector3 rotation)
+    {
+        transform.position = position;
+        transform.rotation = Quaternion.Euler(rotation);
     }
 }

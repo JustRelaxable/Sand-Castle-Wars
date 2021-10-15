@@ -4,23 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Linq;
+using Photon.Pun;
 
-public class CastleTurnController : NetworkBehaviour
+public class CastleTurnController : MonoBehaviour
 {
     public bool myTurn = false;
     private TurnIndicatorUI turnIndicatorUI;
     public MeshRenderer sandMeshRenderer;
     public event Action<bool> OnTurnMine;
-
+    PhotonView photonView;
     private void Awake()
     {
+        photonView = GetComponent<PhotonView>();
         turnIndicatorUI = FindObjectOfType<TurnIndicatorUI>();
     }
 
-    [ClientRpc]
-    public void RpcNextTurn()
+    [PunRPC]
+    public void NextTurnRpc()
     {
-        if (hasAuthority)
+        if (photonView.IsMine)
         {
             myTurn = true;
             OnTurnMine?.Invoke(true);
@@ -29,7 +31,7 @@ public class CastleTurnController : NetworkBehaviour
         }
         else
         {
-            var myCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
+            var myCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.photonView.IsMine);
             myCastle.myTurn = false;
             OnTurnMine?.Invoke(false);
             turnIndicatorUI.SetIndicatorText(myCastle.myTurn);
@@ -41,13 +43,13 @@ public class CastleTurnController : NetworkBehaviour
 
     private void HandleGlowing(bool myTurn)
     {
-        SetGlowing(1);
-        CastleTurnController otherCastle;
-        if(myTurn)
-            otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => !x.hasAuthority);
-        else
-            otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
-        otherCastle.SetGlowing(0);
+        //SetGlowing(1);
+        //CastleTurnController otherCastle;
+        //if(myTurn)
+        //    otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => !x.hasAuthority);
+        //else
+        //    otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
+        //otherCastle.SetGlowing(0);
     }
 
     public void SetGlowing(float value)

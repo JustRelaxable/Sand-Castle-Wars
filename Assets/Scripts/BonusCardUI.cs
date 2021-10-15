@@ -77,9 +77,9 @@ public class BonusCardUI : MonoBehaviour
     {
         turnMine = false;
         bonusCardRewardedAds.ShowBonusCardRewardedAd();
-        var castle = FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority);
-        var netID = castle.netId;
-        castle.CmdRequestBonusCard(netID);
+        //var castle = FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority);
+        //var netID = castle.netId;
+        //castle.CmdRequestBonusCard(netID);
         SetButtonInteractable();
     }
 }

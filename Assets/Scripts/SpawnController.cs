@@ -10,6 +10,12 @@ public class SpawnController : MonoBehaviour
     [SerializeField]
     Transform blueSpawnPoint;
 
+    private void Awake()
+    {
+        redSpawnPoint = GameObject.FindGameObjectWithTag("RedSpawn").transform;
+        blueSpawnPoint = GameObject.FindGameObjectWithTag("BlueSpawn").transform;
+    }
+
     public void ConfigureCastleTransform(Teams team,GameObject castle)
     {
         switch (team)

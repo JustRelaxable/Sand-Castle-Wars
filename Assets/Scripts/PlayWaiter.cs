@@ -17,8 +17,8 @@ public class PlayWaiter : MonoBehaviour
 
     private void ClientGameManager_OnGameStarted()
     {
-        var myCastleTurnController = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
-        myCastleTurnController.OnTurnMine += MyCastleTurnController_OnTurnMine;
+        //var myCastleTurnController = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
+        //myCastleTurnController.OnTurnMine += MyCastleTurnController_OnTurnMine;
     }
 
     private void MyCastleTurnController_OnTurnMine(bool obj)
