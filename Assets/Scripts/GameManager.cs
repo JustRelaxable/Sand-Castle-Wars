@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipCallbacks
 {
     public static GameManager instance;
 
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        PhotonNetwork.AddCallbackTarget(this);
         instance = this;
         spawnController = GetComponent<SpawnController>();
         teamController = GetComponent<TeamController>();
@@ -39,6 +40,8 @@ public class GameManager : MonoBehaviour
     public void OnPlayerConnect(Player player)
     {      
         var castle = PhotonNetwork.Instantiate("PlayerCastle", Vector3.zero, Quaternion.identity);
+        castle.GetComponent<PhotonView>().AddCallback<GameManager>(this);
+       
         castle.GetComponent<PhotonView>().TransferOwnership(player);
         var team = RequestTeam(castle);
         spawnController.ConfigureCastleTransform(team, castle);
@@ -48,8 +51,8 @@ public class GameManager : MonoBehaviour
         UpdateCastleTeams();
         UpdateCastleTransforms();
 
-        if (teamController.AreTeamsReady)
-            StartGame();
+        //if (teamController.AreTeamsReady)
+            //StartGame();
     }
 
     private void UpdateCastleTransforms()
@@ -238,5 +241,26 @@ public class GameManager : MonoBehaviour
             adsFinishedID = -1;
             clientGameManager.RpcAdsFinished();
         }
+    }
+
+    public void OnOwnerChange(Player newOwner, Player previousOwner)
+    {
+
+    }
+
+    public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
+    {
+        if (!targetView.IsMine)
+            StartGame();
+    }
+
+    public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest)
+    {
+        throw new NotImplementedException();
     }
 }
