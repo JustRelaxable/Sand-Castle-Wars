@@ -20,10 +20,10 @@ public class CreateRoomUI : MonoBehaviour
 
     public void OnCreateButtonClicked()
     {
-        photonSimpleMatchMaker.CreateInternetMatch("test");
+
         if (string.IsNullOrEmpty(roomNameField.text))
             return;
-       
+        photonSimpleMatchMaker.CreateInternetMatch(roomNameField.text);
         //simpleMatchMaker.CreateInternetMatch(roomNameField.text,this, roomPasswordField.text);
     }
 }

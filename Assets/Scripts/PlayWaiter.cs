@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Photon.Pun;
 
 public class PlayWaiter : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class PlayWaiter : MonoBehaviour
 
     private void ClientGameManager_OnGameStarted()
     {
-        //var myCastleTurnController = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
-        //myCastleTurnController.OnTurnMine += MyCastleTurnController_OnTurnMine;
+        var myCastleTurnController = FindObjectsOfType<CastleTurnController>().Single(x => x.GetComponent<PhotonView>().IsMine);
+        myCastleTurnController.OnTurnMine += MyCastleTurnController_OnTurnMine;
     }
 
     private void MyCastleTurnController_OnTurnMine(bool obj)

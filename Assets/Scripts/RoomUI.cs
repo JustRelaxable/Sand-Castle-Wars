@@ -13,14 +13,13 @@ public class RoomUI : MonoBehaviour
     Image privateRoomImage;
 
     public static RoomUI SelectedRoom { get; private set; }
-    public MatchInfoSnapshot MatchInfo { get; private set; }
-    public bool IsPrivate { get => privateRoomImage.enabled; }
 
-    public void PrepareRoom(MatchInfoSnapshot matchInfo)
+    public string RoomName { get; private set; }
+
+    public void PrepareRoom(string roomName)
     {
-        this.MatchInfo = matchInfo;
-        roomNameText.text = matchInfo.name;
-        privateRoomImage.enabled = matchInfo.isPrivate;
+        roomNameText.text = roomName;
+        RoomName = roomName;
     }
 
     public void OnClicked()

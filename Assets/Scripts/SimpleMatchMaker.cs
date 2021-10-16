@@ -68,7 +68,7 @@ public class SimpleMatchMaker : MonoBehaviour
             foreach (var item in matches)
             {
                 var go = Instantiate(roomUIInstance, roomListParent);
-                go.GetComponent<RoomUI>().PrepareRoom(item);
+                //go.GetComponent<RoomUI>().PrepareRoom(item);
             }
         }
         else

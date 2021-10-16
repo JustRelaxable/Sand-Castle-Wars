@@ -45,6 +45,12 @@ MonoBehaviour:
   - StartGameRpc
   - NextTurnRpc
   - SetCardDeckRpc
+  - UseCardRpc
+  - GetLastPlayedCardRpc
+  - PlayCardAnimationRpc
+  - HandleNextTurnResourcesRpc
+  - TakeCardRpc
+  - DiscardCardRpc
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

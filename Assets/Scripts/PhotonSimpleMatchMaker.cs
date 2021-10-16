@@ -6,6 +6,11 @@ using Photon.Realtime;
 
 public class PhotonSimpleMatchMaker : MonoBehaviourPunCallbacks
 {
+    [SerializeField]
+    Transform roomListParent;
+
+    [SerializeField]
+    GameObject roomUIInstance;
     public bool connectedToMasterServer = false;
     public void CreateInternetMatch(string roomName)
     {
@@ -18,7 +23,28 @@ public class PhotonSimpleMatchMaker : MonoBehaviourPunCallbacks
     {
         if (!connectedToMasterServer)
             return;
-        PhotonNetwork.JoinRoom("test");
+        PhotonNetwork.JoinRoom(roomName);
+    }
+
+    public void LoadInternetMatches()
+    {
+        PhotonNetwork.GetCustomRoomList(TypedLobby.Default, "ALL");
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        for (int i = 0; i < roomListParent.childCount; i++)
+        {
+            Destroy(roomListParent.GetChild(i).gameObject);
+        }
+        foreach (var item in roomList)
+        {
+            if (!item.RemovedFromList)
+            {
+                var go = Instantiate(roomUIInstance, roomListParent);
+                go.GetComponent<RoomUI>().PrepareRoom(item.Name);
+            }
+        }
     }
 
     public void ConnectToMasterServer()

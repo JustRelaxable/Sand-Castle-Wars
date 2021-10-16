@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Photon.Pun;
 
-public class CastleStats : MonoBehaviour
+public class CastleStats : MonoBehaviourPun
 {
     public event Action OnStatChanged;
 
@@ -95,7 +96,8 @@ public class CastleStats : MonoBehaviour
     {
         OnStatChanged?.Invoke();
     }
-    public void RpcHandleNextTurnResources()
+    [PunRPC]
+    public void HandleNextTurnResourcesRpc()
     {
         HandleNextTurnResources();
     }

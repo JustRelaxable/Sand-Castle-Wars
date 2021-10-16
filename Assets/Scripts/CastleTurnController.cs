@@ -6,16 +6,14 @@ using UnityEngine.Networking;
 using System.Linq;
 using Photon.Pun;
 
-public class CastleTurnController : MonoBehaviour
+public class CastleTurnController : MonoBehaviourPun
 {
     public bool myTurn = false;
     private TurnIndicatorUI turnIndicatorUI;
     public MeshRenderer sandMeshRenderer;
     public event Action<bool> OnTurnMine;
-    PhotonView photonView;
-    private void Awake()
+    private void Start()
     {
-        photonView = GetComponent<PhotonView>();
         turnIndicatorUI = FindObjectOfType<TurnIndicatorUI>();
     }
 
@@ -43,13 +41,13 @@ public class CastleTurnController : MonoBehaviour
 
     private void HandleGlowing(bool myTurn)
     {
-        //SetGlowing(1);
-        //CastleTurnController otherCastle;
-        //if(myTurn)
-        //    otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => !x.hasAuthority);
-        //else
-        //    otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority);
-        //otherCastle.SetGlowing(0);
+        SetGlowing(1);
+        CastleTurnController otherCastle;
+        if (myTurn)
+            otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => !x.photonView.IsMine);
+        else
+            otherCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.photonView.IsMine);
+        otherCastle.SetGlowing(0);
     }
 
     public void SetGlowing(float value)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using Photon.Pun;
 
 public class GameCardUI : MonoBehaviour
 {
@@ -112,23 +113,27 @@ public class GameCardUI : MonoBehaviour
 
     public virtual void UseTheCard()
     {
-        //var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
-        //if (myCastle.GetComponent<CastleTurnController>().myTurn && ableToUseTheCard)
-        //{
-        //    myCastle.CmdUseCard(cardID);
-        //    selectedCard = this;
-        //    FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
-        //}   
+        var myCastlePlayerCard = FindObjectsOfType<PlayerCards>().Single(x => x.photonView.IsMine);
+        if (myCastlePlayerCard.GetComponent<CastleTurnController>().myTurn && ableToUseTheCard)
+        {
+            //myCastle.UseCardRpc(cardID);
+            selectedCard = this;
+            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+            myCastlePlayerCard.photonView.RPC("UseCardRpc", RpcTarget.MasterClient, myCastlePlayerCard.photonView.ViewID, cardID);
+
+            
+        }
     }
     public virtual void DiscardTheCard()
     {
-        //var myCastle = FindObjectsOfType<PlayerCards>().Single(x => x.hasAuthority);
-        //if (myCastle.GetComponent<CastleTurnController>().myTurn)
-        //{
-        //    myCastle.CmdDiscardCard(cardID);
-        //    selectedCard = this;
-        //    FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
-        //}
+        var myCastlePlayerCards = FindObjectsOfType<PlayerCards>().Single(x => x.photonView.IsMine);
+        if (myCastlePlayerCards.GetComponent<CastleTurnController>().myTurn)
+        {
+            selectedCard = this;
+            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+            //myCastle.DiscardCardRpc(cardID);
+        }
+        myCastlePlayerCards.photonView.RPC("DiscardCardRpc", RpcTarget.MasterClient, myCastlePlayerCards.photonView.ViewID, cardID);
     }
 
     public static void RemoveSelectedCard()

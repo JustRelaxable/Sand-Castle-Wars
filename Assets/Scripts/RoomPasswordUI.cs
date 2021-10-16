@@ -14,7 +14,6 @@ public class RoomPasswordUI : MonoBehaviour
     {
         if (string.IsNullOrEmpty(passwordField.text))
             return;
-        else
-            simpleMatchMaker.JoinTheMatch(RoomUI.SelectedRoom.MatchInfo, passwordField.text);
+            //simpleMatchMaker.JoinTheMatch(RoomUI.SelectedRoom.MatchInfo, passwordField.text);
     }
 }

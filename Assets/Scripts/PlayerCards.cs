@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using Photon.Pun;
+using Photon.Realtime;
 
-public class PlayerCards : MonoBehaviour
+public class PlayerCards : MonoBehaviourPun
 {
     public int[] cardDeck = new int[8];
     private GameCardHolderUI gameCardHolderUI;
-    PhotonView photonView;
     private void Awake()
     {
-        photonView = GetComponent<PhotonView>();
         for (int i = 0; i < cardDeck.Length; i++)
         {
             cardDeck[i] = -1;
         }
         gameCardHolderUI = FindObjectOfType<GameCardHolderUI>();
     }
-    public void CmdUseCard(int cardID)
-    {
-        //GameManager.instance.UseCard(netId,cardID);
+    [PunRPC]
+    public void UseCardRpc(int viewID,int cardID)
+    {     
+        GameManager.instance.UseCard(viewID, cardID);
     }
-    public void CmdDiscardCard(int cardID)
+    [PunRPC]
+    public void DiscardCardRpc(int viewID,int cardID)
     {
-        //GameManager.instance.DiscardCard(netId,cardID);
+        GameManager.instance.DiscardCard(viewID,cardID);
     }
 
     private void Update()
@@ -44,14 +45,15 @@ public class PlayerCards : MonoBehaviour
             gameCardHolderUI.InstantiateCard(cardID);
         }
     }
-    public void RpcTakeCard(int cardID)
+    [PunRPC]
+    public void TakeCardRpc(int cardID)
     {
-        //if (!hasAuthority)
-        //    return;
-        ////gameCardHolderUI.InstantiateCard(cardID);
-        //var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
-        ////gameCard.GetComponent<GameCardUI>().OpenCardBack();
-        //FindObjectOfType<ClientGameManager>().TakeCardFromDeck(gameCard);
+        if (!photonView.IsMine)
+            return;
+        //gameCardHolderUI.InstantiateCard(cardID);
+        var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
+        //gameCard.GetComponent<GameCardUI>().OpenCardBack();
+        FindObjectOfType<ClientGameManager>().TakeCardFromDeck(gameCard);
     }
 
     public void RpcTakeBonusCard(int cardID)

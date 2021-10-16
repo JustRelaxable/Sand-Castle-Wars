@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
     private bool gameFinished = false;
 
     private object cardInTheProgress = new object();
-    private NetworkInstanceId lastPlayedID;
+    private int lastPlayedViewID;
 
     private int adsFinishedID = -1;
 
@@ -98,12 +98,12 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
         var randomNumber = UnityEngine.Random.Range(0, 2);
         if (randomNumber == 0)
         {
-            teamController.blueCastle.GetComponent<PhotonView>().RPC("NextTurnRpc",RpcTarget.All);
+            teamController.blueCastle.GetComponent<CastleTurnController>().photonView.RPC("NextTurnRpc",RpcTarget.All);
             currentTurn = Teams.Blue;
         }
         else
         {
-            teamController.redCastle.GetComponent<PhotonView>().RPC("NextTurnRpc", RpcTarget.All);
+            teamController.redCastle.GetComponent<CastleTurnController>().photonView.RPC("NextTurnRpc", RpcTarget.All);
             currentTurn = Teams.Red;
         }      
     }
@@ -126,26 +126,26 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
         teamController.redCastle.GetComponent<PhotonView>().RPC("SetCardDeckRpc", RpcTarget.All, cardDeckToSend);
     }
 
-    public void UseCard(NetworkInstanceId id,int cardID)
+    public void UseCard(int viewID,int cardID)
     {
-
         lock (cardInTheProgress)
         {
-            if (lastPlayedID == id)
+            if (lastPlayedViewID == viewID)
                 return;
-            lastPlayedID = id;
+            lastPlayedViewID = viewID;
             if (gameFinished)
                 return;
-
-            Teams callerTeam = teamController.GetTeamFromGameObject(NetworkServer.FindLocalObject(id));
+            Teams callerTeam = teamController.GetTeamFromGameObject(PhotonView.Find(viewID).gameObject);
             Teams enemyTeam = callerTeam == Teams.Blue ? Teams.Red : Teams.Blue;
 
             var callerStats = teamController.GetGameObjectFromTeam(callerTeam).GetComponent<CastleStats>();
             var enemyStats = teamController.GetGameObjectFromTeam(enemyTeam).GetComponent<CastleStats>();
 
             CardManager.instance.GetCard(cardID).UseTheCard(callerStats, enemyStats);
-            clientGameManager.RpcGetLastPlayedCard(cardID,false);
-            clientGameManager.RpcPlayCardAnimation(cardID, ((byte)currentTurn));
+            clientGameManager.photonView.RPC("GetLastPlayedCardRpc", RpcTarget.All, cardID, false);
+            //clientGameManager.GetLastPlayedCardRpc(cardID, false);
+            clientGameManager.photonView.RPC("PlayCardAnimationRpc",RpcTarget.All,cardID,(byte)currentTurn);
+            //clientGameManager.PlayCardAnimationRpc(cardID, ((byte)currentTurn));
 
             if (CheckIfGameFinished(callerStats, enemyStats))
                 return;
@@ -154,16 +154,17 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
         }
     }
 
-    public void DiscardCard(NetworkInstanceId id,int cardID)
+    public void DiscardCard(int viewID,int cardID)
     {
         lock (cardInTheProgress)
         {
-            if (lastPlayedID == id)
+            if (lastPlayedViewID == viewID)
                 return;
-            lastPlayedID = id;
+            lastPlayedViewID = viewID;
             if (gameFinished)
                 return;
-            clientGameManager.RpcGetLastPlayedCard(cardID,true);
+            //clientGameManager.RpcGetLastPlayedCard(cardID, true);
+            clientGameManager.photonView.RPC("GetLastPlayedCardRpc", RpcTarget.All, cardID, true);
             NextTurn();
         }
     }
@@ -188,18 +189,18 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
         
         if (currentTurn == Teams.Blue)
         {
-            teamController.blueCastle.GetComponent<PlayerCards>().RpcTakeCard(GiveRandomCardIndex());        
+            teamController.blueCastle.GetComponent<PlayerCards>().photonView.RPC("TakeCardRpc",RpcTarget.All, GiveRandomCardIndex());        
             currentTurn = Teams.Red;
             HandleNextTurnResources(currentTurn);
-            teamController.redCastle.GetComponent<CastleTurnController>().NextTurnRpc();
+            teamController.redCastle.GetComponent<CastleTurnController>().photonView.RPC("NextTurnRpc",RpcTarget.All);
         }
            
         else if(currentTurn == Teams.Red)
         {
-            teamController.redCastle.GetComponent<PlayerCards>().RpcTakeCard(GiveRandomCardIndex());
+            teamController.redCastle.GetComponent<PlayerCards>().photonView.RPC("TakeCardRpc", RpcTarget.All, GiveRandomCardIndex());
             currentTurn = Teams.Blue;
             HandleNextTurnResources(currentTurn);
-            teamController.blueCastle.GetComponent<CastleTurnController>().NextTurnRpc();
+            teamController.blueCastle.GetComponent<CastleTurnController>().photonView.RPC("NextTurnRpc", RpcTarget.All);
         }
         
     }
@@ -209,10 +210,10 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
         switch (currentTurn)
         {
             case Teams.Blue:
-                teamController.blueCastle.GetComponent<CastleStats>().RpcHandleNextTurnResources();
+                teamController.blueCastle.GetComponent<CastleStats>().photonView.RPC("HandleNextTurnResourcesRpc",RpcTarget.All);
                 break;
             case Teams.Red:
-                teamController.redCastle.GetComponent<CastleStats>().RpcHandleNextTurnResources();
+                teamController.redCastle.GetComponent<CastleStats>().photonView.RPC("HandleNextTurnResourcesRpc", RpcTarget.All);
                 break;
             default:
                 break;

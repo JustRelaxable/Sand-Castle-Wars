@@ -6,16 +6,18 @@ using UnityEngine.Networking;
 using System.Linq;
 using Photon.Pun;
 
-public class ClientGameManager : MonoBehaviour
+public class ClientGameManager : MonoBehaviourPun
 {
     [SerializeField]
     LastPlayedCardUI lastPlayedCardUI;
 
+    
 
     [SerializeField]
     private CastleStatsUI castleStatsUI;
-
+    [SerializeField]
     private GameCardHolderUI gameCardHolderUI;
+
     public event Action OnGameStarted;
     public CardAnimationSpawner cardAnimationSpawner;
     public GameObject cardRedSpawnPoint;
@@ -27,11 +29,6 @@ public class ClientGameManager : MonoBehaviour
     private Transform lastPlayedCardParentTransform;
     public GameObject nullPoint;
     private bool isLastCardArrived = false;
-    
-    private void Start()
-    {
-        gameCardHolderUI = GameObject.FindObjectOfType<GameCardHolderUI>();
-    }
 
     [PunRPC]
     public void StartGameRpc()
@@ -44,47 +41,47 @@ public class ClientGameManager : MonoBehaviour
         }
         castleStatsUI.OnGameStarted();
     }
-
-    public void RpcGetLastPlayedCard(int cardID,bool isDiscarded)
+    [PunRPC]
+    public void GetLastPlayedCardRpc(int cardID,bool isDiscarded)
     {
-        ClearLastPlayedCards();
+        //ClearLastPlayedCards();
         //gameCardHolderUI.InstantiateLastCard(cardID);
-        //var myTurn = FindObjectsOfType<CastleTurnController>().Single(x => x.hasAuthority).myTurn;
+        var myTurn = FindObjectsOfType<CastleTurnController>().Single(x => x.photonView.IsMine).myTurn;
 
-        //if (myTurn)
-        //{
-        //    if (isDiscarded)
-        //        GameCardUI.selectedCard.OpenDiscarded();
-        //    GameCardUI.selectedCard.CloseCardSettings();
-        //    var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
-        //    StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
-        //    GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
-        //    gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
-        //}
-        //else
-        //{
-        //    var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
-        //    if (isDiscarded)
-        //        gameCard.GetComponent<GameCardUI>().OpenDiscarded();
+        if (myTurn)
+        {
+            if (isDiscarded)
+                GameCardUI.selectedCard.OpenDiscarded();
+            GameCardUI.selectedCard.CloseCardSettings();
+            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
+            StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject, cardPosToGo));
+            GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
+            gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
+        }
+        else
+        {
+            var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
+            if (isDiscarded)
+                gameCard.GetComponent<GameCardUI>().OpenDiscarded();
 
-        //    //var team = FindObjectsOfType<CastleStats>().Single(x => !x.hasAuthority).team;
+            var team = FindObjectsOfType<CastleStats>().Single(x => !x.photonView.IsMine).team;
 
-        //    //switch (team)
-        //    //{
-        //    //    case Teams.Blue:
-        //    //        gameCard.transform.position = cardBlueSpawnPoint.transform.position;
-        //    //        break;
-        //    //    case Teams.Red:
-        //    //        gameCard.transform.position = cardRedSpawnPoint.transform.position;
-        //    //        break;
-        //    //    default:
-        //    //        break;
-        //    //}
+            switch (team)
+            {
+                case Teams.Blue:
+                    gameCard.transform.position = cardBlueSpawnPoint.transform.position;
+                    break;
+                case Teams.Red:
+                    gameCard.transform.position = cardRedSpawnPoint.transform.position;
+                    break;
+                default:
+                    break;
+            }
 
-        //    var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
-        //    StartCoroutine(MoveCardToTransform(gameCard, cardPosToGo));
-        //    gameCard.transform.SetParent(lastPlayedCardUI.transform);
-        //}
+            var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
+            StartCoroutine(MoveCardToTransform(gameCard, cardPosToGo));
+            gameCard.transform.SetParent(lastPlayedCardUI.transform);
+        }
     }
 
     private void ClearLastPlayedCards()
@@ -98,8 +95,8 @@ public class ClientGameManager : MonoBehaviour
         //    Destroy(gameCardHolderUI.lastPlayedCard.transform.GetChild(i).gameObject);
         //}
     }
-
-    public void RpcPlayCardAnimation(int cardID,byte team)
+    [PunRPC]
+    public void PlayCardAnimationRpc(int cardID,byte team)
     {
         PlayCardAnimation(cardID, team);
     }

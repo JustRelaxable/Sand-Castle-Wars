@@ -15,12 +15,14 @@ public class RoomListUIJoinButton : MonoBehaviour
 
     public void OnClicked()
     {
-        photonSimpleMatchMaker.JoinInternetMatch("test");
+        if(RoomUI.SelectedRoom != null)
+            photonSimpleMatchMaker.JoinInternetMatch(RoomUI.SelectedRoom.RoomName);
         /*
         if (RoomUI.SelectedRoom.IsPrivate)
             enterRoomPasswordPanel.SetActive(true);
         else
             simpleMatchMaker.JoinTheMatch(RoomUI.SelectedRoom.MatchInfo);
         */
+        
     }
 }
