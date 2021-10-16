@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   simpleMatchMaker: {fileID: 860894379}
-  roomNameField: {fileID: 0}
+  roomNameField: {fileID: 110815937}
   photonSimpleMatchMaker: {fileID: 860894380}
 --- !u!1 &232659260
 GameObject:
