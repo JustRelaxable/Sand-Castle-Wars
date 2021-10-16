@@ -47,6 +47,6 @@ Material:
     - _Smoothnes: 0.872
     - _Strength: 0.86
     m_Colors:
-    - _DeepColor: {r: 0.08627451, g: 0.6509804, b: 0.67058825, a: 0.84313726}
-    - _ShallowColor: {r: 0, g: 0.96644306, b: 1, a: 0.68235296}
+    - _DeepColor: {r: 0, g: 0.46666658, b: 0.4823529, a: 0.6392157}
+    - _ShallowColor: {r: 0, g: 0.46478555, b: 0.482, a: 0.68235296}
   m_BuildTextureStacks: []
