@@ -231,16 +231,17 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
         x.GetComponent<PlayerCards>().RpcTakeBonusCard(GiveRandomCardIndex());
     }
 
-    public void AdsFinished(NetworkInstanceId id)
+    public void AdsFinished(int viewID)
     {
         if(adsFinishedID == -1)
         {
-            adsFinishedID = (int)id.Value;
+            adsFinishedID = viewID;
         }
-        else if(adsFinishedID != (int)id.Value)
+        else if(adsFinishedID != viewID)
         {
             adsFinishedID = -1;
-            clientGameManager.RpcAdsFinished();
+            //clientGameManager.AdsFinishedRpc();
+            clientGameManager.photonView.RPC("AdsFinishedRpc", RpcTarget.All);
         }
     }
 

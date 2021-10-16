@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 using System.Linq;
+using Photon.Pun;
 
 public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 {
@@ -66,23 +67,24 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
-        //if (placementId != _androidAdUnitId)
-        //    return;
+        if (placementId != _androidAdUnitId)
+            return;
 
-        //switch (showResult)
-        //{
-        //    case ShowResult.Failed:
-        //    case ShowResult.Skipped:
-        //    case ShowResult.Finished:
-        //        if(GameCardBase.GameMode == GameMode.Multiplayer)
-        //        {
-        //            FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority).CmdTellAdsFinished();
-        //        }   
-        //        break;
-        //    default:
-        //        break;
-        //}
+        switch (showResult)
+        {
+            case ShowResult.Failed:
+            case ShowResult.Skipped:
+            case ShowResult.Finished:
+                if (GameCardBase.GameMode == GameMode.Multiplayer)
+                {
+                    var myPlayerCastle = FindObjectsOfType<PlayerCastle>().Single(x => x.photonView.IsMine);
+                    myPlayerCastle.photonView.RPC("TellAdsFinishedRpc",RpcTarget.MasterClient,myPlayerCastle.photonView.ViewID);
+                }
+                break;
+            default:
+                break;
+        }
 
-        //adReady = false;
+        adReady = false;
     }
 }

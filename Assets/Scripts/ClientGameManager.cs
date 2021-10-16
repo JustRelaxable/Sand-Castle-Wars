@@ -172,7 +172,8 @@ public class ClientGameManager : MonoBehaviourPun
         lastPlayedCardParentTransform = transform;
     }
 
-    public void RpcAdsFinished()
+    [PunRPC]
+    public void AdsFinishedRpc()
     {
         var playWaiter = FindObjectOfType<PlayWaiter>();
         StartCoroutine(playWaiter.WaitForPlay(2f));

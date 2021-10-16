@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 using System.Linq;
 using Photon.Pun;
 // player castle castle stats player cards castle turn
-public class PlayerCastle : MonoBehaviour
+public class PlayerCastle : MonoBehaviourPun
 {
     [SerializeField]
     GameObject meshObjects;
@@ -30,10 +30,8 @@ public class PlayerCastle : MonoBehaviour
 
     private Animator animator;
     private CastleStats castleStats;
-    PhotonView photonView;
     private void Awake()
     {
-        photonView = GetComponent<PhotonView>();
         castleStats = GetComponent<CastleStats>();
     }
     private void Start()
@@ -136,10 +134,10 @@ public class PlayerCastle : MonoBehaviour
     {
         GameManager.instance.GetBonusCard(id);
     }
-
-    public void CmdTellAdsFinished()
+    [PunRPC]
+    public void TellAdsFinishedRpc(int viewID)
     {
-        //GameManager.instance.AdsFinished(netId);
+        GameManager.instance.AdsFinished(viewID);
     }
 
     [PunRPC]
