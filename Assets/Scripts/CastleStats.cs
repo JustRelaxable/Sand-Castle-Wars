@@ -110,7 +110,8 @@ public class CastleStats : MonoBehaviourPun
         InvokeOnStatChanged();
     }
 
-    public void RpcSetResource(byte resourceType, int value)
+    [PunRPC]
+    public void SetResourceRpc(byte resourceType, int value)
     {
         SetResource(resourceType, value);
     }
@@ -136,7 +137,8 @@ public class CastleStats : MonoBehaviourPun
                 break;
         }
     }
-    public void RpcSetProduce(byte resourceType, int value)
+    [PunRPC]
+    public void SetProduceRpc(byte resourceType, int value)
     {
         SetProduce(resourceType, value);
     }
@@ -163,7 +165,8 @@ public class CastleStats : MonoBehaviourPun
         }
     }
 
-    public void RpcSetHeightOfBuilding(byte buildingType, int value)
+    [PunRPC]
+    public void SetHeightOfBuildingRpc(byte buildingType, int value)
     {
         SetHeightOfBuilding(buildingType, value);
     }
@@ -185,8 +188,8 @@ public class CastleStats : MonoBehaviourPun
                 break;
         }
     }
-
-    public void RpcBasicAttack(int attackTime)
+    [PunRPC]
+    public void BasicAttackRpc(int attackTime)
     {
         BasicAttack(attackTime);
     }

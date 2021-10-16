@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class GameCardMulti : GameCardVariation
 {
@@ -15,15 +16,18 @@ public class GameCardMulti : GameCardVariation
         {
             case ResourceType.Sand:
                 executor.sandResource -= gameCard.resourceCost;
-                executor.RpcSetResource(((byte)gameCard.resourceType), executor.sandResource);
+                //executor.SetResourceRpc(((byte)gameCard.resourceType), executor.sandResource);
+                executor.photonView.RPC("SetResourceRpc", RpcTarget.All, (byte)gameCard.resourceType, executor.sandResource);
                 break;
             case ResourceType.Water:
                 executor.waterResource -= gameCard.resourceCost;
-                executor.RpcSetResource(((byte)gameCard.resourceType), executor.waterResource);
+                //executor.SetResourceRpc(((byte)gameCard.resourceType), executor.waterResource);
+                executor.photonView.RPC("SetResourceRpc", RpcTarget.All, (byte)gameCard.resourceType, executor.waterResource);
                 break;
             case ResourceType.Magic:
                 executor.magicResource -= gameCard.resourceCost;
-                executor.RpcSetResource(((byte)gameCard.resourceType), executor.magicResource);
+                //executor.SetResourceRpc(((byte)gameCard.resourceType), executor.magicResource);
+                executor.photonView.RPC("SetResourceRpc", RpcTarget.All, (byte)gameCard.resourceType, executor.magicResource);
                 break;
             default:
                 break;
@@ -32,7 +36,8 @@ public class GameCardMulti : GameCardVariation
 
     public override void BasicAttack(CastleStats enemy, int attackTime)
     {
-        enemy.RpcBasicAttack(attackTime);
+        //enemy.BasicAttackRpc(attackTime);
+        enemy.photonView.RPC("BasicAttackRpc", RpcTarget.All, attackTime);
     }
 
     public override void ChangeResource(CastleStats target, ResourceType type, int amount)
@@ -43,19 +48,22 @@ public class GameCardMulti : GameCardVariation
                 target.sandResource += amount;
                 if (target.sandResource < 0)
                     target.sandResource = 0;
-                target.RpcSetResource(((byte)type), target.sandResource);
+                //target.SetResourceRpc(((byte)type), target.sandResource);
+                target.photonView.RPC("SetResourceRpc", RpcTarget.All, (byte)type, target.sandResource);
                 break;
             case ResourceType.Water:
                 target.waterResource += amount;
                 if (target.waterResource < 0)
                     target.waterResource = 0;
-                target.RpcSetResource(((byte)type), target.waterResource);
+                //target.SetResourceRpc(((byte)type), target.waterResource);
+                target.photonView.RPC("SetResourceRpc", RpcTarget.All, (byte)type, target.waterResource);
                 break;
             case ResourceType.Magic:
                 target.magicResource += amount;
                 if (target.magicResource < 0)
                     target.magicResource = 0;
-                target.RpcSetResource(((byte)type), target.magicResource);
+                //target.SetResourceRpc(((byte)type), target.magicResource);
+                target.photonView.RPC("SetResourceRpc", RpcTarget.All, (byte)type, target.magicResource);
                 break;
             default:
                 break;
@@ -70,19 +78,22 @@ public class GameCardMulti : GameCardVariation
                 target.sandProduce += amount;
                 if (target.sandProduce < 1)
                     target.sandProduce = 1;
-                target.RpcSetProduce(((byte)type), target.sandProduce);
+                //target.SetProduceRpc(((byte)type), target.sandProduce);
+                target.photonView.RPC("SetProduceRpc", RpcTarget.All, (byte)type, target.sandProduce);
                 break;
             case ResourceType.Water:
                 target.waterProduce += amount;
                 if (target.waterProduce < 1)
                     target.waterProduce = 1;
-                target.RpcSetProduce(((byte)type), target.waterProduce);
+                //target.SetProduceRpc(((byte)type), target.waterProduce);
+                target.photonView.RPC("SetProduceRpc", RpcTarget.All, (byte)type, target.waterProduce);
                 break;
             case ResourceType.Magic:
                 target.magicProduce += amount;
                 if (target.magicProduce < 1)
                     target.magicProduce = 1;
-                target.RpcSetProduce(((byte)type), target.magicProduce);
+                //target.SetProduceRpc(((byte)type), target.magicProduce);
+                target.photonView.RPC("SetProduceRpc", RpcTarget.All, (byte)type, target.magicProduce);
                 break;
             default:
                 break;
@@ -97,13 +108,15 @@ public class GameCardMulti : GameCardVariation
                 target.wallHeight += amount;
                 if (target.wallHeight < 0)
                     target.wallHeight = 0;
-                target.RpcSetHeightOfBuilding(((byte)type), target.wallHeight);
+                //target.SetHeightOfBuildingRpc(((byte)type), target.wallHeight);
+                target.photonView.RPC("SetHeightOfBuildingRpc", RpcTarget.All, (byte)type, target.wallHeight);
                 break;
             case BuildingType.Castle:
                 target.castleHeight += amount;
                 if (target.castleHeight < 0)
                     target.castleHeight = 0;
-                target.RpcSetHeightOfBuilding(((byte)type), target.castleHeight);
+                //target.SetHeightOfBuildingRpc(((byte)type), target.castleHeight);
+                target.photonView.RPC("SetHeightOfBuildingRpc", RpcTarget.All, (byte)type, target.castleHeight);
                 break;
             default:
                 break;

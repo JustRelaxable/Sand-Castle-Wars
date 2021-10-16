@@ -53,6 +53,10 @@ MonoBehaviour:
   - DiscardCardRpc
   - AdsFinishedRpc
   - TellAdsFinishedRpc
+  - BasicAttackRpc
+  - SetHeightOfBuildingRpc
+  - SetProduceRpc
+  - SetResourceRpc
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
