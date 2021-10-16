@@ -12,11 +12,11 @@ public class PhotonSimpleMatchMaker : MonoBehaviourPunCallbacks
     [SerializeField]
     GameObject roomUIInstance;
     public bool connectedToMasterServer = false;
-    public void CreateInternetMatch(string roomName)
+    public void CreateInternetMatch(string roomName,bool isPrivateGame)
     {
         if (!connectedToMasterServer)
             return;
-        PhotonNetwork.CreateRoom(roomName, new RoomOptions() { MaxPlayers = 2 });
+        PhotonNetwork.CreateRoom(roomName, new RoomOptions() { MaxPlayers = 2,IsVisible = isPrivateGame ? false:true});
     }
 
     public void JoinInternetMatch(string roomName)
