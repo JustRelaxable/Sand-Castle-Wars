@@ -9,13 +9,8 @@ using Photon.Pun;
 public class CastleTurnController : MonoBehaviourPun
 {
     public bool myTurn = false;
-    private TurnIndicatorUI turnIndicatorUI;
     public MeshRenderer sandMeshRenderer;
     public event Action<bool> OnTurnMine;
-    private void Start()
-    {
-        turnIndicatorUI = FindObjectOfType<TurnIndicatorUI>();
-    }
 
     [PunRPC]
     public void NextTurnRpc()
@@ -24,7 +19,7 @@ public class CastleTurnController : MonoBehaviourPun
         {
             myTurn = true;
             OnTurnMine?.Invoke(true);
-            turnIndicatorUI.SetIndicatorText(myTurn);
+            FindObjectOfType<TurnIndicatorUI>().SetIndicatorText(myTurn);
             HandleGlowing(myTurn);
         }
         else
@@ -32,7 +27,7 @@ public class CastleTurnController : MonoBehaviourPun
             var myCastle = FindObjectsOfType<CastleTurnController>().Single(x => x.photonView.IsMine);
             myCastle.myTurn = false;
             OnTurnMine?.Invoke(false);
-            turnIndicatorUI.SetIndicatorText(myCastle.myTurn);
+            FindObjectOfType<TurnIndicatorUI>().SetIndicatorText(myCastle.myTurn);
             //GameCardUI.RemoveSelectedCard();
             HandleGlowing(myCastle.myTurn);
         }

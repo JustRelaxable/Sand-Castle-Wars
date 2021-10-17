@@ -63,11 +63,12 @@ public class CameraAnimatorManager : MonoBehaviour
     public void HandleGameModeClose()
     {
         var gameMode = animator.GetInteger("GameMode");
+        FindObjectOfType<RoundBasedAds>().ResetAdCount();
         switch (gameMode)
         {
             case 0:
                 //might need to clean the round based ad count
-                FindObjectOfType<SnglePlayerGameManager>().adManager.SetActive(false);
+                //FindObjectOfType<SnglePlayerGameManager>().adManager.SetActive(false);
                 break;
             case 1:
                 PhotonNetwork.LeaveRoom();

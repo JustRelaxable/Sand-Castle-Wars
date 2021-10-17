@@ -87,4 +87,9 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 
         adReady = false;
     }
+
+    public void ResetAdCount()
+    {
+        adCount = 0;
+    }
 }
