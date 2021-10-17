@@ -66,13 +66,14 @@ public class CameraAnimatorManager : MonoBehaviour
         switch (gameMode)
         {
             case 0:
+                //might need to clean the round based ad count
                 FindObjectOfType<SnglePlayerGameManager>().adManager.SetActive(false);
                 break;
             case 1:
-                NetworkManager.singleton.StopClient();
+                PhotonNetwork.LeaveRoom();
                 break;
             case 2:
-                NetworkManager.singleton.StopHost();
+                PhotonNetwork.LeaveRoom();
                 break;
             default:
                 break;
