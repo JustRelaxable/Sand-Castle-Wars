@@ -43,10 +43,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571750048881036687}
     m_Modifications:
+    - target: {fileID: 4806200788736647648, guid: e7b827a4c34b329488e0013faf8d29c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5874306607792406710, guid: e7b827a4c34b329488e0013faf8d29c9,
         type: 3}
       propertyPath: m_Name
       value: GameCard3DSingle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
         type: 3}
@@ -65,6 +75,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -76,16 +91,6 @@ PrefabInstance:
     - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6543283925995887116, guid: e7b827a4c34b329488e0013faf8d29c9,
@@ -103,6 +108,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6720729010310794577, guid: e7b827a4c34b329488e0013faf8d29c9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38ed94f7d7903bf4091f5155eba5e0e3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b827a4c34b329488e0013faf8d29c9, type: 3}
 --- !u!4 &7124652021600490007 stripped

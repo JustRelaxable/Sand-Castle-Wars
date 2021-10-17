@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using Photon.Pun;
+using TMPro;
 
 public class GameCardUI : MonoBehaviour
 {
     public static GameCardUI selectedCard;
-    public Text resourceAmount;
-    public Text cardName;
+    public TextMeshProUGUI resourceAmount;
+    public TextMeshProUGUI cardName;
+    public TextMeshProUGUI cardDescription;
     public int cardID;
     public Button overButton;
 
@@ -24,7 +26,7 @@ public class GameCardUI : MonoBehaviour
     private GameCard gameCard;
     protected static GameCardUI settingsOpenedCard;
     public GameObject cardSettings;
-    public Text cardDescription;
+
 
     public Sprite sandSprite;
     public Sprite waterSprite;
