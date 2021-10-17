@@ -26,4 +26,9 @@ public class DisconnectedPanelUI : MonoBehaviourPunCallbacks
         if (joinedToRoom)
             disconnectedPanel.SetActive(true);
     }
+
+    public void SetJoinedToRoom(bool b)
+    {
+        joinedToRoom = b;
+    }
 }

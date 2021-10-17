@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castlePrefab: {fileID: 3274401479163850755, guid: 770372853b2faa84aa3498d12118118e,
     type: 3}
+  teamController: {fileID: 0}
 --- !u!114 &5848752936810254434
 MonoBehaviour:
   m_ObjectHideFlags: 0

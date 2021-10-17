@@ -67,4 +67,9 @@ public class PhotonSimpleMatchMaker : MonoBehaviourPunCallbacks
         FindObjectOfType<CameraAnimatorManager>().StartGameAnimation();
         transform.parent.gameObject.SetActive(false);
     }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        Debug.Log(message);
+    }
 }

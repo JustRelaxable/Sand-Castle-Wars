@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
     GameObject castlePrefab;
 
     private SpawnController spawnController;
+    [SerializeField]
     private TeamController teamController;
     private ClientGameManager clientGameManager;
     private Teams currentTurn = Teams.Null;
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
     {
     }
 
-    private void Start()
+    private void OnEnable()
     {
         PhotonNetwork.AddCallbackTarget(this);
         instance = this;
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
 
     public void StartGame()
     {
+        Debug.Log("StartGame", this);
         clientGameManager.GetComponent<PhotonView>().RPC("StartGameRpc",RpcTarget.All);
         PrepareCastleCards();
         AssignStartingPlayer();
@@ -116,6 +118,8 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
             int randomCardIndex = UnityEngine.Random.Range(0, CardManager.instance.cards.Length);
             cardDeckToSend[i] = randomCardIndex;
         }
+        Debug.Log("PrepareCastleCards", this);
+
         teamController.blueCastle.GetComponent<PhotonView>().RPC("SetCardDeckRpc",RpcTarget.All,cardDeckToSend);
 
         for (int i = 0; i < cardDeckToSend.Length; i++)
@@ -258,11 +262,20 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
     public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
     {
         if (!targetView.IsMine)
+        {
+            Debug.Log("OnOwnershipTransfered", this);
             StartGame();
+        }      
     }
 
     public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest)
     {
         throw new NotImplementedException();
+    }
+
+    private void OnDisable()
+    {
+        PhotonNetwork.RemoveCallbackTarget(this);
+        instance = null;
     }
 }

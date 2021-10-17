@@ -28,14 +28,14 @@ public class CameraAnimatorManager : MonoBehaviour
         animator.SetTrigger("GameStarts");
     }
 
-    public void MenuBehaviourStateExit(MatchInfo mathcInfo = null)
+    public void MenuBehaviourStateExit()
     {
-        HandleGameModeScene(mathcInfo);
+        HandleGameModeScene();
         animator.GetComponent<CameraShake>().enabled = true;
         animator.applyRootMotion = true;
     }
 
-    private void HandleGameModeScene(MatchInfo mathcInfo)
+    private void HandleGameModeScene()
     {
         var gameMode = animator.GetInteger("GameMode");
         switch (gameMode)
@@ -60,7 +60,7 @@ public class CameraAnimatorManager : MonoBehaviour
         }
     }
 
-    private void HandleGameModeClose()
+    public void HandleGameModeClose()
     {
         var gameMode = animator.GetInteger("GameMode");
         switch (gameMode)
@@ -79,7 +79,7 @@ public class CameraAnimatorManager : MonoBehaviour
                 break;
         }
 
-        animator.SetInteger("GameMode", -1);
+        //animator.SetInteger("GameMode", -1);
     }
 
     private void ActivateUI()
@@ -96,7 +96,7 @@ public class CameraAnimatorManager : MonoBehaviour
         DestroyCastles();
         cameraCanvas.SetActive(false);
 
-        HandleGameModeClose();
+        //HandleGameModeClose();
     }
 
     private void CardHolderClear()
