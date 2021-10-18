@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using System.Linq;
 using Photon.Pun;
+using Unity.RemoteConfig;
 
 public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 {
@@ -11,13 +12,31 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
     [SerializeField] public bool adReady;
     [SerializeField] private ClientGameManager clientGameManager;
     private int adCount = 0;
+    private int maxRoundCount = 10;
     public bool adsWatchedOnBothPlayers;
 
     private void Awake()
     {
+        ConfigManager.FetchCompleted += ConfigManager_FetchCompleted;
         Advertisement.AddListener(this);
         clientGameManager.OnGameStarted += ClientGameManager_OnGameStarted;
         adReady = false;
+    }
+
+    private void ConfigManager_FetchCompleted(ConfigResponse obj)
+    {
+        switch (obj.requestOrigin)
+        {
+            case ConfigOrigin.Default:
+                break;
+            case ConfigOrigin.Cached:
+                break;
+            case ConfigOrigin.Remote:
+                maxRoundCount = ConfigManager.appConfig.GetInt("RoundBasedAdsCount");
+                break;
+            default:
+                break;
+        }
     }
 
     public void ClientGameManager_OnGameStarted()
@@ -34,7 +53,7 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
     private void CastleTurnController_OnTurnMine(bool obj)
     {
         adCount++;
-        if(adCount % 10 == 0)
+        if(adCount % maxRoundCount == 0)
         {
             adsWatchedOnBothPlayers = false;
             ShowRoundBasedAd();

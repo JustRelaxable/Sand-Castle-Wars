@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3b53bfa0-dc51-4c07-8df3-24a73db8c231\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"RoundBasedAdsCount\",\r\n      \"value\":
+    20,\r\n      \"type\": \"int\"\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: '[]'
+  _environments: "[\r\n  {\r\n    \"projectId\": \"9d4fe56b-84ab-433a-a649-a502b505f92c\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"c0c8e00f-a797-4a32-8984-bcebfa6dfc41\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2021-09-21T22:24:49Z\",\r\n    \"updatedAt\":
+    \"2021-09-21T22:24:49Z\"\r\n  }\r\n]"
+  _rulesList: '[]'
+  _lastCachedRulesList: '[]'
