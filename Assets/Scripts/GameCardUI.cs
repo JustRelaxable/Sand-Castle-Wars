@@ -42,8 +42,8 @@ public class GameCardUI : MonoBehaviour
         this.gameCard = gameCard;
         this.isLastCard = isLastCard;
         cardDescription.text = gameCard.cardDescription;
-        //if(gameCard.cardIcon)
-        //    cardIcon.sprite = gameCard.cardIcon;
+        if(gameCard.cardIcon != null && GameCardBase.GameMode == GameMode.Singleplayer)
+            cardIcon.sprite = gameCard.cardIcon;
 
         switch (gameCard.resourceType)
         {

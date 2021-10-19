@@ -2217,8 +2217,8 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 5
-  cardIcon: {fileID: 0}
-  cardDescription: Enemy Magic -8
+  cardIcon: {fileID: 21300000, guid: bbb6270a186b7c0419522fb0463d6dd4, type: 3}
+  cardDescription: Destroy 8 units of magic from your enemy's resources.
 --- !u!1 &225440866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,8 +2320,8 @@ MonoBehaviour:
   resourceCost: 5
   resourceType: 0
   botPriority: 15
-  cardIcon: {fileID: 21300000, guid: 330ab34a894619b4c8a6bb1c7d6e1b6b, type: 3}
-  cardDescription: Castle +5
+  cardIcon: {fileID: 21300000, guid: a8ed75ebdfea9f04eb724c25438113f3, type: 3}
+  cardDescription: Build and add 5 units to your castle.
 --- !u!1 &237560830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,8 +2859,8 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 30
-  cardIcon: {fileID: 0}
-  cardDescription: Magic +8
+  cardIcon: {fileID: 21300000, guid: f567aa4ce45c87b48900d721b33be67c, type: 3}
+  cardDescription: Produce 8 units of magic with your crystals.
 --- !u!1 &281517904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,8 +3119,8 @@ MonoBehaviour:
   resourceCost: 12
   resourceType: 1
   botPriority: 0
-  cardIcon: {fileID: 0}
-  cardDescription: Enemy Resources -4
+  cardIcon: {fileID: 21300000, guid: c03dea0cb5ed0234484d265ac9e0f7d6, type: 3}
+  cardDescription: Destroy 4 units of sand, water and magic from your enemy's resources.
 --- !u!1 &290676146
 GameObject:
   m_ObjectHideFlags: 0
@@ -6416,8 +6416,8 @@ MonoBehaviour:
   resourceCost: 21
   resourceType: 2
   botPriority: 27
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 25
+  cardIcon: {fileID: 21300000, guid: 5ed21a5a6dbb5e747aa6bc83aead4935, type: 3}
+  cardDescription: Perform an 8 unit attack on the enemy's castle.
 --- !u!1 &619684891
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,6 +6880,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: aaac07c4f1200a644af8f4fc6d7ff25e,
         type: 3}
+    - target: {fileID: 8092309755476571505, guid: 32dfb94c485d5d64f849b0bbd29c050c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 8092309755920118558, guid: 32dfb94c485d5d64f849b0bbd29c050c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7149,8 +7154,8 @@ MonoBehaviour:
   resourceCost: 39
   resourceType: 0
   botPriority: 20
-  cardIcon: {fileID: 0}
-  cardDescription: Castle +32
+  cardIcon: {fileID: 21300000, guid: bb1422c99e370074fa1eb272446b4aea, type: 3}
+  cardDescription: Build and add 32 units to your castle.
 --- !u!1001 &706836725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7357,8 +7362,9 @@ MonoBehaviour:
   resourceCost: 8
   resourceType: 2
   botPriority: 28
-  cardIcon: {fileID: 0}
-  cardDescription: Magic Produce +1
+  cardIcon: {fileID: 21300000, guid: 0f44818f2dc563a4e84ea61bc530c6dc, type: 3}
+  cardDescription: Increase your magic production by 1 unit with the help of your
+    sorcerer.
 --- !u!1 &751877884
 GameObject:
   m_ObjectHideFlags: 0
@@ -7446,7 +7452,7 @@ GameObject:
   - component: {fileID: 758647525}
   - component: {fileID: 758647526}
   m_Layer: 0
-  m_Name: Rider
+  m_Name: Bubble Trouble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7479,12 +7485,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 0}
-  cardName: Rider
+  cardName: Bubble Trouble
   resourceCost: 2
   resourceType: 1
   botPriority: 22
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 4
+  cardIcon: {fileID: 21300000, guid: 91b72493e5eda0846ba6dfb01a212d21, type: 3}
+  cardDescription: Perform a 4 unit attack on the enemy with the bubbly water.
 --- !u!1 &761386912
 GameObject:
   m_ObjectHideFlags: 0
@@ -7865,8 +7871,8 @@ MonoBehaviour:
   resourceCost: 15
   resourceType: 1
   botPriority: 24
-  cardIcon: {fileID: 0}
-  cardDescription: Transfer Resources 5
+  cardIcon: {fileID: 21300000, guid: b9bef871792080d45ac31a81047e8b1b, type: 3}
+  cardDescription: Steam 5 units of sand, water and magic from your enemy's resources.
 --- !u!1 &871976167
 GameObject:
   m_ObjectHideFlags: 0
@@ -7992,8 +7998,8 @@ MonoBehaviour:
   resourceCost: 1
   resourceType: 0
   botPriority: 16
-  cardIcon: {fileID: 0}
-  cardDescription: Castle +2
+  cardIcon: {fileID: 21300000, guid: 7948ae92606519b4897afc7b28a9fe37, type: 3}
+  cardDescription: Build and add 2 units to your castle.
 --- !u!1 &908982569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,7 +10456,7 @@ GameObject:
   - component: {fileID: 1163886810}
   - component: {fileID: 1163886811}
   m_Layer: 0
-  m_Name: Pixies
+  m_Name: Mermaid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10483,12 +10489,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 0}
-  cardName: Pixies
+  cardName: Mermaid
   resourceCost: 22
   resourceType: 2
   botPriority: 26
-  cardIcon: {fileID: 0}
-  cardDescription: Castle +22
+  cardIcon: {fileID: 21300000, guid: 7b252d18852b7264d871096d99df0834, type: 3}
+  cardDescription: Get help from mermaids to add 22 units more to your castle.
 --- !u!1 &1164598895
 GameObject:
   m_ObjectHideFlags: 0
@@ -10537,10 +10543,8 @@ MonoBehaviour:
   resourceCost: 3
   resourceType: 0
   botPriority: 18
-  cardIcon: {fileID: 0}
-  cardDescription: 'Castle +8
-
-    Wall -4'
+  cardIcon: {fileID: 21300000, guid: a5735820da0899b47889912819d10fc7, type: 3}
+  cardDescription: Build and add 8 units to your castle from destroying 4 wall thickness.
 --- !u!1 &1165716846
 GameObject:
   m_ObjectHideFlags: 0
@@ -10973,12 +10977,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 0}
-  cardName: Platoon
+  cardName: Liquid Sand
   resourceCost: 4
   resourceType: 1
   botPriority: 22
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 6
+  cardIcon: {fileID: 21300000, guid: d6bdd306ac228b8468ea57d1001540e0, type: 3}
+  cardDescription: Perform a 6 unit attack on the enemy by liquidating their sand.
 --- !u!1 &1239349572
 GameObject:
   m_ObjectHideFlags: 0
@@ -11369,8 +11373,8 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 5
-  cardIcon: {fileID: 0}
-  cardDescription: Enemy Sand -8
+  cardIcon: {fileID: 21300000, guid: b6f84688df423b4478def2e6afb6cc69, type: 3}
+  cardDescription: Reduce the enemy's sand resources by 8 units.
 --- !u!1 &1317765013
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,8 +11613,9 @@ MonoBehaviour:
   resourceCost: 1
   resourceType: 0
   botPriority: 15
-  cardIcon: {fileID: 0}
-  cardDescription: Wall +3
+  cardIcon: {fileID: 21300000, guid: 12c98002d41d3154cbfc7a5d07351f04, type: 3}
+  cardDescription: Add extra protection to your castle by increasing your wall thickness
+    3 units.
 --- !u!1 &1361196504
 GameObject:
   m_ObjectHideFlags: 0
@@ -11721,7 +11726,7 @@ GameObject:
   - component: {fileID: 1376109140}
   - component: {fileID: 1376109141}
   m_Layer: 0
-  m_Name: Recruit
+  m_Name: Water Treatment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11754,12 +11759,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 0}
-  cardName: Recruit
+  cardName: Water Treatment
   resourceCost: 8
   resourceType: 1
   botPriority: 28
-  cardIcon: {fileID: 0}
-  cardDescription: Water Produce +1
+  cardIcon: {fileID: 21300000, guid: f84585f162df82f42867bce69d1a0a0d, type: 3}
+  cardDescription: Increase your water production by 1 unit by treating water.
 --- !u!1 &1388296665
 GameObject:
   m_ObjectHideFlags: 0
@@ -11809,8 +11814,8 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 5
-  cardIcon: {fileID: 0}
-  cardDescription: Enemy Weapons -8
+  cardIcon: {fileID: 21300000, guid: d3166049bc1064e459784560867cfeaa, type: 3}
+  cardDescription: Reduce the enemy's water resources by 8 units.
 --- !u!1 &1397331068
 GameObject:
   m_ObjectHideFlags: 0
@@ -13834,12 +13839,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 0}
-  cardName: SWAT
+  cardName: Cannon
   resourceCost: 18
   resourceType: 1
   botPriority: 21
-  cardIcon: {fileID: 0}
-  cardDescription: Enemy Castle -10
+  cardIcon: {fileID: 21300000, guid: 65b0367540a1f344bafe9bc1affe9032, type: 3}
+  cardDescription: Perform a 10 unit attack on the enemy's castle directly.
 --- !u!1 &1533454782
 GameObject:
   m_ObjectHideFlags: 0
@@ -13888,8 +13893,8 @@ MonoBehaviour:
   resourceCost: 10
   resourceType: 1
   botPriority: 25
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 12
+  cardIcon: {fileID: 21300000, guid: ac1892f6de9fc9e41b8616414c17d24b, type: 3}
+  cardDescription: Perform a 12 unit attack on the enemy.
 --- !u!1 &1570137527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14168,8 +14173,8 @@ MonoBehaviour:
   resourceCost: 4
   resourceType: 2
   botPriority: 20
-  cardIcon: {fileID: 0}
-  cardDescription: Sand +8
+  cardIcon: {fileID: 21300000, guid: aa28f6f944a0b0c439d7f35a5a7d87dc, type: 3}
+  cardDescription: Produce 8 units of sand with conjuring bricks.
 --- !u!1 &1582275337
 GameObject:
   m_ObjectHideFlags: 0
@@ -14252,12 +14257,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 6004639692663161292, guid: 68bab76cc435d714f8f85706425fc19d,
     type: 3}
-  cardName: Conjure Weapons
+  cardName: Conjure Cellar
   resourceCost: 4
   resourceType: 2
   botPriority: 20
-  cardIcon: {fileID: 0}
-  cardDescription: Water +8
+  cardIcon: {fileID: 21300000, guid: 2b18e8318c09c8b439d6ba2455c29210, type: 3}
+  cardDescription: Add 8 unit water to your resources.
 --- !u!1 &1614883254
 GameObject:
   m_ObjectHideFlags: 0
@@ -14295,7 +14300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12529728, y: 0.272}
   m_AnchorMax: {x: 0.87000006, y: 0.72200006}
-  m_AnchoredPosition: {x: 0.84143066, y: 0.7338028}
+  m_AnchoredPosition: {x: 0.84143066, y: 0.73379517}
   m_SizeDelta: {x: 0.8885994, y: 0.83730316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614883256
@@ -14541,8 +14546,8 @@ MonoBehaviour:
   resourceCost: 8
   resourceType: 0
   botPriority: 28
-  cardIcon: {fileID: 0}
-  cardDescription: Sand Produce +1
+  cardIcon: {fileID: 21300000, guid: b9d373a2f13567644afb3adc349e057f, type: 3}
+  cardDescription: Increase your sand production by 1 unity by educating your ally.
 --- !u!1 &1620744830
 GameObject:
   m_ObjectHideFlags: 0
@@ -15476,6 +15481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092309755476571505, guid: 32dfb94c485d5d64f849b0bbd29c050c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 8092309755920118558, guid: 32dfb94c485d5d64f849b0bbd29c050c,
         type: 3}
@@ -21672,8 +21682,8 @@ MonoBehaviour:
   resourceCost: 2
   resourceType: 1
   botPriority: 22
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 3
+  cardIcon: {fileID: 21300000, guid: ef78c828c014644409ebfa00985e2d99, type: 3}
+  cardDescription: Perform a 3 unit attack on the enemy with your sand knight.
 --- !u!1 &1895470273
 GameObject:
   m_ObjectHideFlags: 0
@@ -21910,10 +21920,9 @@ MonoBehaviour:
   resourceCost: 25
   resourceType: 2
   botPriority: 29
-  cardIcon: {fileID: 0}
-  cardDescription: 'All +1
-
-    Enemy All -1'
+  cardIcon: {fileID: 21300000, guid: 801b8fed0df974b478ad59dce2b23b7d, type: 3}
+  cardDescription: Increase your produce by 1 unit while cursing your enemy with
+    1 unit decreased produce.
 --- !u!1 &1939333413
 GameObject:
   m_ObjectHideFlags: 0
@@ -22068,8 +22077,8 @@ MonoBehaviour:
   resourceCost: 18
   resourceType: 0
   botPriority: 12
-  cardIcon: {fileID: 0}
-  cardDescription: Castle +20
+  cardIcon: {fileID: 21300000, guid: 808237804170b654da9ef289cb53709b, type: 3}
+  cardDescription: Build and add 20 units more to your castle.
 --- !u!1 &1992213700
 GameObject:
   m_ObjectHideFlags: 0
@@ -22081,7 +22090,7 @@ GameObject:
   - component: {fileID: 1992213701}
   - component: {fileID: 1992213702}
   m_Layer: 0
-  m_Name: Banshee
+  m_Name: Thunder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22115,12 +22124,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 7852444466256024072, guid: 9eced021b12d6ca44a6f4b075fa42095,
     type: 3}
-  cardName: Banshee
+  cardName: Thunder
   resourceCost: 28
   resourceType: 1
   botPriority: 26
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 32
+  cardIcon: {fileID: 21300000, guid: 65a58a6a615b84e4eb35e0eaf4dd3a23, type: 3}
+  cardDescription: Perform a massive 32 unit attack on the enemy with a man-made
+    thunder.
 --- !u!1 &1995952038
 GameObject:
   m_ObjectHideFlags: 0
@@ -22586,7 +22596,7 @@ GameObject:
   - component: {fileID: 2008017152}
   - component: {fileID: 2008017153}
   m_Layer: 0
-  m_Name: Wain
+  m_Name: Sand Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22619,14 +22629,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationPrefab: {fileID: 0}
-  cardName: Wain
+  cardName: Sand Bucket
   resourceCost: 10
   resourceType: 0
   botPriority: 24
-  cardIcon: {fileID: 0}
-  cardDescription: 'Castle +8
-
-    Enemy Castle -4'
+  cardIcon: {fileID: 21300000, guid: 2a7530b659ca7cf4094d71e75f3ef274, type: 3}
+  cardDescription: Build and add 8 units to your castle and perform a 4 unit attack
+    to enemy castle.
 --- !u!1 &2021354352
 GameObject:
   m_ObjectHideFlags: 0
@@ -22675,8 +22684,9 @@ MonoBehaviour:
   resourceCost: 12
   resourceType: 0
   botPriority: 25
-  cardIcon: {fileID: 0}
-  cardDescription: Wall +22
+  cardIcon: {fileID: 21300000, guid: 3adb8a6c7283dff48906e7d535aa1751, type: 3}
+  cardDescription: Add extra protection to your castle by increasing your wall thickness
+    22 units.
 --- !u!1001 &2037816626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23255,8 +23265,8 @@ MonoBehaviour:
   resourceCost: 3
   resourceType: 0
   botPriority: 20
-  cardIcon: {fileID: 0}
-  cardDescription: Wall +6
+  cardIcon: {fileID: 21300000, guid: 14a7b55a115e91844b7190b47d089d4b, type: 3}
+  cardDescription: Defend your castle by increasing its wall thickness 3 units.
 --- !u!1 &2091597255
 GameObject:
   m_ObjectHideFlags: 0
@@ -23604,8 +23614,8 @@ MonoBehaviour:
   resourceCost: 1
   resourceType: 1
   botPriority: 24
-  cardIcon: {fileID: 0}
-  cardDescription: Attack 2
+  cardIcon: {fileID: 21300000, guid: 2419a2ff736621a4f862b4ccbca0b2c4, type: 3}
+  cardDescription: Perform a 2 unit attack on the enemy.
 --- !u!1 &2140068655
 GameObject:
   m_ObjectHideFlags: 0
