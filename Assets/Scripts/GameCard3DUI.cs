@@ -17,4 +17,14 @@ public class GameCard3DUI : GameCardUI
     public override void OpenCardBack()
     {
     }
+
+    public void OpenCardOptions()
+    {
+
+    }
+
+    public void CloseCardOptions()
+    {
+
+    }
 }

@@ -26,6 +26,11 @@ public class SnglePlayerGameManager : MonoBehaviour
     [SerializeField]
     CardAnimationSpawner cardAnimationSpawner;
 
+    [SerializeField]
+    GameObject showOffCard;
+    private GameObject selectedShowOffCard;
+    private Transform showOffCardParent;
+    private float showOffCardParentLocalScale;
 
     CastleStats playerStats;
     CastleStats botStats;
@@ -112,7 +117,7 @@ public class SnglePlayerGameManager : MonoBehaviour
     {
         if (gameFinished)
             return;
-       
+        ShowOffCardClose();
 
         if (isDiscarded)
         {
@@ -128,6 +133,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
         StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
         GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
+        StartCoroutine(ChangeScaleOfGameObject(GameCardUI.selectedCard.gameObject, lastPlayedCardUI.transform.GetChild(0), 1));
         gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
 
        
@@ -236,7 +242,7 @@ public class SnglePlayerGameManager : MonoBehaviour
     private IEnumerator MoveCardToTransformAndChangeParent(GameObject go, Transform lastTransform)
     {
         yield return MoveCardToTransform(go, lastTransform);
-        go.transform.parent = lastTransform;
+        //go.transform.parent = lastTransform;
     }
 
     private IEnumerator CardTakenFromDeck(GameObject go)
@@ -250,11 +256,61 @@ public class SnglePlayerGameManager : MonoBehaviour
         go.transform.position = cardDeck.transform.position;
         yield return MoveCardToTransform(go, cardShowing.transform, 1f);
         go.GetComponent<GameCard3DUI>().animator.SetTrigger("TurnBack");
-        yield return MoveCardToTransformAndChangeParent(go, lastPlayedCardParentTransform);
+        StartCoroutine(MoveCardToTransform(go, lastPlayedCardParentTransform));
+        go.transform.parent = lastPlayedCardParentTransform;
+        var tranformedScale = go.transform.localScale.x * lastPlayedCardParentTransform.parent.localScale.x;
+        StartCoroutine(ChangeScaleOfGameObject(go,tranformedScale, 1));
+        //yield return MoveCardToTransformAndChangeParent(go, lastPlayedCardParentTransform);
     }
     private IEnumerator MoveLastPlayedCard(GameObject go,Vector3 posToGo)
     {
         yield return MoveCardToTransform(go, posToGo, 1f);
         isLastCardArrived = true;
+    }
+    private IEnumerator ChangeScaleOfGameObject(GameObject go,Transform scaleTransform,float duration = 2)
+    {
+        var currentScale = go.transform.localScale;
+        var time = 0f;
+        float curve = 0f;
+        while (time <= duration)
+        {
+            curve = lastPlayedCurve.Evaluate((time / duration));
+            go.transform.localScale = Vector3.Lerp(currentScale, scaleTransform.localScale, curve);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+    private IEnumerator ChangeScaleOfGameObject(GameObject go,float scale, float duration = 2)
+    {
+        var currentScale = go.transform.localScale;
+        var time = 0f;
+        float curve = 0f;
+        while (time <= duration)
+        {
+            curve = lastPlayedCurve.Evaluate((time / duration));
+            go.transform.localScale = Vector3.Lerp(currentScale, new Vector3(scale,scale,scale), curve);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+    public void ShowOffCardOpen(GameObject card)
+    {
+        SetLastPlayedCardParentTransform(card.transform.parent);
+        CameraCanvasBlur.instance.OpenBlur();
+        selectedShowOffCard = card;
+        showOffCardParent = card.transform.parent;
+        showOffCardParentLocalScale = card.transform.localScale.x;
+        StartCoroutine(MoveCardToTransform(card, showOffCard.transform, 1));
+        card.transform.parent = showOffCard.transform;
+        var showOffCardChild = showOffCard.transform.GetChild(0);
+        StartCoroutine(ChangeScaleOfGameObject(card, showOffCardChild, 1));
+    }
+    public void ShowOffCardClose()
+    {
+        CameraCanvasBlur.instance.CloseBlur();
+        selectedShowOffCard.GetComponent<Animator>().SetTrigger("CloseCardOptions");
+        StartCoroutine(MoveCardToTransform(selectedShowOffCard, showOffCardParent, 1));
+        selectedShowOffCard.transform.parent = showOffCardParent;
+        StartCoroutine(ChangeScaleOfGameObject(selectedShowOffCard, showOffCardParentLocalScale, 1));
     }
 }

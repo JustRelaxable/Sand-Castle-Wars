@@ -6,6 +6,9 @@ public class GameCardUISingle : GameCard3DUI
 {
     public override void OpenCardSettings()
     {
+        FindObjectOfType<SnglePlayerGameManager>().ShowOffCardOpen(this.gameObject);
+        animator.SetTrigger("OpenCardOptions");
+        /*
         if (cardSettings.activeInHierarchy)
         {
             CloseCardSettings();
@@ -19,19 +22,20 @@ public class GameCardUISingle : GameCard3DUI
                 settingsOpenedCard.CloseCardSettings();
 
         settingsOpenedCard = this;
+        */
     }
 
     public override void UseTheCard()
     {
         selectedCard = this;
-        FindObjectOfType<SnglePlayerGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+        //FindObjectOfType<SnglePlayerGameManager>().SetLastPlayedCardParentTransform(transform.parent);
         FindObjectOfType<SnglePlayerGameManager>().PlayCard(cardID,false);
     }
 
     public override void DiscardTheCard()
     {
         selectedCard = this;
-        FindObjectOfType<SnglePlayerGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+        //FindObjectOfType<SnglePlayerGameManager>().SetLastPlayedCardParentTransform(transform.parent);
         FindObjectOfType<SnglePlayerGameManager>().PlayCard(cardID, true);
     }
 }
