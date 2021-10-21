@@ -10,6 +10,15 @@ public class GameCard3DUI : GameCardUI
     {
         animator = GetComponent<Animator>();
     }
+    public override void OpenCardSettings()
+    {
+        if (!FindObjectOfType<PlayWaiter>().canPlay)
+        {
+            return;
+        }
+        FindObjectOfType<ClientGameManager>().ShowOffCardOpen(this.gameObject);
+        animator.SetTrigger("OpenCardOptions");
+    }
     public override void CloseCardBack()
     {
     }

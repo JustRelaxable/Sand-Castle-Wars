@@ -120,7 +120,7 @@ public class GameCardUI : MonoBehaviour
         {
             //myCastle.UseCardRpc(cardID);
             selectedCard = this;
-            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+            //FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
             myCastlePlayerCard.photonView.RPC("UseCardRpc", RpcTarget.MasterClient, myCastlePlayerCard.photonView.ViewID, cardID);
 
             
@@ -132,7 +132,7 @@ public class GameCardUI : MonoBehaviour
         if (myCastlePlayerCards.GetComponent<CastleTurnController>().myTurn)
         {
             selectedCard = this;
-            FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
+            //FindObjectOfType<ClientGameManager>().SetLastPlayedCardParentTransform(transform.parent);
             //myCastle.DiscardCardRpc(cardID);
         }
         myCastlePlayerCards.photonView.RPC("DiscardCardRpc", RpcTarget.MasterClient, myCastlePlayerCards.photonView.ViewID, cardID);

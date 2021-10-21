@@ -1081,15 +1081,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142106715}
   m_LocalRotation: {x: 0.007825153, y: -0, z: -0, w: 0.9999694}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.0003}
+  m_LocalScale: {x: 1.494382, y: 1.494382, z: 1.494382}
   m_Children: []
   m_Father: {fileID: 210761235}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 111}
+  m_AnchoredPosition: {x: 13.953, y: 158}
   m_SizeDelta: {x: 1184.2144, y: 297.46848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142106717
@@ -24113,6 +24113,11 @@ PrefabInstance:
       propertyPath: lastCardPos
       value: 
       objectReference: {fileID: 1361196504}
+    - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
+        type: 3}
+      propertyPath: showOffCard
+      value: 
+      objectReference: {fileID: 1018801833}
     - target: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
         type: 3}
       propertyPath: castleStatsUI
