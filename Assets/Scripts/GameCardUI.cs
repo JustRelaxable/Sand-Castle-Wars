@@ -36,6 +36,10 @@ public class GameCardUI : MonoBehaviour
     public GameObject discarded;
 
     public Button useButton;
+    public GameObject numberTextPrefab;
+    public float cardWidth;
+    public float cardHeight;
+
     public void PrepareCard(GameCard gameCard,bool isLastCard)
     {
         cardID = CardManager.instance.GetIndex(gameCard);
@@ -46,6 +50,18 @@ public class GameCardUI : MonoBehaviour
         cardDescription.text = gameCard.cardDescription;
         if(gameCard.cardIcon != null)
             cardIcon.sprite = gameCard.cardIcon;
+
+        for (int i = 0; i < gameCard.cardNumberTexts.Length; i++)
+        {
+            var go = Instantiate(numberTextPrefab, backgroundImage.transform);
+            var x = Mathf.Lerp(-cardWidth, cardWidth, gameCard.cardNumberTexts[i].textX);
+            var y = Mathf.Lerp(-cardHeight, cardHeight, gameCard.cardNumberTexts[i].textY);
+            var rectTransform = go.GetComponent<RectTransform>();
+            rectTransform.localPosition = new Vector3(x,y,0);
+            var tmpro = go.GetComponent<TextMeshProUGUI>();
+            tmpro.text = gameCard.cardNumberTexts[i].cardText;
+            tmpro.color = gameCard.cardNumberTexts[i].textColor;
+        }
 
         switch (gameCard.resourceType)
         {

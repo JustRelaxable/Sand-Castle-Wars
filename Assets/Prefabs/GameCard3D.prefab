@@ -290,7 +290,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4741848167564721708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.009018002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.9209585, y: 3.9209597, z: 3.9209592}
   m_Children: []
   m_Father: {fileID: 9043323282249578993}
@@ -569,6 +569,10 @@ MonoBehaviour:
   cardBack: {fileID: 0}
   discarded: {fileID: 5893463335826411088}
   useButton: {fileID: 1436661913165576530}
+  numberTextPrefab: {fileID: 7665275955143598329, guid: 4c3485ce63dc0e641b3d3bf995992705,
+    type: 3}
+  cardWidth: 0
+  cardHeight: 0
   animator: {fileID: 0}
 --- !u!95 &5427987330278870201
 Animator:
@@ -1541,7 +1545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6cce48cefbbf9a54cb7d5b99894476e1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

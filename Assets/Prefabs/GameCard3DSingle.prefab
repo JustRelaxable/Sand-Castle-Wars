@@ -26,16 +26,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4806200788736647648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.009018}
-  m_LocalScale: {x: 3.9209592, y: 3.9209597, z: 3.9209592}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.9209585, y: 3.9209597, z: 3.9209592}
   m_Children: []
   m_Father: {fileID: 6720729009344487444}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.28678235, y: 0.36246666}
   m_AnchorMax: {x: 0.7127169, y: 0.63578385}
-  m_AnchoredPosition: {x: 0.000074997544, y: 0.0439}
-  m_SizeDelta: {x: -0.073659, y: -0.070976}
+  m_AnchoredPosition: {x: 0.00007464737, y: 0.043901443}
+  m_SizeDelta: {x: -0.073659, y: -0.070976004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3949372792540929081
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b18e8318c09c8b439d6ba2455c29210, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6bdd306ac228b8468ea57d1001540e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -340,6 +340,10 @@ MonoBehaviour:
   cardBack: {fileID: 0}
   discarded: {fileID: 8146251260456966069}
   useButton: {fileID: 8549285996892583764}
+  numberTextPrefab: {fileID: 7665275955143598329, guid: 4c3485ce63dc0e641b3d3bf995992705,
+    type: 3}
+  cardWidth: 0.1498
+  cardHeight: 0.227
   animator: {fileID: 0}
 --- !u!1 &6720729009081236770
 GameObject:
@@ -1367,7 +1371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6cce48cefbbf9a54cb7d5b99894476e1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
