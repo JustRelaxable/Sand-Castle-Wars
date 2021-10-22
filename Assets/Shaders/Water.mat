@@ -44,9 +44,9 @@ Material:
     - Vector1_83EC4A2E: 0.02
     - _Depth: 1.27
     - _NormalStrength: 1
-    - _Smoothnes: 0.872
+    - _Smoothnes: 0.588
     - _Strength: 0.86
     m_Colors:
-    - _DeepColor: {r: 0, g: 0.46666658, b: 0.4823529, a: 0.6392157}
-    - _ShallowColor: {r: 0.22051498, g: 0.5342075, b: 0.72300005, a: 0.84313726}
+    - _DeepColor: {r: 0.25947848, g: 0.45023957, b: 0.46226418, a: 0.95686275}
+    - _ShallowColor: {r: 0.2205149, g: 0.5342075, b: 0.72300005, a: 0.92156863}
   m_BuildTextureStacks: []

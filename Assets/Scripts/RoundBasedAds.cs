@@ -11,6 +11,7 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] public bool adReady;
     [SerializeField] private ClientGameManager clientGameManager;
+    [SerializeField] private bool showOnlyOnSinglePlayer = true;
     private int adCount = 0;
     private int maxRoundCount = 10;
     public bool adsWatchedOnBothPlayers;
@@ -41,6 +42,10 @@ public class RoundBasedAds : MonoBehaviour,IUnityAdsListener
 
     public void ClientGameManager_OnGameStarted()
     {
+        if (showOnlyOnSinglePlayer)
+            if (GameCardBase.GameMode == GameMode.Multiplayer)
+                return;
+
         adCount = 0;
         adsWatchedOnBothPlayers = true;
         var castleTurnControllers = FindObjectsOfType<CastleTurnController>();

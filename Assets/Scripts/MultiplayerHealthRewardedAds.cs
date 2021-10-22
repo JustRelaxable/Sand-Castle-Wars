@@ -5,10 +5,12 @@ using System;
 using UnityEngine.Networking;
 using System.Linq;
 
-public class BonusCardRewardedAds : MonoBehaviour, IUnityAdsListener
+public class MultiplayerHealthRewardedAds : MonoBehaviour, IUnityAdsListener
 {
     [SerializeField] string _androidAdUnitId = "Interstitial_Android";
     [SerializeField] public bool adReady;
+    public event Action OnAdsReady;
+    public event Action OnAdsSuccessfullyWatched;
 
     private void Awake()
     {
@@ -16,7 +18,7 @@ public class BonusCardRewardedAds : MonoBehaviour, IUnityAdsListener
         adReady = false;
     }
 
-    public void ShowBonusCardRewardedAd()
+    public void ShowAd()
     {
         Advertisement.Show(_androidAdUnitId);
     }
@@ -26,6 +28,7 @@ public class BonusCardRewardedAds : MonoBehaviour, IUnityAdsListener
         if (placementId != _androidAdUnitId)
             return;
         adReady = true;
+        OnAdsReady?.Invoke();
     }
 
     public void OnUnityAdsDidError(string message)
@@ -52,7 +55,7 @@ public class BonusCardRewardedAds : MonoBehaviour, IUnityAdsListener
             case ShowResult.Skipped:
                 break;
             case ShowResult.Finished:
-                
+                OnAdsSuccessfullyWatched?.Invoke();
                 break;
             default:
                 break;

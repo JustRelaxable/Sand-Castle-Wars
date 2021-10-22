@@ -9,7 +9,7 @@ public class BonusCardUI : MonoBehaviour
     public GameObject cardHolder;
     private bool turnMine = false;
     [SerializeField]private ClientGameManager clientGameManager;
-    [SerializeField]private BonusCardRewardedAds bonusCardRewardedAds;
+    [SerializeField]private MultiplayerHealthRewardedAds bonusCardRewardedAds;
     private Button bonusCardButton;
     public Text debugText;
 
@@ -76,7 +76,7 @@ public class BonusCardUI : MonoBehaviour
     public void OnDestroyForBonusCardClicked()
     {
         turnMine = false;
-        bonusCardRewardedAds.ShowBonusCardRewardedAd();
+        bonusCardRewardedAds.ShowAd();
         //var castle = FindObjectsOfType<PlayerCastle>().Single(x => x.hasAuthority);
         //var netID = castle.netId;
         //castle.CmdRequestBonusCard(netID);
