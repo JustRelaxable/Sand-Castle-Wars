@@ -13,6 +13,8 @@ public class CameraAnimatorManager : MonoBehaviour
     public GameObject turnIndicatorUI;
     public GameObject cameraCanvas;
     public GameObject mainMenu;
+    [SerializeField]
+    private MainmenuUIController mainmenuUIController;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -33,6 +35,12 @@ public class CameraAnimatorManager : MonoBehaviour
         HandleGameModeScene();
         animator.GetComponent<CameraShake>().enabled = true;
         animator.applyRootMotion = true;
+        ShowGameStartAds();
+    }
+
+    private void ShowGameStartAds()
+    {
+        FindObjectOfType<GameStartAds>().ShowAd();
     }
 
     private void HandleGameModeScene()
@@ -79,8 +87,19 @@ public class CameraAnimatorManager : MonoBehaviour
             default:
                 break;
         }
-
+        ShowGameEndAds();
+        OpenMainMenuUI();
         //animator.SetInteger("GameMode", -1);
+    }
+
+    private void OpenMainMenuUI()
+    {
+        mainmenuUIController.OpenMainMenuUI();
+    }
+
+    private void ShowGameEndAds()
+    {
+        FindObjectOfType<GameEndAds>().ShowAd();
     }
 
     private void ActivateUI()

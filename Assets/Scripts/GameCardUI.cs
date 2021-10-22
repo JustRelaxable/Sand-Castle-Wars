@@ -34,6 +34,8 @@ public class GameCardUI : MonoBehaviour
 
     public GameObject cardBack;
     public GameObject discarded;
+
+    public Button useButton;
     public void PrepareCard(GameCard gameCard,bool isLastCard)
     {
         cardID = CardManager.instance.GetIndex(gameCard);
@@ -74,12 +76,14 @@ public class GameCardUI : MonoBehaviour
                 {
                     overImage.color = darkenColor;
                     ableToUseTheCard = false;
+                    useButton.interactable = false;
                 }
 
                 else
                 {
                     overImage.color = normalColor;
                     ableToUseTheCard = true;
+                    useButton.interactable = true;
                 }
                     
                 break;
@@ -88,12 +92,14 @@ public class GameCardUI : MonoBehaviour
                 {
                     overImage.color = darkenColor;
                     ableToUseTheCard = false;
+                    useButton.interactable = false;
                 }
 
                 else
                 {
                     overImage.color = normalColor;
                     ableToUseTheCard = true;
+                    useButton.interactable = true;
                 }
                 break;
             case ResourceType.Magic:
@@ -101,11 +107,13 @@ public class GameCardUI : MonoBehaviour
                 {
                     overImage.color = darkenColor;
                     ableToUseTheCard = false;
+                    useButton.interactable = false;
                 }
                 else
                 {
                     overImage.color = normalColor;
                     ableToUseTheCard = true;
+                    useButton.interactable = true;
                 }
                 break;
             default:

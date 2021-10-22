@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Rc2
-  productName: Sand Castle Card Wars
+  productName: Sand Wars - Card Game Battle
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -149,7 +149,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Rc2.SandCastleCardWars
+    Android: com.Rc2.SandWarsCardGameBattle
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -811,7 +811,7 @@ PlayerSettings:
   cloudProjectId: 9d4fe56b-84ab-433a-a649-a502b505f92c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Sand Castle Card Wars
+  projectName: Sand Wars - Card Game Battle
   organizationId: justrelaxable
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

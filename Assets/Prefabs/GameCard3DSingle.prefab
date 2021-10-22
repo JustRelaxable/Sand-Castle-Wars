@@ -339,6 +339,7 @@ MonoBehaviour:
   magicSprite: {fileID: 21300000, guid: 6cce48cefbbf9a54cb7d5b99894476e1, type: 3}
   cardBack: {fileID: 0}
   discarded: {fileID: 8146251260456966069}
+  useButton: {fileID: 8549285996892583764}
   animator: {fileID: 0}
 --- !u!1 &6720729009081236770
 GameObject:

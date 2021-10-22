@@ -18,7 +18,7 @@ public class MultiplayerHealthUI : MonoBehaviour
 
     private void MultiplayerHealthRewardedAds_OnAdsSuccessfullyWatched()
     {
-        var multiplayerHealth = PlayerPrefs.GetInt("MultiplayerHealth", 5);
+        var multiplayerHealth = PlayerPrefs.GetInt("MultiplayerHealth", 3);
         if (multiplayerHealth < 5)
             PlayerPrefs.SetInt("MultiplayerHealth", multiplayerHealth + 1);
         UpdateText();
@@ -31,6 +31,6 @@ public class MultiplayerHealthUI : MonoBehaviour
 
     private void UpdateText()
     {
-        text.text = "Multiplayer Health: " + PlayerPrefs.GetInt("MultiplayerHealth", 5).ToString();
+        text.text = "Multiplayer Health: " + PlayerPrefs.GetInt("MultiplayerHealth", 3).ToString();
     }
 }

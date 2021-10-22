@@ -12,11 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2dfd4e11-7065-43e5-b3ef-9aced125e929\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a2df7e7f-7cc4-4c02-9f18-b710920bcd93\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"RoundBasedAdsCount\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 20\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"9696f997-42ae-40ed-ac11-714acd2916db\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"ShowAdsOnGameStart\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"732d03f0-11f3-4987-b698-883a39b20bb2\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"ShowAdsOnGameEnd\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3e39029c-23c1-4d12-b95b-ea88d2a5cef1\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"MaxTimeForPopup\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 20\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2dfd4e11-7065-43e5-b3ef-9aced125e929\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a2df7e7f-7cc4-4c02-9f18-b710920bcd93\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"RoundBasedAdsCount\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 20\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"9696f997-42ae-40ed-ac11-714acd2916db\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"ShowAdsOnGameStart\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"732d03f0-11f3-4987-b698-883a39b20bb2\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"ShowAdsOnGameEnd\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3e39029c-23c1-4d12-b95b-ea88d2a5cef1\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"MaxTimeForPopup\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 20\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"9d4fe56b-84ab-433a-a649-a502b505f92c\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"c0c8e00f-a797-4a32-8984-bcebfa6dfc41\",\r\n   

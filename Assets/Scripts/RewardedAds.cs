@@ -1,24 +1,28 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Advertisements;
 using System;
-using UnityEngine.Networking;
-using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.RemoteConfig;
+using UnityEngine;
+using UnityEngine.Advertisements;
 
-public class MultiplayerHealthRewardedAds : MonoBehaviour, IUnityAdsListener,IAdEvents
+public class RewardedAds : MonoBehaviour,IUnityAdsListener,IAdEvents
 {
-    [SerializeField] string _androidAdUnitId = "Interstitial_Android";
-    [SerializeField] public bool adReady;
+    [SerializeField] string _androidAdUnitId = "";
     public event Action OnAdsReady;
     public event Action OnAdsSuccessfullyWatched;
 
     private void Awake()
     {
+        ConfigManager.FetchCompleted += ConfigManager_FetchCompleted;
         Advertisement.AddListener(this);
-        adReady = false;
     }
 
-    public void ShowAd()
+    protected virtual void ConfigManager_FetchCompleted(ConfigResponse obj)
+    {
+
+    }
+
+    public virtual void ShowAd()
     {
         Advertisement.Show(_androidAdUnitId);
     }
@@ -27,7 +31,6 @@ public class MultiplayerHealthRewardedAds : MonoBehaviour, IUnityAdsListener,IAd
     {
         if (placementId != _androidAdUnitId)
             return;
-        adReady = true;
         OnAdsReady?.Invoke();
     }
 
@@ -43,7 +46,7 @@ public class MultiplayerHealthRewardedAds : MonoBehaviour, IUnityAdsListener,IAd
     }
 
 
-    public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
+    public virtual void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
         if (placementId != _androidAdUnitId)
             return;
@@ -60,7 +63,5 @@ public class MultiplayerHealthRewardedAds : MonoBehaviour, IUnityAdsListener,IAd
             default:
                 break;
         }
-
-        adReady = false;
     }
 }
