@@ -42,7 +42,7 @@ public class PhotonSimpleMatchMaker : MonoBehaviourPunCallbacks
             if (!item.RemovedFromList)
             {
                 var go = Instantiate(roomUIInstance, roomListParent);
-                go.GetComponent<RoomUI>().PrepareRoom(item.Name);
+                go.GetComponent<RoomUI>().PrepareRoom(item.Name,item.PlayerCount);
             }
         }
     }

@@ -16,9 +16,9 @@ public class RoomUI : MonoBehaviour
 
     public string RoomName { get; private set; }
 
-    public void PrepareRoom(string roomName)
+    public void PrepareRoom(string roomName,int playerCount)
     {
-        roomNameText.text = roomName;
+        roomNameText.text = roomName + $" {playerCount}/2";
         RoomName = roomName;
     }
 

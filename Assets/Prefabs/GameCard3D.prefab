@@ -561,7 +561,7 @@ MonoBehaviour:
   isLastCard: 0
   overImage: {fileID: 9043323283148739764}
   backgroundImage: {fileID: 9043323282249578992}
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 2501267330636827762}
   cardSettings: {fileID: 9043323283995202225}
   sandSprite: {fileID: 21300000, guid: b252e60706299a04d9a8ed11043b9ae7, type: 3}
   waterSprite: {fileID: 21300000, guid: e224166add24f7a4bb0bacc0821f7661, type: 3}
