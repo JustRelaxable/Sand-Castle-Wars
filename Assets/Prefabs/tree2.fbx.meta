@@ -3,7 +3,37 @@ guid: 57adc40f4fc87ca4e8bd6715aa2be773
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 089dac282c51bf244bd869a9768f4c29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: 62c6b62a408e34e43bf7a5de403183c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5
+    second: {fileID: 2100000, guid: c7b1ac683e8952645bf514323f74e38c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tree_coconut_texture
+    second: {fileID: 2800000, guid: f9e91126c67161848a71551e6c593c1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tree_leave_texture
+    second: {fileID: 2800000, guid: 8a2becd3fa1a613469737485477f4569, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tree_trunk_texture
+    second: {fileID: 2800000, guid: 42bef498616e33349bc0599ada6d2087, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
