@@ -40,6 +40,7 @@ public class SnglePlayerGameManager : MonoBehaviour
     public GameObject nullPoint;
     private bool isLastCardArrived = false;
     private bool gameFinished = false;
+    public bool GameFinished { get => gameFinished; set { gameFinished = value; } }
     public GameObject cardDeck;
     public GameObject cardShowing;
     public GameObject cardBlueSpawnPoint;

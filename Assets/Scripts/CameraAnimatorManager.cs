@@ -77,6 +77,7 @@ public class CameraAnimatorManager : MonoBehaviour
             case 0:
                 //might need to clean the round based ad count
                 //FindObjectOfType<SnglePlayerGameManager>().adManager.SetActive(false);
+                FindObjectOfType<SnglePlayerGameManager>().GameFinished = false;
                 break;
             case 1:
                 PhotonNetwork.LeaveRoom();

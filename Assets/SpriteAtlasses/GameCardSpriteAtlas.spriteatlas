@@ -77,7 +77,15 @@ SpriteAtlas:
     - {fileID: 21300000, guid: d6bdd306ac228b8468ea57d1001540e0, type: 3}
     - {fileID: 21300000, guid: 0f44818f2dc563a4e84ea61bc530c6dc, type: 3}
     - {fileID: 21300000, guid: aaac07c4f1200a644af8f4fc6d7ff25e, type: 3}
-    totalSpriteSurfaceArea: 9212023
+    - {fileID: 21300000, guid: 5aeb0d3b5c6bf8243b6e9781a5854a49, type: 3}
+    - {fileID: 21300000, guid: 4c5ccba2cee993849b11208d42786722, type: 3}
+    - {fileID: 21300000, guid: a1ca4a9867313f6408731e6007bbaf78, type: 3}
+    - {fileID: 21300000, guid: 8346d535c9faef54c8fe4e42e8cabf77, type: 3}
+    - {fileID: 21300000, guid: 264464b299047f54bbfbfcbeba130691, type: 3}
+    - {fileID: 21300000, guid: 042be02f55484884498c06bf5d9b31f9, type: 3}
+    - {fileID: 21300000, guid: 15313794552ff8e4cb07617d3526915c, type: 3}
+    - {fileID: 21300000, guid: eeb7777e0432dd8448364557c281ffc9, type: 3}
+    totalSpriteSurfaceArea: 9635953
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -91,8 +99,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 12c98002d41d3154cbfc7a5d07351f04, type: 3}
   - {fileID: 21300000, guid: 7948ae92606519b4897afc7b28a9fe37, type: 3}
   - {fileID: 21300000, guid: b9d373a2f13567644afb3adc349e057f, type: 3}
+  - {fileID: 21300000, guid: 4c5ccba2cee993849b11208d42786722, type: 3}
+  - {fileID: 21300000, guid: 264464b299047f54bbfbfcbeba130691, type: 3}
   - {fileID: 21300000, guid: 91b72493e5eda0846ba6dfb01a212d21, type: 3}
+  - {fileID: 21300000, guid: 15313794552ff8e4cb07617d3526915c, type: 3}
   - {fileID: 21300000, guid: aaac07c4f1200a644af8f4fc6d7ff25e, type: 3}
+  - {fileID: 21300000, guid: 8346d535c9faef54c8fe4e42e8cabf77, type: 3}
   - {fileID: 21300000, guid: 65b0367540a1f344bafe9bc1affe9032, type: 3}
   - {fileID: 21300000, guid: d6bdd306ac228b8468ea57d1001540e0, type: 3}
   - {fileID: 21300000, guid: 2a7530b659ca7cf4094d71e75f3ef274, type: 3}
@@ -101,6 +113,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7b252d18852b7264d871096d99df0834, type: 3}
   - {fileID: 21300000, guid: ef78c828c014644409ebfa00985e2d99, type: 3}
   - {fileID: 21300000, guid: b6f84688df423b4478def2e6afb6cc69, type: 3}
+  - {fileID: 21300000, guid: a1ca4a9867313f6408731e6007bbaf78, type: 3}
   - {fileID: 21300000, guid: d3166049bc1064e459784560867cfeaa, type: 3}
   - {fileID: 21300000, guid: bb1422c99e370074fa1eb272446b4aea, type: 3}
   - {fileID: 21300000, guid: aa28f6f944a0b0c439d7f35a5a7d87dc, type: 3}
@@ -109,12 +122,15 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5ed21a5a6dbb5e747aa6bc83aead4935, type: 3}
   - {fileID: 21300000, guid: e224166add24f7a4bb0bacc0821f7661, type: 3}
   - {fileID: 21300000, guid: 65a58a6a615b84e4eb35e0eaf4dd3a23, type: 3}
+  - {fileID: 21300000, guid: 5aeb0d3b5c6bf8243b6e9781a5854a49, type: 3}
   - {fileID: 21300000, guid: a8ed75ebdfea9f04eb724c25438113f3, type: 3}
   - {fileID: 21300000, guid: c03dea0cb5ed0234484d265ac9e0f7d6, type: 3}
   - {fileID: 21300000, guid: f567aa4ce45c87b48900d721b33be67c, type: 3}
   - {fileID: 21300000, guid: 3adb8a6c7283dff48906e7d535aa1751, type: 3}
   - {fileID: 21300000, guid: 801b8fed0df974b478ad59dce2b23b7d, type: 3}
+  - {fileID: 21300000, guid: eeb7777e0432dd8448364557c281ffc9, type: 3}
   - {fileID: 21300000, guid: 6cce48cefbbf9a54cb7d5b99894476e1, type: 3}
+  - {fileID: 21300000, guid: 042be02f55484884498c06bf5d9b31f9, type: 3}
   - {fileID: 21300000, guid: 0f44818f2dc563a4e84ea61bc530c6dc, type: 3}
   - {fileID: 21300000, guid: 2419a2ff736621a4f862b4ccbca0b2c4, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -126,8 +142,12 @@ SpriteAtlas:
   - 1_WALL
   - 3_BASE
   - 8_SCHOOL
+  - Magic-1
+  - Water
   - 5_BUBBLE TROUBLE
+  - Bar_Blue
   - BACK
+  - Sand-1
   - 3_CANNON
   - 10_LIQUID SAND
   - 7_SAND BUCKET(WAIN)
@@ -136,6 +156,7 @@ SpriteAtlas:
   - 8_MERMAID
   - 8_KNIGHT
   - 3_EARTHQUAKE
+  - Sand
   - 1_DROUGHT
   - 6_SKYSCRAPER (BABYLON)
   - 2_CONJURE BRICKS
@@ -144,12 +165,15 @@ SpriteAtlas:
   - 4_DRAGON
   - 0_WATER_BASE
   - 6_THUNDER
+  - Magic
   - 2_TOWER
   - 9_SABOUTEUR
   - 6_CONJURE CRYSTALS
   - 10_FENCE
   - 5_CURSE
+  - Bar_Red
   - 0_MAGIC BASE
+  - Water-2
   - 10_SORCERER
   - 2_ARCHER
   m_RenderDataMap: {}

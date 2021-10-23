@@ -20,14 +20,14 @@ public class TeamStatsUI
 
     public void UpdateTeamStat(CastleStats castleStat)
     {
-        sandProduce.text = "Sand Produce:"+ castleStat.sandProduce.ToString();
-        sand.text = "Sand:" + castleStat.sandResource.ToString();
+        sandProduce.text = castleStat.sandProduce.ToString();
+        sand.text =  castleStat.sandResource.ToString();
 
-        waterProduce.text = "Water Produce:" + castleStat.waterProduce.ToString();
-        water.text = "Water:" + castleStat.waterResource.ToString();
+        waterProduce.text =  castleStat.waterProduce.ToString();
+        water.text = castleStat.waterResource.ToString();
 
-        magicProduce.text = "Magic Produce:" + castleStat.magicProduce.ToString();
-        magic.text = "Magic:" + castleStat.magicResource.ToString();
+        magicProduce.text = castleStat.magicProduce.ToString();
+        magic.text = castleStat.magicResource.ToString();
 
         castleHeight.text = "Castle Height:" + castleStat.castleHeight.ToString();
         wallHeight.text = "Wall Height:" + castleStat.wallHeight.ToString();
