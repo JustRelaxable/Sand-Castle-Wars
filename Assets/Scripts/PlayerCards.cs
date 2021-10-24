@@ -51,7 +51,7 @@ public class PlayerCards : MonoBehaviourPun
         if (!photonView.IsMine)
             return;
         //gameCardHolderUI.InstantiateCard(cardID);
-        var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
+        var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID,false);
         //gameCard.GetComponent<GameCardUI>().OpenCardBack();
         FindObjectOfType<ClientGameManager>().TakeCardFromDeck(gameCard);
     }

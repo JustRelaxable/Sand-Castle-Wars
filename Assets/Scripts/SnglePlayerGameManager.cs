@@ -131,6 +131,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         }
         
         GameCardUI.selectedCard.CloseCardSettings();
+        GameCardUI.selectedCard.DeactivateButton();
         var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
         StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
         GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
@@ -140,7 +141,7 @@ public class SnglePlayerGameManager : MonoBehaviour
        
 
 
-        var gameCard = gameCardHolderUI.InstantiateCardAndReturn(UnityEngine.Random.Range(0, CardManager.instance.cards.Length));
+        var gameCard = gameCardHolderUI.InstantiateCardAndReturn(UnityEngine.Random.Range(0, CardManager.instance.cards.Length),false);
         StartCoroutine(CardTakenFromDeck(gameCard));
 
         if (CheckIfGameFinished(playerStats, botStats))
@@ -159,7 +160,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         singlePlayerBot.deck.Add(botCardID);
 
 
-        var botGameCard = gameCardHolderUI.InstantiateCardAndReturn(CardManager.instance.GetIndex(botResponse.gameCard));
+        var botGameCard = gameCardHolderUI.InstantiateCardAndReturn(CardManager.instance.GetIndex(botResponse.gameCard),true);
         if (botResponse.isDiscarded)
         {
             botGameCard.GetComponent<GameCardUI>().OpenDiscarded();
@@ -170,8 +171,7 @@ public class SnglePlayerGameManager : MonoBehaviour
             cardAnimationSpawner.HandleCardAnimation(botResponse.gameCard.ID, Teams.Blue);
         }
 
-
-            
+        botGameCard.GetComponent<GameCardUI>().DeactivateButton();
         botGameCard.transform.position = cardBlueSpawnPoint.transform.position;
 
         var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());

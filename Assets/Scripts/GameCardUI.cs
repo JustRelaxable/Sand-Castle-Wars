@@ -233,4 +233,9 @@ public class GameCardUI : MonoBehaviour
     {
         discarded.SetActive(true);
     }
+
+    public void DeactivateButton()
+    {
+        overButton.enabled = false;
+    }
 }

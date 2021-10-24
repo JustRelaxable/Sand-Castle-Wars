@@ -15,18 +15,18 @@ public class GameCardHolder3DUI : GameCardHolderUI
         gameCardUI.PrepareCard(card, false);
     }
 
-    public override GameObject InstantiateCardAndReturn(int gameCardID)
+    public override GameObject InstantiateCardAndReturn(int gameCardID,bool isLastCard)
     {
         var cardGO = Instantiate(gameCardUI3D, transform.parent);
         var card = CardManager.instance.GetCard(gameCardID);
         var gameCardUI = cardGO.GetComponent<GameCardUI>();
-        gameCardUI.PrepareCard(card, false);
+        gameCardUI.PrepareCard(card, isLastCard);
         return cardGO;
     }
 
     public override void InstantiateBonusCard(int gameCardID)
     {
-        var cardGO = InstantiateCardAndReturn(gameCardID);
+        var cardGO = InstantiateCardAndReturn(gameCardID,false);
 
         for (int i = 0; i < transform.childCount; i++)
         {

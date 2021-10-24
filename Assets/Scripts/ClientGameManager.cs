@@ -60,6 +60,7 @@ public class ClientGameManager : MonoBehaviourPun
             if (isDiscarded)
                 GameCardUI.selectedCard.OpenDiscarded();
             GameCardUI.selectedCard.CloseCardSettings();
+            GameCardUI.selectedCard.DeactivateButton();
             var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
             StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject, cardPosToGo));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
@@ -68,10 +69,11 @@ public class ClientGameManager : MonoBehaviourPun
         }
         else
         {
-            var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID);
+            var gameCard = gameCardHolderUI.InstantiateCardAndReturn(cardID,true);
             if (isDiscarded)
                 gameCard.GetComponent<GameCardUI>().OpenDiscarded();
 
+            gameCard.GetComponent<GameCardUI>().DeactivateButton();
             var team = FindObjectsOfType<CastleStats>().Single(x => !x.photonView.IsMine).team;
 
             switch (team)

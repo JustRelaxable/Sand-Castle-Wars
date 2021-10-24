@@ -14,6 +14,9 @@ public class MainmenuUIController : MonoBehaviourPunCallbacks
     [SerializeField]
     GameObject title;
 
+    [SerializeField]
+    GameObject mainMenuToBeClosedSettings;
+
     public void OpenMainMenuUI()
     {
         foreach (var item in mainMenuUIs)
@@ -26,5 +29,6 @@ public class MainmenuUIController : MonoBehaviourPunCallbacks
     {
         homeButton.SetActive(false);
         title.SetActive(false);
+        mainMenuToBeClosedSettings.SetActive(false);
     }
 }

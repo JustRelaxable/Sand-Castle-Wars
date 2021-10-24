@@ -53,11 +53,11 @@ public class GameCardHolderUI : MonoBehaviour
         var card = CardManager.instance.GetCard(gameCardID);
         cardGO.GetComponent<GameCardUI>().PrepareCard(card,false);
     }
-    public virtual GameObject InstantiateCardAndReturn(int gameCardID)
+    public virtual GameObject InstantiateCardAndReturn(int gameCardID,bool isLastCard)
     {
         var cardGO = Instantiate(gameCardUIPrefab,transform.parent);
         var card = CardManager.instance.GetCard(gameCardID);
-        cardGO.GetComponent<GameCardUI>().PrepareCard(card, false);
+        cardGO.GetComponent<GameCardUI>().PrepareCard(card, isLastCard);
         return cardGO;
     }
 
