@@ -67,5 +67,249 @@ MonoBehaviour:
     m_Localized: Return to the Mainmenu
     m_Metadata:
       m_Items: []
+  - m_Id: 3935161789517824
+    m_Localized: Tower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935260632485888
+    m_Localized: Build and add 5 units to your castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935506850713600
+    m_Localized: Wall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935541994786816
+    m_Localized: Add extra protection to your castle by increasing your wall thickness
+      3 units.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935806080749568
+    m_Localized: Base
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935977506148352
+    m_Localized: Build and add 2 units to your castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936246264565760
+    m_Localized: Liquid Sand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936366620119040
+    m_Localized: Perform a 6 unit attack on the enemy by liquidating their sand.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936647441354752
+    m_Localized: Conjure Bricks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936709701603328
+    m_Localized: Produce 8 units of sand with conjuring bricks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937328889925632
+    m_Localized: Drought
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937376625299456
+    m_Localized: Reduce the enemy's water resources by 8 units.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937637741694976
+    m_Localized: Dragon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937690661228544
+    m_Localized: Perform an 25 unit attack on the enemy's castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938049370689536
+    m_Localized: Saboteur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938111131815936
+    m_Localized: Destroy 4 units of sand, water and magic from your enemy's resources.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938330053513216
+    m_Localized: Knight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938359145205760
+    m_Localized: Perform a 3 unit attack on the enemy with your sand knight.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938574543687680
+    m_Localized: Defense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938620488093696
+    m_Localized: Defend your castle by increasing its wall thickness 3 units.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938816731189248
+    m_Localized: Curse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938861572493312
+    m_Localized: Increase your produce by 1 unit while cursing your enemy with 1
+      unit decreased produce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939352108929024
+    m_Localized: Conjure Crystals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939429418340352
+    m_Localized: Produce 8 units of magic with your crystals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939863834988544
+    m_Localized: Reserve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3945443769257984
+    m_Localized: Build and add 8 units to your castle from destroying 4 wall thickness.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946189415845888
+    m_Localized: Babylon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946251147612160
+    m_Localized: Build and add 32 units to your castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946438645583872
+    m_Localized: Sand Bucket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946681202184192
+    m_Localized: Build and add 8 units to your castle and perform a 4 unit attack
+      to enemy castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3947094232076288
+    m_Localized: School
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3947159189262336
+    m_Localized: Increase your sand production by 1 unity by educating your ally.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948067742617600
+    m_Localized: Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948117994573824
+    m_Localized: Perform a 12 unit attack on the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948809463336960
+    m_Localized: Water Treatment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948867986460672
+    m_Localized: Increase your water production by 1 unit by treating water.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949094034280448
+    m_Localized: Thunder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949248644714496
+    m_Localized: Perform a massive 32 unit attack on the enemy with a man-made thunder.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949474461847552
+    m_Localized: Crush Crystals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949591856222208
+    m_Localized: Destroy 8 units of magic from your enemy's resources.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949932765057024
+    m_Localized: Mermaid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949981595144192
+    m_Localized: Get help from mermaids to add 22 units more to your castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950258125606912
+    m_Localized: Conjure Cellar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950312618004480
+    m_Localized: Add 8 unit water to your resources.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950615371255808
+    m_Localized: Bubble Trouble
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950654252453888
+    m_Localized: Perform a 4 unit attack on the enemy with the bubbly water.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950925540036608
+    m_Localized: Thief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950971572523008
+    m_Localized: Steam 5 units of sand, water and magic from your enemy's resources.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951214435307520
+    m_Localized: Sorcerer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951261671559168
+    m_Localized: Increase your magic production by 1 unit with the help of your sorcerer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951538583703552
+    m_Localized: Cannon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951645001584640
+    m_Localized: Perform a 10 unit attack on the enemy's castle directly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951877558964224
+    m_Localized: Crush Bricks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951938569310208
+    m_Localized: Reduce the enemy's sand resources by 8 units.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952207705214976
+    m_Localized: Fort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952242924785664
+    m_Localized: Build and add 20 units more to your castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952458390376448
+    m_Localized: Fence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952516842196992
+    m_Localized: Add extra protection to your castle by increasing your wall thickness
+      22 units.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952901220798464
+    m_Localized: Archer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952932552249344
+    m_Localized: Perform a 2 unit attack on the enemy.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -68,5 +68,256 @@ MonoBehaviour:
     m_Localized: "Anamen\xFCye D\xF6n"
     m_Metadata:
       m_Items: []
+  - m_Id: 3935161789517824
+    m_Localized: Kule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935260632485888
+    m_Localized: "Kalenin y\xFCksekli\u011Fini 5 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935506850713600
+    m_Localized: Duvar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935541994786816
+    m_Localized: "Kalenin duvar kal\u0131nl\u0131\u011F\u0131n\u0131 3 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935806080749568
+    m_Localized: Temel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935977506148352
+    m_Localized: "Kalenin y\xFCksekli\u011Fini 2 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936246264565760
+    m_Localized: "S\u0131v\u0131la\u015Ft\u0131r\u0131lm\u0131\u015F Kum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936366620119040
+    m_Localized: "Rakibin kalesini \u0131slatarak 6 birim hasar verir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936709701603328
+    m_Localized: "8 birim kum \xFCretir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936647441354752
+    m_Localized: "Kumdan Tu\u011Flalar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937328889925632
+    m_Localized: "Kurakl\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937376625299456
+    m_Localized: "Rakibin su deposundan 8 birim su azalt\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937637741694976
+    m_Localized: Ejder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937690661228544
+    m_Localized: "Ejder yard\u0131m\u0131yla rakibin kalesine 25 birim hasar verir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938049370689536
+    m_Localized: Sabotaj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938111131815936
+    m_Localized: "Rakibin kum, su ve b\xFCy\xFC kaynaklar\u0131n\u0131 4 birim azalt\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938330053513216
+    m_Localized: "\u015Eovalye"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938359145205760
+    m_Localized: "Kum \u015Fovalyeleri olu\u015Fturarak rakibin kalesine 3 birim
+      hasar verir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938574543687680
+    m_Localized: Savunma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938620488093696
+    m_Localized: "Kalenin duvar kal\u0131nl\u0131\u011F\u0131n\u0131 3 birim artt\u0131rarak
+      kaleyi savunur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938816731189248
+    m_Localized: Lanet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938861572493312
+    m_Localized: "Rakibin t\xFCm \xFCretimlerini ve kaynaklar\u0131n\u0131 1 birim
+      azalt\u0131rken, senin \xFCretim ve kaynaklar\u0131n\u0131 1 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939352108929024
+    m_Localized: Kristal Madeni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939429418340352
+    m_Localized: "Kalenin b\xFCy\xFC kaynaklar\u0131n\u0131 8 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939863834988544
+    m_Localized: Kaynak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3945443769257984
+    m_Localized: "Duvar kal\u0131nl\u0131\u011F\u0131n\u0131 4 birim azaltarak, kalenin
+      y\xFCksekli\u011Fini 8 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946189415845888
+    m_Localized: "G\xF6kdelen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946251147612160
+    m_Localized: "Kalenin y\xFCksekli\u011Fini 32 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946438645583872
+    m_Localized: "Kum Kovas\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946681202184192
+    m_Localized: "Rakibin kulesinin y\xFCkseli\u011Fini 4 birim azalt\u0131rken senin
+      kalenin y\xFCksekli\u011Fini 8 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3947094232076288
+    m_Localized: Okul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3947159189262336
+    m_Localized: "Kum \xFCretimini 1 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948067742617600
+    m_Localized: Atak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948117994573824
+    m_Localized: "Rakibin kalesine 12 birim sald\u0131r\u0131 uygular."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948809463336960
+    m_Localized: "Su Ar\u0131t\u0131m\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948867986460672
+    m_Localized: "Denizden su ar\u0131tarak su \xFCretimini 1 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949094034280448
+    m_Localized: "Y\u0131ld\u0131r\u0131m"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949248644714496
+    m_Localized: "Bir y\u0131ld\u0131r\u0131m olu\u015Fturarak rakibin kalesine 32
+      birim hasar verir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949474461847552
+    m_Localized: Kristal Reaksiyonu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949591856222208
+    m_Localized: "Rakibin kristallerini reaksiyona sokarak 8 birim azalt\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949932765057024
+    m_Localized: "Deniz K\u0131z\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949981595144192
+    m_Localized: "Deniz k\u0131zlar\u0131ndan yard\u0131m alarak kalenin y\xFCksekli\u011Fini
+      22 birim artt\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950258125606912
+    m_Localized: Su Deposu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950312618004480
+    m_Localized: Su deposuna 8 birim su ekler.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950615371255808
+    m_Localized: "Baloncuk Sald\u0131r\u0131s\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950654252453888
+    m_Localized: "Rakibin kalesine baloncuk yard\u0131m\u0131 ile 4 birim hasar verir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950925540036608
+    m_Localized: "H\u0131rs\u0131z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950971572523008
+    m_Localized: "Rakibin kum, su ve b\xFCy\xFC kaynaklar\u0131ndan 5 birim \xE7alarak
+      kendi kalene ekler."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951214435307520
+    m_Localized: Sihirbaz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951261671559168
+    m_Localized: "Sihirbaz e\u011Fiterek kendi kalenin b\xFCy\xFC \xFCretimini 1
+      birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951538583703552
+    m_Localized: Havan Topu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951645001584640
+    m_Localized: "Rakip kalenin duvar kal\u0131nl\u0131\u011F\u0131na bakmaks\u0131z\u0131n
+      direkt kale y\xFCksekli\u011Fine 10 birim hasar verir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951877558964224
+    m_Localized: Erozyon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951938569310208
+    m_Localized: "Rakibin kum kaynaklar\u0131n\u0131 8 birim azalt\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952207705214976
+    m_Localized: Hisar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952242924785664
+    m_Localized: "Kalenin y\xFCksekli\u011Fini 20 birim artt\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952458390376448
+    m_Localized: Sur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952516842196992
+    m_Localized: "Kalenin duvar kal\u0131nl\u0131\u011F\u0131n\u0131 22 birim artt\u0131rarak
+      kaleyi hasarlara kar\u015F\u0131 korur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952901220798464
+    m_Localized: "Ok\xE7u"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952932552249344
+    m_Localized: Rakibin kalesine 2 birim hasar uygular.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

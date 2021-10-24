@@ -5,13 +5,18 @@ using UnityEngine.UI;
 using System.Linq;
 using Photon.Pun;
 using TMPro;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class GameCardUI : MonoBehaviour
 {
     public static GameCardUI selectedCard;
     public TextMeshProUGUI resourceAmount;
     public TextMeshProUGUI cardName;
+    public LocalizeStringEvent cardNameString;
     public TextMeshProUGUI cardDescription;
+    public LocalizeStringEvent cardDescriptionString;
     public int cardID;
     public Button overButton;
 
@@ -40,14 +45,26 @@ public class GameCardUI : MonoBehaviour
     public float cardWidth;
     public float cardHeight;
 
+    private string translations = "Translations";
+
     public void PrepareCard(GameCard gameCard,bool isLastCard)
     {
+        cardNameString.StringReference.TableReference = translations;
+        cardDescriptionString.StringReference.TableReference = translations;
+
         cardID = CardManager.instance.GetIndex(gameCard);
         resourceAmount.text = gameCard.resourceCost.ToString();
-        cardName.text = gameCard.cardName;
+
+
+        var localizedCardName = GetLocalizedName(gameCard.cardName);
+        cardNameString.StringReference.TableEntryReference = localizedCardName;
+        //cardName.text = gameCard.cardName;
+
         this.gameCard = gameCard;
         this.isLastCard = isLastCard;
-        cardDescription.text = gameCard.cardDescription;
+        //cardDescription.text = gameCard.cardDescription;
+        localizedCardName = GetLocalizedDescription(gameCard.cardName);
+        cardDescriptionString.StringReference.TableEntryReference = localizedCardName;
         if(gameCard.cardIcon != null)
             cardIcon.sprite = gameCard.cardIcon;
 
@@ -237,5 +254,20 @@ public class GameCardUI : MonoBehaviour
     public void DeactivateButton()
     {
         overButton.enabled = false;
+    }
+
+    public string GetLocalizedName(string cardName)
+    {
+        var upper = cardName.ToUpper();
+        var fixedCardName = upper.Replace(' ', '_');
+        fixedCardName = fixedCardName.Replace('İ', 'I');
+        return fixedCardName + "_CARD_NAME";
+    }
+    public string GetLocalizedDescription(string cardName)
+    {
+        var upper = cardName.ToUpper();
+        var fixedCardName = upper.Replace(' ', '_');
+        fixedCardName = fixedCardName.Replace('İ', 'I');
+        return fixedCardName + "_CARD_DESCRIPTION";
     }
 }
