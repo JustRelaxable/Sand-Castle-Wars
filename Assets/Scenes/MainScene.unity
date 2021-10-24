@@ -12258,6 +12258,8 @@ MonoBehaviour:
   - {fileID: 1668845602}
   - {fileID: 1564917784}
   - {fileID: 1614883254}
+  homeButton: {fileID: 1824820938}
+  title: {fileID: 1564917784}
 --- !u!114 &1240786857 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5688032886142093226, guid: 5805e7f583aab9b4e9f4303130444316,
