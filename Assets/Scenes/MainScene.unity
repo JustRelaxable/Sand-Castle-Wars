@@ -7059,7 +7059,7 @@ MonoBehaviour:
   resourceType: 2
   botPriority: 27
   cardIcon: {fileID: 21300000, guid: 5ed21a5a6dbb5e747aa6bc83aead4935, type: 3}
-  cardDescription: Perform an 8 unit attack on the enemy's castle.
+  cardDescription: Perform an 25 unit attack on the enemy's castle.
   cardNumberTexts:
   - textX: 0.776
     textY: 0.518
@@ -12409,7 +12409,7 @@ GameObject:
   - component: {fileID: 1230263615}
   - component: {fileID: 1230263616}
   m_Layer: 0
-  m_Name: Platoon
+  m_Name: Liquid Sand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15615,7 +15615,7 @@ GameObject:
   - component: {fileID: 1526298871}
   - component: {fileID: 1526298872}
   m_Layer: 0
-  m_Name: Swat
+  m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16129,7 +16129,7 @@ GameObject:
   - component: {fileID: 1609133466}
   - component: {fileID: 1609133467}
   m_Layer: 0
-  m_Name: ConjureWeapons
+  m_Name: Conjure Cellar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

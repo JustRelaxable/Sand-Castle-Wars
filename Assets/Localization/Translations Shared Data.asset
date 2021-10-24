@@ -63,6 +63,246 @@ MonoBehaviour:
     m_Key: RETURN_TO_THE_MAINMENU
     m_Metadata:
       m_Items: []
+  - m_Id: 3935161789517824
+    m_Key: TOWER_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935260632485888
+    m_Key: TOWER_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935506850713600
+    m_Key: WALL_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935541994786816
+    m_Key: WALL_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935806080749568
+    m_Key: BASE_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3935977506148352
+    m_Key: BASE_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936246264565760
+    m_Key: LIQUID_SAND_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936366620119040
+    m_Key: LIQUID_SAND_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936647441354752
+    m_Key: CONJURE_BRICKS_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3936709701603328
+    m_Key: CONJURE_BRICKS_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937328889925632
+    m_Key: DROUGHT_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937376625299456
+    m_Key: DROUGHT_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937637741694976
+    m_Key: DRAGON_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3937690661228544
+    m_Key: DRAGON_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938049370689536
+    m_Key: SABOTEUR_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938111131815936
+    m_Key: SABOTEUR_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938330053513216
+    m_Key: KNIGHT_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938359145205760
+    m_Key: KNIGHT_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938574543687680
+    m_Key: DEFENSE_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938620488093696
+    m_Key: DEFENSE_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938816731189248
+    m_Key: CURSE_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3938861572493312
+    m_Key: CURSE_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939352108929024
+    m_Key: CONJURE_CRYSTALS_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939429418340352
+    m_Key: CONJURE_CRYSTALDS_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939863834988544
+    m_Key: RESERVE_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3945443769257984
+    m_Key: RESERVE_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946189415845888
+    m_Key: BABYLON_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946251147612160
+    m_Key: BABYLON_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946438645583872
+    m_Key: SAND_BUCKET_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3946681202184192
+    m_Key: SAND_BUCKET_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3947094232076288
+    m_Key: SCHOOL_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3947159189262336
+    m_Key: SCHOOL_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948067742617600
+    m_Key: ATTACK_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948117994573824
+    m_Key: ATTACK_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948809463336960
+    m_Key: WATER_TREATMENT_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3948867986460672
+    m_Key: WATER_TREATMENT_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949094034280448
+    m_Key: THUNDER_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949248644714496
+    m_Key: THUNDER_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949474461847552
+    m_Key: CRUSH_CRYTSTALS_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949591856222208
+    m_Key: CRUSH_CRYSTALS_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949932765057024
+    m_Key: MERMAID_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3949981595144192
+    m_Key: MERMAID_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950258125606912
+    m_Key: CONJURE_CELLAR_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950312618004480
+    m_Key: CONJURE_CELLAR_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950615371255808
+    m_Key: BUBBLE_TROUBLE_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950654252453888
+    m_Key: BUBBLE_TROUBLE_CARD_DESCRIPTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950925540036608
+    m_Key: THIEF_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3950971572523008
+    m_Key: THIEF_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951214435307520
+    m_Key: SORCERER_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951261671559168
+    m_Key: SORCERER_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951538583703552
+    m_Key: CANNON_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951645001584640
+    m_Key: CANNON_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951877558964224
+    m_Key: CRUSH_BRICKS_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951938569310208
+    m_Key: CRUSH_BRICKS_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952207705214976
+    m_Key: FORT_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952242924785664
+    m_Key: FORT_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952458390376448
+    m_Key: FENCE_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952516842196992
+    m_Key: FENCE_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952901220798464
+    m_Key: ARCHER_CARD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3952932552249344
+    m_Key: ARCHER_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
