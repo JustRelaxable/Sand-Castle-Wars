@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class SnglePlayerGameManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class SnglePlayerGameManager : MonoBehaviour
     private GameObject selectedShowOffCard;
     private Transform showOffCardParent;
     private float showOffCardParentLocalScale;
+    private Button showOffCardOverButton;
 
     CastleStats playerStats;
     CastleStats botStats;
@@ -294,7 +296,7 @@ public class SnglePlayerGameManager : MonoBehaviour
             yield return null;
         }
     }
-    public void ShowOffCardOpen(GameObject card)
+    public void ShowOffCardOpen(GameObject card,Button button)
     {
         SetLastPlayedCardParentTransform(card.transform.parent);
         CameraCanvasBlur.instance.OpenBlur();
@@ -305,6 +307,8 @@ public class SnglePlayerGameManager : MonoBehaviour
         card.transform.parent = showOffCard.transform;
         var showOffCardChild = showOffCard.transform.GetChild(0);
         StartCoroutine(ChangeScaleOfGameObject(card, showOffCardChild, 1));
+        showOffCardOverButton = button;
+
     }
     public void ShowOffCardClose()
     {
@@ -313,5 +317,12 @@ public class SnglePlayerGameManager : MonoBehaviour
         StartCoroutine(MoveCardToTransform(selectedShowOffCard, showOffCardParent, 1));
         selectedShowOffCard.transform.parent = showOffCardParent;
         StartCoroutine(ChangeScaleOfGameObject(selectedShowOffCard, showOffCardParentLocalScale, 1));
+        StartCoroutine(EnableOverButtonafterSeconds(showOffCardOverButton));
+    }
+
+    private IEnumerator EnableOverButtonafterSeconds(Button button, int seconds = 1)
+    {
+        yield return new WaitForSeconds(seconds);
+        button.enabled = true;
     }
 }

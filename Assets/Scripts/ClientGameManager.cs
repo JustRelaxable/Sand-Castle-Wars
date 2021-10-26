@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Linq;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class ClientGameManager : MonoBehaviourPun
 {
@@ -23,6 +24,7 @@ public class ClientGameManager : MonoBehaviourPun
     private GameObject selectedShowOffCard;
     private Transform showOffCardParent;
     private float showOffCardParentLocalScale;
+    private Button showOffCardOverButton;
 
     public event Action OnGameStarted;
     public CardAnimationSpawner cardAnimationSpawner;
@@ -219,7 +221,7 @@ public class ClientGameManager : MonoBehaviourPun
         FindObjectOfType<RoundBasedAds>().adsWatchedOnBothPlayers = true;
     }
 
-    public void ShowOffCardOpen(GameObject card)
+    public void ShowOffCardOpen(GameObject card,Button overButton)
     {
         SetLastPlayedCardParentTransform(card.transform.parent);
         CameraCanvasBlur.instance.OpenBlur();
@@ -230,6 +232,7 @@ public class ClientGameManager : MonoBehaviourPun
         card.transform.parent = showOffCard.transform;
         var showOffCardChild = showOffCard.transform.GetChild(0);
         StartCoroutine(ChangeScaleOfGameObject(card, showOffCardChild, 1));
+        showOffCardOverButton = overButton;
     }
     public void ShowOffCardClose()
     {
@@ -238,5 +241,12 @@ public class ClientGameManager : MonoBehaviourPun
         StartCoroutine(MoveCardToTransform(selectedShowOffCard, showOffCardParent, 1));
         selectedShowOffCard.transform.parent = showOffCardParent;
         StartCoroutine(ChangeScaleOfGameObject(selectedShowOffCard, showOffCardParentLocalScale, 1));
+        StartCoroutine(EnableOverButtonafterSeconds(showOffCardOverButton));
+    }
+
+    private IEnumerator EnableOverButtonafterSeconds(Button button,int seconds = 1)
+    {
+        yield return new WaitForSeconds(seconds);
+        button.enabled = true;
     }
 }

@@ -6,7 +6,8 @@ public class GameCardUISingle : GameCard3DUI
 {
     public override void OpenCardSettings()
     {
-        FindObjectOfType<SnglePlayerGameManager>().ShowOffCardOpen(this.gameObject);
+        overButton.enabled = false;
+        FindObjectOfType<SnglePlayerGameManager>().ShowOffCardOpen(this.gameObject,overButton);
         animator.SetTrigger("OpenCardOptions");
         /*
         if (cardSettings.activeInHierarchy)
