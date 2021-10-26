@@ -30,6 +30,6 @@ public class TeamStatsUI
         magic.text = castleStat.magicResource.ToString();
 
         castleHeight.text = "Castle Height:" + castleStat.castleHeight.ToString();
-        wallHeight.text = "Wall Height:" + castleStat.wallHeight.ToString();
+        wallHeight.text = "Wall Thickness:" + castleStat.wallHeight.ToString();
     }
 }
