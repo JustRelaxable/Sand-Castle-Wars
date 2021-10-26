@@ -12,6 +12,14 @@ public class PhotonSimpleMatchMaker : MonoBehaviourPunCallbacks
     [SerializeField]
     GameObject roomUIInstance;
     public bool connectedToMasterServer = false;
+    public static PhotonSimpleMatchMaker instance;
+
+    public void Awake()
+    {
+        instance = this;
+    }
+
+
     public void CreateInternetMatch(string roomName,bool isPrivateGame)
     {
         if (!connectedToMasterServer)

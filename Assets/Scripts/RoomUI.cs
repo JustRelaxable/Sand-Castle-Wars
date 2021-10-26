@@ -11,7 +11,6 @@ public class RoomUI : MonoBehaviour
 
     [SerializeField]
     Image privateRoomImage;
-
     public static RoomUI SelectedRoom { get; private set; }
 
     public string RoomName { get; private set; }
@@ -24,11 +23,14 @@ public class RoomUI : MonoBehaviour
 
     public void OnClicked()
     {
+        /*
         if(SelectedRoom != null)
         {
             SelectedRoom.GetComponent<Button>().interactable = true;
         }
         SelectedRoom = this;
         GetComponent<Button>().interactable = false;
+        */
+        PhotonSimpleMatchMaker.instance.JoinInternetMatch(RoomName);
     }
 }
