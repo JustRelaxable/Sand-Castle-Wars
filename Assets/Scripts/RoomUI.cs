@@ -11,14 +11,31 @@ public class RoomUI : MonoBehaviour
 
     [SerializeField]
     Image privateRoomImage;
+
+    [SerializeField]
+    Sprite hlfSprite;
+
+    [SerializeField]
+    Sprite fullSprite;
+
+    private Image imge;
     public static RoomUI SelectedRoom { get; private set; }
 
     public string RoomName { get; private set; }
+
+    private void Awake()
+    {
+        imge = GetComponent<Image>();
+    }
 
     public void PrepareRoom(string roomName,int playerCount)
     {
         roomNameText.text = roomName + $" {playerCount}/2";
         RoomName = roomName;
+        if (playerCount == 1)
+            imge.sprite = hlfSprite;
+        else
+            imge.sprite = fullSprite;
     }
 
     public void OnClicked()
