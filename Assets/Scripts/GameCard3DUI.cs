@@ -12,11 +12,12 @@ public class GameCard3DUI : GameCardUI
     }
     public override void OpenCardSettings()
     {
+        overButton.enabled = false;
         if (!FindObjectOfType<PlayWaiter>().canPlay)
         {
             return;
         }
-        FindObjectOfType<ClientGameManager>().ShowOffCardOpen(this.gameObject);
+        FindObjectOfType<ClientGameManager>().ShowOffCardOpen(this.gameObject,overButton);
         animator.SetTrigger("OpenCardOptions");
     }
     public override void CloseCardBack()
