@@ -31,4 +31,9 @@ public class MainmenuUIController : MonoBehaviourPunCallbacks
         title.SetActive(false);
         mainMenuToBeClosedSettings.SetActive(false);
     }
+
+    public void OpenHomeButton()
+    {
+        homeButton.SetActive(true);
+    }
 }
