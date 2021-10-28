@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipCallbacks
+public class GameManager : MonoBehaviourPun,IOnPhotonViewOwnerChange,IPunOwnershipCallbacks
 {
     public static GameManager instance;
 
@@ -258,7 +258,7 @@ public class GameManager : MonoBehaviour,IOnPhotonViewOwnerChange,IPunOwnershipC
 
     public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
     {
-        if (!targetView.IsMine)
+        if (!targetView.IsMine && this.photonView.IsMine)
         {
             StartGame();
         }      
