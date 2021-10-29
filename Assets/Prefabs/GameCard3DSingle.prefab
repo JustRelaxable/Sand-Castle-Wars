@@ -836,10 +836,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Banshee
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c6d7c9dee6beb8d41ae9dbd6db57acad, type: 2}
-  m_sharedMaterial: {fileID: -7014261933740622157, guid: c6d7c9dee6beb8d41ae9dbd6db57acad,
+  m_fontAsset: {fileID: 11400000, guid: 214ee7d8830e3cd44b94c0609b9e925a, type: 2}
+  m_sharedMaterial: {fileID: 6230574285343301996, guid: 214ee7d8830e3cd44b94c0609b9e925a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.9
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1

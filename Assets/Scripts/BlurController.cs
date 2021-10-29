@@ -13,10 +13,10 @@ public class BlurController : MonoBehaviour
         switch (GameCardBase.GameMode)
         {
             case GameMode.Singleplayer:
-                singlePlayerGameManager.ShowOffCardClose();
+                singlePlayerGameManager.ShowOffCardClose(false);
                 break;
             case GameMode.Multiplayer:
-                clientGameManager.ShowOffCardClose();
+                clientGameManager.ShowOffCardClose(false);
                 break;
             default:
                 break;
