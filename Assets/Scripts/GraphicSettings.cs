@@ -9,10 +9,4 @@ public class GraphicSettings : MonoBehaviour
     {
         Application.targetFrameRate = Screen.currentResolution.refreshRate;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
