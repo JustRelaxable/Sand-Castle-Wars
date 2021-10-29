@@ -138,6 +138,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject,cardPosToGo));
         GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
         StartCoroutine(ChangeScaleOfGameObject(GameCardUI.selectedCard.gameObject, lastPlayedCardUI.transform.GetChild(0), 1));
+        gameCardHolderUI.DeactivateOvers();
         gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
 
        
@@ -187,6 +188,7 @@ public class SnglePlayerGameManager : MonoBehaviour
 
         playerStats.HandleNextTurnResources();
         gameCardHolderUI.HandleCardsAbleToUse();
+        gameCardHolderUI.ActivateOvers();
         playerStats.GetComponent<CastleTurnController>().InvokeOnTurnMine();
     }
     private bool CheckIfGameFinished(CastleStats callerStats, CastleStats enemyStats)

@@ -67,6 +67,7 @@ public class ClientGameManager : MonoBehaviourPun
             StartCoroutine(MoveLastPlayedCard(GameCardUI.selectedCard.gameObject, cardPosToGo));
             GameCardUI.selectedCard.transform.parent = gameCardHolderUI.lastPlayedCard.transform;
             StartCoroutine(ChangeScaleOfGameObject(GameCardUI.selectedCard.gameObject, lastPlayedCardUI.transform.GetChild(0), 1));
+            gameCardHolderUI.DeactivateOvers();
             gameCardHolderUI.StartCoroutine(((GameCardHolder3DUI)gameCardHolderUI).TurnCardsBack());
         }
         else
@@ -92,6 +93,7 @@ public class ClientGameManager : MonoBehaviourPun
 
             var cardPosToGo = lastPlayedCardUI.transform.TransformPoint(lastPlayedCardUI.GetNewCardLocalPosition());
             StartCoroutine(MoveCardToTransform(gameCard, cardPosToGo));
+            gameCardHolderUI.ActivateOvers();
             gameCard.transform.SetParent(lastPlayedCardUI.transform);
         }
     }
