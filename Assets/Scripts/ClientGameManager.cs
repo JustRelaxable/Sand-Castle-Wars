@@ -58,7 +58,7 @@ public class ClientGameManager : MonoBehaviourPun
 
         if (myTurn)
         {
-            ShowOffCardClose();
+            ShowOffCardClose(true);
             if (isDiscarded)
                 GameCardUI.selectedCard.OpenDiscarded();
             GameCardUI.selectedCard.CloseCardSettings();
@@ -162,6 +162,7 @@ public class ClientGameManager : MonoBehaviourPun
 
     private IEnumerator CardTakenFromDeck(GameObject go)
     {
+        go.GetComponent<GameCardUI>().DeactivateButton();
         go.transform.position = nullPoint.transform.position;
         while (!isLastCardArrived)
         {
@@ -175,6 +176,7 @@ public class ClientGameManager : MonoBehaviourPun
         go.transform.parent = lastPlayedCardParentTransform;
         var tranformedScale = go.transform.localScale.x * lastPlayedCardParentTransform.parent.localScale.x;
         StartCoroutine(ChangeScaleOfGameObject(go, tranformedScale, 1));
+        StartCoroutine(EnableOverButtonafterSeconds(go.GetComponent<GameCardUI>().overButton, 1));
     }
     private IEnumerator MoveLastPlayedCard(GameObject go, Vector3 posToGo)
     {
@@ -234,14 +236,15 @@ public class ClientGameManager : MonoBehaviourPun
         StartCoroutine(ChangeScaleOfGameObject(card, showOffCardChild, 1));
         showOffCardOverButton = overButton;
     }
-    public void ShowOffCardClose()
+    public void ShowOffCardClose(bool isCardUsed)
     {
         CameraCanvasBlur.instance.CloseBlur();
         selectedShowOffCard.GetComponent<Animator>().SetTrigger("CloseCardOptions");
         StartCoroutine(MoveCardToTransform(selectedShowOffCard, showOffCardParent, 1));
         selectedShowOffCard.transform.parent = showOffCardParent;
         StartCoroutine(ChangeScaleOfGameObject(selectedShowOffCard, showOffCardParentLocalScale, 1));
-        StartCoroutine(EnableOverButtonafterSeconds(showOffCardOverButton));
+        if(!isCardUsed)
+            StartCoroutine(EnableOverButtonafterSeconds(showOffCardOverButton));
     }
 
     private IEnumerator EnableOverButtonafterSeconds(Button button,int seconds = 1)

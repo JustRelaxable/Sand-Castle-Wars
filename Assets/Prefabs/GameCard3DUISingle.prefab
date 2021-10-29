@@ -112,8 +112,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38ed94f7d7903bf4091f5155eba5e0e3,
+      objectReference: {fileID: 21300000, guid: 6cce48cefbbf9a54cb7d5b99894476e1,
         type: 3}
+    - target: {fileID: 6720729010421672681, guid: e7b827a4c34b329488e0013faf8d29c9,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6720729010421672683, guid: e7b827a4c34b329488e0013faf8d29c9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0014
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b827a4c34b329488e0013faf8d29c9, type: 3}
 --- !u!4 &7124652021600490007 stripped

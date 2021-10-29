@@ -120,7 +120,7 @@ public class SnglePlayerGameManager : MonoBehaviour
     {
         if (gameFinished)
             return;
-        ShowOffCardClose();
+        ShowOffCardClose(true);
 
         if (isDiscarded)
         {
@@ -144,6 +144,7 @@ public class SnglePlayerGameManager : MonoBehaviour
 
 
         var gameCard = gameCardHolderUI.InstantiateCardAndReturn(UnityEngine.Random.Range(0, CardManager.instance.cards.Length),false);
+        gameCard.GetComponent<GameCardUI>().DeactivateButton();
         StartCoroutine(CardTakenFromDeck(gameCard));
 
         if (CheckIfGameFinished(playerStats, botStats))
@@ -263,6 +264,7 @@ public class SnglePlayerGameManager : MonoBehaviour
         go.transform.parent = lastPlayedCardParentTransform;
         var tranformedScale = go.transform.localScale.x * lastPlayedCardParentTransform.parent.localScale.x;
         StartCoroutine(ChangeScaleOfGameObject(go,tranformedScale, 1));
+        StartCoroutine(EnableOverButtonafterSeconds(go.GetComponent<GameCardUI>().overButton, 1));
         //yield return MoveCardToTransformAndChangeParent(go, lastPlayedCardParentTransform);
     }
     private IEnumerator MoveLastPlayedCard(GameObject go,Vector3 posToGo)
@@ -310,14 +312,15 @@ public class SnglePlayerGameManager : MonoBehaviour
         showOffCardOverButton = button;
 
     }
-    public void ShowOffCardClose()
+    public void ShowOffCardClose(bool isCrdUsed)
     {
         CameraCanvasBlur.instance.CloseBlur();
         selectedShowOffCard.GetComponent<Animator>().SetTrigger("CloseCardOptions");
         StartCoroutine(MoveCardToTransform(selectedShowOffCard, showOffCardParent, 1));
         selectedShowOffCard.transform.parent = showOffCardParent;
         StartCoroutine(ChangeScaleOfGameObject(selectedShowOffCard, showOffCardParentLocalScale, 1));
-        StartCoroutine(EnableOverButtonafterSeconds(showOffCardOverButton));
+        if(!isCrdUsed)
+            StartCoroutine(EnableOverButtonafterSeconds(showOffCardOverButton));
     }
 
     private IEnumerator EnableOverButtonafterSeconds(Button button, int seconds = 1)
