@@ -256,6 +256,11 @@ public class GameCardUI : MonoBehaviour
         overButton.enabled = false;
     }
 
+    public void ActivateButton()
+    {
+        overButton.enabled = true;
+    }
+
     public string GetLocalizedName(string cardName)
     {
         var upper = cardName.ToUpper();

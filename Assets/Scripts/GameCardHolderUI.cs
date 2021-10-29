@@ -100,4 +100,22 @@ public class GameCardHolderUI : MonoBehaviour
     {
         firstRound = true;
     }
+
+    public void DeactivateOvers()
+    {
+        var gameCardUIs = GetComponentsInChildren<GameCardUI>();
+        for (int i = 0; i < gameCardUIs.Length; i++)
+        {
+            gameCardUIs[i].DeactivateButton();
+        }
+    }
+
+    public void ActivateOvers()
+    {
+        var gameCardUIs = GetComponentsInChildren<GameCardUI>();
+        for (int i = 0; i < gameCardUIs.Length; i++)
+        {
+            gameCardUIs[i].ActivateButton();
+        }
+    }
 }
