@@ -50,7 +50,7 @@ Material:
     m_Floats:
     - <noninit>: 0
     - _Exposure: 1.35
-    - _Rotation: -56.471386
+    - _Rotation: -12.990656
     m_Colors:
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
