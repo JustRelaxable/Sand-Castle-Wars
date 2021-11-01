@@ -10,6 +10,7 @@ public class LocalizationGameObjectactivator : MonoBehaviour
     private void Awake()
     {
         LocalizationSettings.SelectedLocaleChanged += LocalizationSettings_SelectedLocaleChanged;
+        LocalizationSettings_SelectedLocaleChanged(LocalizationSettings.SelectedLocale);
     }
 
     private void LocalizationSettings_SelectedLocaleChanged(Locale locale)

@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47807177756672
-    m_Localized: Tek Oyunculu Mod
+    m_Localized: OYNA
     m_Metadata:
       m_Items: []
   - m_Id: 48042910224384
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48305297494016
-    m_Localized: Ayarlar
+    m_Localized: NASIL OYNANIR?
     m_Metadata:
       m_Items: []
   - m_Id: 48420678602752
@@ -45,7 +45,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50549828947968
-    m_Localized: "Oda Olu\u015Ftur"
+    m_Localized: "ODA OLU\u015ETUR"
     m_Metadata:
       m_Items: []
   - m_Id: 50699745955840
@@ -317,6 +317,51 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3952932552249344
     m_Localized: Rakibin kalesine 2 birim hasar uygular.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6879111177375744
+    m_Localized: SES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6879150595444736
+    m_Localized: "M\xDCZ\u0130K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6880812420632576
+    m_Localized: TAMAM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6881433299259392
+    m_Localized: TEK OYUNCULU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6882253487017984
+    m_Localized: "SAVA\u015E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6883803873742848
+    m_Localized: "ODA \u0130SM\u0130YLE KATIL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885024609144832
+    m_Localized: "E\u011ELEN\u0130YOR MUSUN?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885156452896768
+    m_Localized: "L\xDCTFEN B\u0130ZE 5 YILDIZ VER\u0130N VE OYUN HAKKINDA NELER
+      D\xDC\u015E\xDCND\xDC\u011E\xDCN\xDCZDEN BAHSED\u0130N!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885480202833920
+    m_Localized: "PEK\u0130!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6886684559478784
+    m_Localized: "KALE Y\xDCKSEKL\u0130\u011E\u0130:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6886781787639808
+    m_Localized: "DUVAR KALINLI\u011EI:"
     m_Metadata:
       m_Items: []
   references:

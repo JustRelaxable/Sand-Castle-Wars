@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 [System.Serializable]
 public class TeamStatsUI
@@ -18,6 +20,10 @@ public class TeamStatsUI
     public Text castleHeight;
     public Text wallHeight;
 
+    private readonly string translations = "Translations";
+    private readonly string castleHeightLocalization = "CASTLE_HEIGHT";
+    private readonly string wallThicknessLocalization = "WALL_THICKNESS";
+
     public void UpdateTeamStat(CastleStats castleStat)
     {
         sandProduce.text = castleStat.sandProduce.ToString();
@@ -29,7 +35,11 @@ public class TeamStatsUI
         magicProduce.text = castleStat.magicProduce.ToString();
         magic.text = castleStat.magicResource.ToString();
 
-        castleHeight.text = "Castle Height:" + castleStat.castleHeight.ToString();
-        wallHeight.text = "Wall Thickness:" + castleStat.wallHeight.ToString();
+
+        var ch = LocalizationSettings.StringDatabase.GetLocalizedString(translations, castleHeightLocalization);
+        var wt = LocalizationSettings.StringDatabase.GetLocalizedString(translations, wallThicknessLocalization);
+
+        castleHeight.text = ch + castleStat.castleHeight.ToString();
+        wallHeight.text = wt + castleStat.wallHeight.ToString();
     }
 }

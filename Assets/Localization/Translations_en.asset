@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47807177756672
-    m_Localized: Singleplayer Mode
+    m_Localized: PLAY
     m_Metadata:
       m_Items: []
   - m_Id: 48042910224384
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48305297494016
-    m_Localized: Options
+    m_Localized: TUTORIAL
     m_Metadata:
       m_Items: []
   - m_Id: 48420678602752
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50549828947968
-    m_Localized: Create a Room
+    m_Localized: CREATE A ROOM
     m_Metadata:
       m_Items: []
   - m_Id: 50699745955840
@@ -309,6 +309,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3952932552249344
     m_Localized: Perform a 2 unit attack on the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6879111177375744
+    m_Localized: SOUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6879150595444736
+    m_Localized: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6880812420632576
+    m_Localized: OKAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6881433299259392
+    m_Localized: SINGLEPLAYER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6882253487017984
+    m_Localized: BATTLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6883803873742848
+    m_Localized: JOIN BY ROOM NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885024609144832
+    m_Localized: ARE YOU HAVING FUN?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885156452896768
+    m_Localized: PLEASE RATE US 5-STARS & TELL US WHAT YOU THINK!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885480202833920
+    m_Localized: SURE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6886684559478784
+    m_Localized: 'CASTLE HEIGHT:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6886781787639808
+    m_Localized: 'WALL THICKNESS:'
     m_Metadata:
       m_Items: []
   references:

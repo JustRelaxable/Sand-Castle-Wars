@@ -20,7 +20,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47807177756672
-    m_Key: SINGLEPLAYER_MODE_BUTTON
+    m_Key: PLAY_BUTTON
     m_Metadata:
       m_Items: []
   - m_Id: 48042910224384
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48305297494016
-    m_Key: OPTIONS_BUTTON
+    m_Key: TUTORIAL_BUTTON
     m_Metadata:
       m_Items: []
   - m_Id: 48420678602752
@@ -156,7 +156,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3939429418340352
-    m_Key: CONJURE_CRYSTALDS_CARD_DESCRIPTION
+    m_Key: CONJURE_CRYSTALS_CARD_DESCRIPTION
     m_Metadata:
       m_Items: []
   - m_Id: 3939863834988544
@@ -216,7 +216,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3949474461847552
-    m_Key: CRUSH_CRYTSTALS_CARD_NAME
+    m_Key: CRUSH_CRYSTALS_CARD_NAME
     m_Metadata:
       m_Items: []
   - m_Id: 3949591856222208
@@ -244,7 +244,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3950654252453888
-    m_Key: BUBBLE_TROUBLE_CARD_DESCRIPTON
+    m_Key: BUBBLE_TROUBLE_CARD_DESCRIPTION
     m_Metadata:
       m_Items: []
   - m_Id: 3950925540036608
@@ -301,6 +301,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3952932552249344
     m_Key: ARCHER_CARD_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6879111177375744
+    m_Key: SOUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6879150595444736
+    m_Key: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6880812420632576
+    m_Key: OKAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6881433299259392
+    m_Key: SINGLEPLAYER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6882253487017984
+    m_Key: BATTLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6883803873742848
+    m_Key: JOIN_BY_ROOM_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885024609144832
+    m_Key: ARE_YOU_HAVING_FUN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885156452896768
+    m_Key: PLEASE_RATE_US
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6885480202833920
+    m_Key: SURE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6886684559478784
+    m_Key: CASTLE_HEIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6886781787639808
+    m_Key: WALL_THICKNESS
     m_Metadata:
       m_Items: []
   m_Metadata:
