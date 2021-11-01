@@ -395,5 +395,13 @@ MonoBehaviour:
     m_Localized: 'EXAMINE THE CARD TO SEE HOW IT WORKS. '
     m_Metadata:
       m_Items: []
+  - m_Id: 6971051562569728
+    m_Localized: "HURRY UP! \nYOUR OPPONENT IS STILL WAITING FOR YOU."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6971286179352576
+    m_Localized: SETTINGS
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

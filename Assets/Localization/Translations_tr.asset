@@ -407,5 +407,13 @@ MonoBehaviour:
     m_Localized: "KARTI \u0130NCELEYEREK NASIL \xC7ALI\u015ETI\u011EINI G\xD6R"
     m_Metadata:
       m_Items: []
+  - m_Id: 6971051562569728
+    m_Localized: "ACELE ET!\nRAK\u0130B\u0130N SEN\u0130N OYNAMANI BEKL\u0130YOR."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6971286179352576
+    m_Localized: AYARLAR
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

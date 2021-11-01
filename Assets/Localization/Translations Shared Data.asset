@@ -383,6 +383,14 @@ MonoBehaviour:
     m_Key: EXAMINE_THE_CARD
     m_Metadata:
       m_Items: []
+  - m_Id: 6971051562569728
+    m_Key: HURRY_UP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6971286179352576
+    m_Key: SETTINGS
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
