@@ -364,5 +364,48 @@ MonoBehaviour:
     m_Localized: "DUVAR KALINLI\u011EI:"
     m_Metadata:
       m_Items: []
+  - m_Id: 6890692380528640
+    m_Localized: "RAK\u0130B\u0130N KALES\u0130N\u0130 YIKMAK \u0130\xC7\u0130N KARTLARINI
+      D\u0130ZMEYE BA\u015ELA!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6890970706153472
+    m_Localized: "KAZANMAK \u0130\xC7\u0130N RAK\u0130B\u0130N\u0130N KALES\u0130N\u0130N
+      Y\xDCKSEKL\u0130\u011E\u0130N\u0130 YA SIFIRLAMAN GEREK YA DA KEND\u0130 KALEN\u0130N
+      Y\xDCKSEKL\u0130\u011E\u0130N\u0130 100 YAPMAN GEREK."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891443311939584
+    m_Localized: "EKRANIN \xDCST K\xD6\u015EELER\u0130NDE KALE DURUMLARINI G\xD6REB\u0130L\u0130RS\u0130N."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891656957202432
+    m_Localized: "KALE DUVARLARINI KALINLA\u015ETIRMAYA \xC7ALI\u015E. BU KALEN\u0130
+      KALKAN G\u0130B\u0130 KORUR. SALDIRILAR \xD6NCE KALEN\u0130N DUVAR KALINLI\u011EINA
+      ETK\u0130 EDER."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892189973549056
+    m_Localized: "KULLANAB\u0130LECE\u011E\u0130N 3 FARKLI KAYNAK VAR."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892422350573568
+    m_Localized: "KAYNAKLARI BURADAK\u0130 ELEMENTLERLE \xDCRETECEKS\u0130N."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892705080217600
+    m_Localized: "EKRANIN SA\u011E VE SOL TARAFINDA KEND\u0130N\u0130N VE RAK\u0130B\u0130N
+      KAYNAKLARINI VE ELEMENTLER\u0130N\u0130 G\xD6RECEKS\u0130N."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6893093346938880
+    m_Localized: "ELEMENTLER\u0130N\u0130N SAYISINA BA\u011ELI OLARAK HER TUR KAYNAK
+      KAZANACAKSIN."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6893327363936256
+    m_Localized: "KARTI \u0130NCELEYEREK NASIL \xC7ALI\u015ETI\u011EINI G\xD6R"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

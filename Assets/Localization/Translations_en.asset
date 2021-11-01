@@ -355,5 +355,45 @@ MonoBehaviour:
     m_Localized: 'WALL THICKNESS:'
     m_Metadata:
       m_Items: []
+  - m_Id: 6890692380528640
+    m_Localized: "BUILD YOUR DECK TO SMASH YOUR OPPONENT'S CASTLE! \n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6890970706153472
+    m_Localized: TO WIN, EITHER YOU NEED TO SMASH YOUR OPPONENT'S CASTLE HEIGHT TO
+      0 OR UPGRADE YOUR CASTLE HEIGHT TO 100.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891443311939584
+    m_Localized: YOU CAN SEE CASTLE STATS ON THE TOP OF YOUR SCREEN.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891656957202432
+    m_Localized: TRY TO INCREASE YOUR WALL THICKNESS, IT WORKS AS A SHIELD FOR YOUR
+      CASTLE. THE TAKEN DAMAGE WILL AFFECT THE WALL FIRST.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892189973549056
+    m_Localized: 'THERE ARE 3 DIFFERENT RESOURCES YOU CAN USE. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892422350573568
+    m_Localized: YOU WILL PRODUCE THE RESOURCES WITH THESE ELEMENTS.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892705080217600
+    m_Localized: ON THE RIGHT & LEFT, YOU CAN SEE THE PRODUCE FACTORS & RESOURCES
+      OF YOU & YOUR OPPONENT.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6893093346938880
+    m_Localized: YOU WILL PRODUCE SAND, WATER AND MAGIC EVERY TURN, REGARDING TO
+      YOUR PRODUCE FACTOR.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6893327363936256
+    m_Localized: 'EXAMINE THE CARD TO SEE HOW IT WORKS. '
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -347,6 +347,42 @@ MonoBehaviour:
     m_Key: WALL_THICKNESS
     m_Metadata:
       m_Items: []
+  - m_Id: 6890692380528640
+    m_Key: BUILD_YOUR_DECK_TO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6890970706153472
+    m_Key: TO_WIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891443311939584
+    m_Key: YOU_CAN_SEE_CASTLE_STATS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891656957202432
+    m_Key: TRY_TO_INCREASE_YOUR_WALL_THICKNESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892189973549056
+    m_Key: THERE_ARE_3_DIFFERENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892422350573568
+    m_Key: YOU_WILL_PRODUCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6892705080217600
+    m_Key: ON_THE_RIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6893093346938880
+    m_Key: YOU_WILL_PRODUCE_SAND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6893327363936256
+    m_Key: EXAMINE_THE_CARD
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
