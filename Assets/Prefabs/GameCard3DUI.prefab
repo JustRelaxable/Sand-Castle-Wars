@@ -48,6 +48,11 @@ PrefabInstance:
       propertyPath: backgroundImage
       value: 
       objectReference: {fileID: 8092309756003592665}
+    - target: {fileID: 1481946088140112738, guid: 3dd9a45a43a49f3489dbe67e09214d67,
+        type: 3}
+      propertyPath: m_text
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8160873599735372115, guid: 3dd9a45a43a49f3489dbe67e09214d67,
         type: 3}
       propertyPath: m_Name
@@ -97,6 +102,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043323282304284411, guid: 3dd9a45a43a49f3489dbe67e09214d67,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 38.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043323282304284411, guid: 3dd9a45a43a49f3489dbe67e09214d67,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 29.2207
       objectReference: {fileID: 0}
     - target: {fileID: 9043323282304284411, guid: 3dd9a45a43a49f3489dbe67e09214d67,
         type: 3}

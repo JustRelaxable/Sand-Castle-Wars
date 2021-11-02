@@ -3901,7 +3901,7 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: bbb6270a186b7c0419522fb0463d6dd4, type: 3}
   cardDescription: Destroy 8 units of magic from your enemy's resources.
   cardNumberTexts:
-  - textX: 0.741
+  - textX: 0.261
     textY: 0.688
     cardText: -8
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
@@ -4592,7 +4592,7 @@ MonoBehaviour:
   cardDescription: Produce 8 units of magic with your crystals.
   cardNumberTexts:
   - textX: 0.811
-    textY: 0.627
+    textY: 0.698
     cardText: +8
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
 --- !u!1 &279729066
@@ -9477,7 +9477,7 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: 5ed21a5a6dbb5e747aa6bc83aead4935, type: 3}
   cardDescription: Perform an 25 unit attack on the enemy's castle.
   cardNumberTexts:
-  - textX: 0.664
+  - textX: 0.688
     textY: 0.482
     cardText: 25
     textColor: {r: 0.70980394, g: 0.7803922, b: 0.6039216, a: 1}
@@ -10573,7 +10573,7 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: bb1422c99e370074fa1eb272446b4aea, type: 3}
   cardDescription: Build and add 32 units to your castle.
   cardNumberTexts:
-  - textX: 0.736
+  - textX: 0.746
     textY: 0.418
     cardText: +32
     textColor: {r: 0.57254905, g: 0.47450984, b: 0.3921569, a: 1}
@@ -10787,7 +10787,7 @@ MonoBehaviour:
   cardDescription: Increase your magic production by 1 unit with the help of your
     sorcerer.
   cardNumberTexts:
-  - textX: 0.841
+  - textX: 0.851
     textY: 0.418
     cardText: +1
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
@@ -16106,7 +16106,7 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: 7b252d18852b7264d871096d99df0834, type: 3}
   cardDescription: Get help from mermaids to add 22 units more to your castle.
   cardNumberTexts:
-  - textX: 0.841
+  - textX: 0.784
     textY: 0.418
     cardText: +22
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
@@ -16165,7 +16165,7 @@ MonoBehaviour:
     textY: 0.722
     cardText: +8
     textColor: {r: 0.57254905, g: 0.47450984, b: 0.3921569, a: 1}
-  - textX: 0.751
+  - textX: 0.693
     textY: 0.523
     cardText: 4
     textColor: {r: 0.9333334, g: 0.8235295, b: 0.7686275, a: 1}
@@ -18031,9 +18031,9 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: b6f84688df423b4478def2e6afb6cc69, type: 3}
   cardDescription: Reduce the enemy's sand resources by 8 units.
   cardNumberTexts:
-  - textX: 0.722
-    textY: 0.553
-    cardText: 
+  - textX: 0.708
+    textY: 0.501
+    cardText: -8
     textColor: {r: 0.33333334, g: 0.45882356, b: 0.16470589, a: 1}
 --- !u!1 &1315824919
 GameObject:
@@ -18625,8 +18625,8 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: d3166049bc1064e459784560867cfeaa, type: 3}
   cardDescription: Reduce the enemy's water resources by 8 units.
   cardNumberTexts:
-  - textX: 0.622
-    textY: 0.463
+  - textX: 0.673
+    textY: 0.491
     cardText: -8
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
 --- !u!1 &1389632884
@@ -22320,7 +22320,7 @@ MonoBehaviour:
   cardDescription: Produce 8 units of sand with conjuring bricks.
   cardNumberTexts:
   - textX: 0.677
-    textY: 0.488
+    textY: 0.443
     cardText: +8
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
 --- !u!1 &1582275337
@@ -31126,10 +31126,10 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: ef78c828c014644409ebfa00985e2d99, type: 3}
   cardDescription: Perform a 3 unit attack on the enemy with your sand knight.
   cardNumberTexts:
-  - textX: 0.7
+  - textX: 0.76
     textY: 0.49
     cardText: 3
-    textColor: {r: 0.72156864, g: 0.882353, b: 0.9450981, a: 1}
+    textColor: {r: 0.15686275, g: 0.6862745, b: 0.9176471, a: 1}
 --- !u!4 &1881532023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bce6e20c293c5764e8491959910831b3,
@@ -31840,7 +31840,7 @@ MonoBehaviour:
   animationPrefab: {fileID: 8453605879597209075, guid: bc5d2170f59de1c41bc2c074cfd2f443,
     type: 3}
   cardName: Curse
-  resourceCost: 25
+  resourceCost: 40
   resourceType: 2
   botPriority: 29
   cardIcon: {fileID: 21300000, guid: 801b8fed0df974b478ad59dce2b23b7d, type: 3}
@@ -32373,7 +32373,7 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: 808237804170b654da9ef289cb53709b, type: 3}
   cardDescription: Build and add 20 units more to your castle.
   cardNumberTexts:
-  - textX: 0.662
+  - textX: 0.686
     textY: 0.761
     cardText: +20
     textColor: {r: 0.57254905, g: 0.47450984, b: 0.3921569, a: 1}
@@ -32897,7 +32897,7 @@ MonoBehaviour:
     textY: 0.722
     cardText: +8
     textColor: {r: 0.57254905, g: 0.47450984, b: 0.3921569, a: 1}
-  - textX: 0.707
+  - textX: 0.692
     textY: 0.563
     cardText: 4
     textColor: {r: 0.9333334, g: 0.8235295, b: 0.7686275, a: 1}
