@@ -403,5 +403,29 @@ MonoBehaviour:
     m_Localized: SETTINGS
     m_Metadata:
       m_Items: []
+  - m_Id: 7280283758407680
+    m_Localized: SAND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7280368210718720
+    m_Localized: WATER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7280425513299968
+    m_Localized: MAGIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7280468454584320
+    m_Localized: BUCKET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7280562830618624
+    m_Localized: TAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7280632435093504
+    m_Localized: HAT
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
