@@ -93,7 +93,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3936246264565760
-    m_Localized: "SIVILA\u015ETIRILMI\u015E KUM"
+    m_Localized: SIVI KUM
     m_Metadata:
       m_Items: []
   - m_Id: 3936366620119040
@@ -156,7 +156,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3938861572493312
     m_Localized: "Rakibin t\xFCm \xFCretimlerini ve kaynaklar\u0131n\u0131 1 birim
-      azalt\u0131rken, senin \xFCretim ve kaynaklar\u0131n\u0131 1 birim artt\u0131r\u0131r."
+      azalt, kendi \xFCretim ve kaynaklar\u0131n\u0131 1 birim artt\u0131r."
     m_Metadata:
       m_Items: []
   - m_Id: 3939352108929024
@@ -189,8 +189,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3946681202184192
-    m_Localized: "Rakibin kulesinin y\xFCkseli\u011Fini 4 birim azalt\u0131rken senin
-      kalenin y\xFCksekli\u011Fini 8 birim artt\u0131r\u0131r."
+    m_Localized: "Rakibin kalesini 4 birim azalt\u0131rken kendi kalenin y\xFCksekli\u011Fini
+      8 birim artt\u0131r\u0131r."
     m_Metadata:
       m_Items: []
   - m_Id: 3947094232076288
@@ -371,8 +371,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 6890970706153472
     m_Localized: "KAZANMAK \u0130\xC7\u0130N RAK\u0130B\u0130N\u0130N KALES\u0130N\u0130N
-      Y\xDCKSEKL\u0130\u011E\u0130N\u0130 YA SIFIRLAMAN GEREK YA DA KEND\u0130 KALEN\u0130N
-      Y\xDCKSEKL\u0130\u011E\u0130N\u0130 100 YAPMAN GEREK."
+      Y\xDCKSEKL\u0130\u011E\u0130N\u0130 SIFIRLA YA DA KEND\u0130 KALEN\u0130N Y\xDCKSEKL\u0130\u011E\u0130N\u0130
+      100'E ER\u0130\u015ET\u0130R."
     m_Metadata:
       m_Items: []
   - m_Id: 6891443311939584
@@ -380,8 +380,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6891656957202432
-    m_Localized: "KALE DUVARLARINI KALINLA\u015ETIRMAYA \xC7ALI\u015E. BU KALEN\u0130
-      KALKAN G\u0130B\u0130 KORUR. SALDIRILAR \xD6NCE KALEN\u0130N DUVAR KALINLI\u011EINA
+    m_Localized: "KALE DUVARLARINI KALINLA\u015ETIRMAYA \xC7ALI\u015E. BU, KALEN\u0130
+      KALKAN G\u0130B\u0130 KORUR. SALDIRILAR, \xD6NCE KALEN\u0130N DUVAR KALINLI\u011EINA
       ETK\u0130 EDER."
     m_Metadata:
       m_Items: []
@@ -394,13 +394,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6892705080217600
-    m_Localized: "EKRANIN SA\u011E VE SOL TARAFINDA KEND\u0130N\u0130N VE RAK\u0130B\u0130N
+    m_Localized: "EKRANIN SA\u011E VE SOL TARAFINDA KEND\u0130N\u0130N VE RAK\u0130B\u0130N\u0130N
       KAYNAKLARINI VE ELEMENTLER\u0130N\u0130 G\xD6RECEKS\u0130N."
     m_Metadata:
       m_Items: []
   - m_Id: 6893093346938880
     m_Localized: "ELEMENTLER\u0130N\u0130N SAYISINA BA\u011ELI OLARAK HER TUR KAYNAK
-      KAZANACAKSIN."
+      \xDCRETECEKS\u0130N."
     m_Metadata:
       m_Items: []
   - m_Id: 6893327363936256

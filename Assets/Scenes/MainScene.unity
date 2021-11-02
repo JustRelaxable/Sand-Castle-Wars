@@ -2639,7 +2639,7 @@ RectTransform:
   - {fileID: 516497223}
   - {fileID: 591123929}
   m_Father: {fileID: 1239349576}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3901,8 +3901,8 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: bbb6270a186b7c0419522fb0463d6dd4, type: 3}
   cardDescription: Destroy 8 units of magic from your enemy's resources.
   cardNumberTexts:
-  - textX: 0.692
-    textY: 0.583
+  - textX: 0.741
+    textY: 0.688
     cardText: -8
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
 --- !u!1 &225440866
@@ -7736,6 +7736,10 @@ MonoBehaviour:
     systemLanguage: 10
   - gameObject: {fileID: 516497222}
     systemLanguage: 37
+  - gameObject: {fileID: 1451466310}
+    systemLanguage: 37
+  - gameObject: {fileID: 652120241}
+    systemLanguage: 10
 --- !u!4 &503193408
 Transform:
   m_ObjectHideFlags: 0
@@ -9473,8 +9477,8 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: 5ed21a5a6dbb5e747aa6bc83aead4935, type: 3}
   cardDescription: Perform an 25 unit attack on the enemy's castle.
   cardNumberTexts:
-  - textX: 0.776
-    textY: 0.518
+  - textX: 0.664
+    textY: 0.482
     cardText: 25
     textColor: {r: 0.70980394, g: 0.7803922, b: 0.6039216, a: 1}
 --- !u!1 &619684891
@@ -12774,7 +12778,7 @@ RectTransform:
   m_Children:
   - {fileID: 1108844193}
   m_Father: {fileID: 1239349576}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16627,7 +16631,7 @@ RectTransform:
   - {fileID: 507412574}
   - {fileID: 1747104570}
   m_Father: {fileID: 1239349576}
-  m_RootOrder: 16
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17237,10 +17241,10 @@ RectTransform:
   - {fileID: 1773344021}
   - {fileID: 170434919}
   - {fileID: 1668845603}
-  - {fileID: 1172076835}
   - {fileID: 967802037}
   - {fileID: 1824820939}
   - {fileID: 191693037}
+  - {fileID: 1172076835}
   - {fileID: 1105514835}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -22509,8 +22513,8 @@ MonoBehaviour:
   cardIcon: {fileID: 21300000, guid: 2b18e8318c09c8b439d6ba2455c29210, type: 3}
   cardDescription: Add 8 unit water to your resources.
   cardNumberTexts:
-  - textX: 0.841
-    textY: 0.418
+  - textX: 0.184
+    textY: 0.736
     cardText: +8
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
 --- !u!1 &1614883254
@@ -30320,7 +30324,7 @@ RectTransform:
   m_Children:
   - {fileID: 210752032}
   m_Father: {fileID: 1239349576}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -31843,11 +31847,11 @@ MonoBehaviour:
   cardDescription: Increase your produce by 1 unit while cursing your enemy with
     1 unit decreased produce.
   cardNumberTexts:
-  - textX: 0.115
+  - textX: 0.155
     textY: 0.538
     cardText: -1
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
-  - textX: 0.896
+  - textX: 0.846
     textY: 0.558
     cardText: +1
     textColor: {r: 0.30980393, g: 0.45098042, b: 0.16862746, a: 1}
@@ -32707,7 +32711,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2002025329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1172076834}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2002025329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32878,11 +32894,11 @@ MonoBehaviour:
     to enemy castle.
   cardNumberTexts:
   - textX: 0.801
-    textY: 0.677
+    textY: 0.722
     cardText: +8
     textColor: {r: 0.57254905, g: 0.47450984, b: 0.3921569, a: 1}
   - textX: 0.707
-    textY: 0.503
+    textY: 0.563
     cardText: 4
     textColor: {r: 0.9333334, g: 0.8235295, b: 0.7686275, a: 1}
 --- !u!1 &2015977644
