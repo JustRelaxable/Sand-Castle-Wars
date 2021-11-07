@@ -439,5 +439,9 @@ MonoBehaviour:
     m_Localized: "\u015EAPKA"
     m_Metadata:
       m_Items: []
+  - m_Id: 9010623872679936
+    m_Localized: "SEN VEYA RAK\u0130B\u0130N OYUNDAN D\xDC\u015ET\xDC!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -427,5 +427,9 @@ MonoBehaviour:
     m_Localized: HAT
     m_Metadata:
       m_Items: []
+  - m_Id: 9010623872679936
+    m_Localized: YOU OR YOUR OPPONENT HAS DISCONNECTED!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

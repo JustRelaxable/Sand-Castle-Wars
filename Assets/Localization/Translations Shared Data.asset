@@ -415,6 +415,10 @@ MonoBehaviour:
     m_Key: HAT
     m_Metadata:
       m_Items: []
+  - m_Id: 9010623872679936
+    m_Key: DISCONNECTED_TEXT
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
