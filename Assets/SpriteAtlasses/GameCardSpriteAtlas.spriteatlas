@@ -85,7 +85,7 @@ SpriteAtlas:
     - {fileID: 21300000, guid: 042be02f55484884498c06bf5d9b31f9, type: 3}
     - {fileID: 21300000, guid: 15313794552ff8e4cb07617d3526915c, type: 3}
     - {fileID: 21300000, guid: eeb7777e0432dd8448364557c281ffc9, type: 3}
-    totalSpriteSurfaceArea: 9635953
+    - {fileID: 21300000, guid: d9c0139eea0675141a2441b833329d7e, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -129,6 +129,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3adb8a6c7283dff48906e7d535aa1751, type: 3}
   - {fileID: 21300000, guid: 801b8fed0df974b478ad59dce2b23b7d, type: 3}
   - {fileID: 21300000, guid: eeb7777e0432dd8448364557c281ffc9, type: 3}
+  - {fileID: 21300000, guid: d9c0139eea0675141a2441b833329d7e, type: 3}
   - {fileID: 21300000, guid: 6cce48cefbbf9a54cb7d5b99894476e1, type: 3}
   - {fileID: 21300000, guid: 042be02f55484884498c06bf5d9b31f9, type: 3}
   - {fileID: 21300000, guid: 0f44818f2dc563a4e84ea61bc530c6dc, type: 3}
@@ -172,6 +173,7 @@ SpriteAtlas:
   - 10_FENCE
   - 5_CURSE
   - Bar_Red
+  - "yeni-yaz\u0131-k\xFC\xE7\xFCk"
   - 0_MAGIC BASE
   - Water-2
   - 10_SORCERER
